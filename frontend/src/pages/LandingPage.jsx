@@ -332,7 +332,7 @@ export default function LandingPage() {
         >
           <div className="container reveal text-center">
             <div className="cta-eyebrow">
-              CLIMAID ADAPTATION PLATFORM
+              CLIMATE ADAPTATION PLATFORM
             </div>
 
             <h2 className="cta-headline">
@@ -342,7 +342,7 @@ export default function LandingPage() {
             <div style={{ width: 48, height: 2, background: 'var(--accent)', marginInline: 'auto', marginBottom: 'var(--sp-6)' }} />
 
             <p className="cta-body">
-              Initiate your adaptation analysis. Explore Pune's 76 wards, evaluate localized heat and drainage vulnerabilities, and generate a budget-optimized municipal action plan.
+              Initiate your adaptation analysis. Evaluate localized heat and drainage vulnerabilities, and generate a budget-optimized municipal action plan.
             </p>
 
             <div style={{ display: 'inline-block' }}>
