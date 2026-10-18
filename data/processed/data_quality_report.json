@@ -1,0 +1,15 @@
+{
+  "report_generated_utc": "2026-10-17T18:20:55.043274+00:00",
+  "pilot_area": "Pune Urban Pilot (18.50-18.60N, 73.80-73.90E)",
+  "summary": {
+    "total_raw_layers": 32,
+    "total_issues_and_notices": 4,
+    "status": "READY_FOR_FIRST_PASS_INDICATORS"
+  },
+  "issues_and_notices": [
+    "clinics.geojson: 0 features present.",
+    "GAPS NOTICE: Satellite imagery (NDVI analysis) is currently MISSING_UNVERIFIED.",
+    "GAPS NOTICE: Digital Elevation Model / Terrain is currently MISSING_UNVERIFIED.",
+    "GAPS NOTICE: GSDA Local Monitoring Wells is currently MISSING_UNVERIFIED."
+  ]
+}

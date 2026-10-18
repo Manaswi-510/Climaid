@@ -1,0 +1,51 @@
+{
+  "generated_at_utc": "2026-10-17T17:40:38.109006+00:00",
+  "framework": "ClimateAdapt Pune Indicator Framework (v1.0)",
+  "core_metrics": [
+    {
+      "id": "heat_exposure_proxy",
+      "name": "Heat Exposure Screening Proxy",
+      "scale": "0 - 100",
+      "inputs": [
+        "Open-Meteo 7-day max temperature",
+        "OSM tree & park canopy",
+        "School/Hospital sensitive receptors"
+      ],
+      "evidence_type": "Model Forecast & Spatial Proxy",
+      "notes": "Does not predict medical heat stroke incidents. Used for identifying shading and cool roof prioritization."
+    },
+    {
+      "id": "flood_screening_proxy",
+      "name": "Flood & Drainage Screening Proxy",
+      "scale": "0 - 100",
+      "inputs": [
+        "OpenCity Stormwater Drains Coverage %",
+        "OpenCity Slum Drainage %",
+        "Open-Meteo precipitation sum"
+      ],
+      "evidence_type": "Official Municipal Data & Forecast",
+      "notes": "Presence of drain does not prove absence of blockage. Indicates infrastructure coverage deficit."
+    },
+    {
+      "id": "water_stress_proxy",
+      "name": "Water Stress Screening Proxy",
+      "scale": "0 - 100",
+      "inputs": [
+        "Open-Meteo ET0 & soil moisture",
+        "Participatory budget allocations"
+      ],
+      "evidence_type": "Forecast Proxy & Municipal Finance",
+      "notes": "Local monitoring well data unavailable; relies on regional resource assessments."
+    },
+    {
+      "id": "green_deficit_proxy",
+      "name": "Green Cover Deficit Proxy",
+      "scale": "0 - 100",
+      "inputs": [
+        "OSM Parks, Gardens, Woodlands, Tree Points"
+      ],
+      "evidence_type": "Spatial Inventory Proxy",
+      "notes": "Tree point completeness varies across wards in OpenStreetMap."
+    }
+  ]
+}

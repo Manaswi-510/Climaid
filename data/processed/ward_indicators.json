@@ -1,0 +1,2675 @@
+{
+  "generated_at_utc": "2026-10-17T17:40:38.104804+00:00",
+  "formula_version": "1.0.0-pune-screening",
+  "pilot_area": "Pune Pilot, Maharashtra, India",
+  "total_wards_analyzed": 76,
+  "top_vulnerable_wards": [
+    "Vadgaon Sheri - Ganesh Nagar",
+    "Arunkumar Vaidya Stadium",
+    "Ghorpade Garden",
+    "Upper Indiranagar",
+    "Mohammadwadi"
+  ],
+  "wards": [
+    {
+      "ward_num": 19,
+      "ward_title": "Vadgaon Sheri - Ganesh Nagar",
+      "area_zone": "Nagar Road",
+      "population_voters_proxy": 32318,
+      "indicators": {
+        "heat_exposure_proxy": 58.4,
+        "flood_screening_proxy": 75.2,
+        "water_stress_proxy": 52.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 68.8
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 1.8,
+        "underground_drainage_slums_pct": 20.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 0,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 3,
+        "archetype_name": "Moderate Vulnerability & Nature-Buffered",
+        "pca_x": 3.471,
+        "pca_y": -5.575
+      }
+    },
+    {
+      "ward_num": 47,
+      "ward_title": "Arunkumar Vaidya Stadium",
+      "area_zone": "Bhawani",
+      "population_voters_proxy": 29257,
+      "indicators": {
+        "heat_exposure_proxy": 64.4,
+        "flood_screening_proxy": 54.8,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 65.0
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 2.5,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 1,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 6,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 1,
+        "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+        "pca_x": 1.134,
+        "pca_y": 0.16
+      }
+    },
+    {
+      "ward_num": 65,
+      "ward_title": "Ghorpade Garden",
+      "area_zone": "Bhawani",
+      "population_voters_proxy": 32256,
+      "indicators": {
+        "heat_exposure_proxy": 63.8,
+        "flood_screening_proxy": 54.6,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 93.3,
+        "composite_vulnerability_score": 64.4
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 3.0,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 2,
+        "hospitals_count": 6,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 1,
+        "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+        "pca_x": 1.06,
+        "pca_y": 0.145
+      }
+    },
+    {
+      "ward_num": 72,
+      "ward_title": "Upper Indiranagar",
+      "area_zone": "Bibewadi",
+      "population_voters_proxy": 31859,
+      "indicators": {
+        "heat_exposure_proxy": 58.4,
+        "flood_screening_proxy": 59.1,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 64.4
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 1.5,
+        "underground_drainage_slums_pct": 85.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 0,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 1,
+        "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+        "pca_x": 1.636,
+        "pca_y": -0.722
+      }
+    },
+    {
+      "ward_num": 45,
+      "ward_title": "Mohammadwadi",
+      "area_zone": "Hadapsar",
+      "population_voters_proxy": 45100,
+      "indicators": {
+        "heat_exposure_proxy": 58.4,
+        "flood_screening_proxy": 60.7,
+        "water_stress_proxy": 52.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 63.7
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 1.0,
+        "underground_drainage_slums_pct": 80.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 0,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 1,
+        "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+        "pca_x": 1.659,
+        "pca_y": -2.175
+      }
+    },
+    {
+      "ward_num": 3,
+      "ward_title": "Vimannagar Sanjay Park",
+      "area_zone": "Nagar Road",
+      "population_voters_proxy": 37250,
+      "indicators": {
+        "heat_exposure_proxy": 58.4,
+        "flood_screening_proxy": 55.4,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 63.1
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 6.0,
+        "underground_drainage_slums_pct": 90.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 0,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 1,
+        "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+        "pca_x": 1.437,
+        "pca_y": -0.358
+      }
+    },
+    {
+      "ward_num": 63,
+      "ward_title": "Bhagyodaynagar",
+      "area_zone": "Kondhwa",
+      "population_voters_proxy": 40640,
+      "indicators": {
+        "heat_exposure_proxy": 58.4,
+        "flood_screening_proxy": 55.6,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 63.1
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 8.0,
+        "underground_drainage_slums_pct": 85.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 0,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 1,
+        "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+        "pca_x": 1.568,
+        "pca_y": -0.608
+      }
+    },
+    {
+      "ward_num": 59,
+      "ward_title": "Kashewadi Gurunanaknagar",
+      "area_zone": "Bhawani",
+      "population_voters_proxy": 33457,
+      "indicators": {
+        "heat_exposure_proxy": 60.4,
+        "flood_screening_proxy": 54.6,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 90.0,
+        "composite_vulnerability_score": 62.8
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 3.0,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 3,
+        "hospitals_count": 3,
+        "schools_count": 1,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 1,
+        "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+        "pca_x": 0.924,
+        "pca_y": 0.094
+      }
+    },
+    {
+      "ward_num": 54,
+      "ward_title": "Suncity Wadgaon Budruk",
+      "area_zone": "Tilak Road",
+      "population_voters_proxy": 48206,
+      "indicators": {
+        "heat_exposure_proxy": 58.4,
+        "flood_screening_proxy": 53.2,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 62.3
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 10.0,
+        "underground_drainage_slums_pct": 90.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 0,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 1,
+        "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+        "pca_x": 1.394,
+        "pca_y": -0.286
+      }
+    },
+    {
+      "ward_num": 62,
+      "ward_title": "Kondhwa Budruk, Gokulnagar",
+      "area_zone": "Kondhwa",
+      "population_voters_proxy": 36315,
+      "indicators": {
+        "heat_exposure_proxy": 58.4,
+        "flood_screening_proxy": 53.2,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 62.3
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 10.0,
+        "underground_drainage_slums_pct": 90.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 0,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 1,
+        "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+        "pca_x": 1.394,
+        "pca_y": -0.286
+      }
+    },
+    {
+      "ward_num": 42,
+      "ward_title": "Ward 42",
+      "area_zone": "Hadapsar",
+      "population_voters_proxy": 30000,
+      "indicators": {
+        "heat_exposure_proxy": 58.4,
+        "flood_screening_proxy": 51.7,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 61.8
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 10.0,
+        "underground_drainage_slums_pct": 96.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 0,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 1,
+        "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+        "pca_x": 1.212,
+        "pca_y": 0.055
+      }
+    },
+    {
+      "ward_num": 74,
+      "ward_title": "Bharati Vidyapeeth",
+      "area_zone": "Dhanakawadi",
+      "population_voters_proxy": 25005,
+      "indicators": {
+        "heat_exposure_proxy": 58.4,
+        "flood_screening_proxy": 51.1,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 61.6
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 9.2,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 0,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 1,
+        "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+        "pca_x": 1.098,
+        "pca_y": 0.27
+      }
+    },
+    {
+      "ward_num": 44,
+      "ward_title": "Gliding Centre",
+      "area_zone": "Hadapsar",
+      "population_voters_proxy": 37913,
+      "indicators": {
+        "heat_exposure_proxy": 58.4,
+        "flood_screening_proxy": 51.0,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 61.5
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 10.0,
+        "underground_drainage_slums_pct": 99.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 0,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 1,
+        "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+        "pca_x": 1.122,
+        "pca_y": 0.224
+      }
+    },
+    {
+      "ward_num": 60,
+      "ward_title": "Mahatma Phule Peth Kashewadi Bhawani Peth",
+      "area_zone": "Bhawani",
+      "population_voters_proxy": 31822,
+      "indicators": {
+        "heat_exposure_proxy": 58.1,
+        "flood_screening_proxy": 54.8,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 86.7,
+        "composite_vulnerability_score": 61.5
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 2.5,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 4,
+        "hospitals_count": 3,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 1,
+        "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+        "pca_x": 0.792,
+        "pca_y": 0.041
+      }
+    },
+    {
+      "ward_num": 49,
+      "ward_title": "Dr. Kotnis Hospital",
+      "area_zone": "Kasba Vishrambagwada ",
+      "population_voters_proxy": 33319,
+      "indicators": {
+        "heat_exposure_proxy": 60.4,
+        "flood_screening_proxy": 51.8,
+        "water_stress_proxy": 52.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 61.3
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 8.0,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 5,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 2,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 1,
+        "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+        "pca_x": 0.964,
+        "pca_y": -0.907
+      }
+    },
+    {
+      "ward_num": 18,
+      "ward_title": "Vadgaon Sheri",
+      "area_zone": "Nagar Road",
+      "population_voters_proxy": 30878,
+      "indicators": {
+        "heat_exposure_proxy": 58.4,
+        "flood_screening_proxy": 52.5,
+        "water_stress_proxy": 52.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 60.9
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 6.7,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 0,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 1,
+        "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+        "pca_x": 0.99,
+        "pca_y": -0.933
+      }
+    },
+    {
+      "ward_num": 46,
+      "ward_title": "Wanavdi - Ramtekdi",
+      "area_zone": "Kondhwa",
+      "population_voters_proxy": 33757,
+      "indicators": {
+        "heat_exposure_proxy": 58.4,
+        "flood_screening_proxy": 47.9,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 60.5
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 16.0,
+        "underground_drainage_slums_pct": 98.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 0,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 1,
+        "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+        "pca_x": 1.087,
+        "pca_y": 0.276
+      }
+    },
+    {
+      "ward_num": 15,
+      "ward_title": "Rajguru Road",
+      "area_zone": "Yerwada",
+      "population_voters_proxy": 32048,
+      "indicators": {
+        "heat_exposure_proxy": 58.3,
+        "flood_screening_proxy": 47.7,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 94.7,
+        "composite_vulnerability_score": 60.3
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 20.0,
+        "underground_drainage_slums_pct": 90.0,
+        "mapped_trees_osm": 4,
+        "mapped_parks_osm": 1,
+        "hospitals_count": 0,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 1,
+        "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+        "pca_x": 1.275,
+        "pca_y": -0.112
+      }
+    },
+    {
+      "ward_num": 56,
+      "ward_title": "Sarasbaug Parvati",
+      "area_zone": "Tilak Road",
+      "population_voters_proxy": 35499,
+      "indicators": {
+        "heat_exposure_proxy": 59.4,
+        "flood_screening_proxy": 44.7,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 59.7
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 30.0,
+        "underground_drainage_slums_pct": 80.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 1,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 1,
+        "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+        "pca_x": 1.478,
+        "pca_y": -0.497
+      }
+    },
+    {
+      "ward_num": 41,
+      "ward_title": "Sopan Baug - Vikasnagar",
+      "area_zone": "Kondhwa",
+      "population_voters_proxy": 37164,
+      "indicators": {
+        "heat_exposure_proxy": 58.4,
+        "flood_screening_proxy": 45.1,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 59.5
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 22.0,
+        "underground_drainage_slums_pct": 96.0,
+        "mapped_trees_osm": 1,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 0,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 1,
+        "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+        "pca_x": 1.084,
+        "pca_y": 0.27
+      }
+    },
+    {
+      "ward_num": 76,
+      "ward_title": "Katraj Maulinagar",
+      "area_zone": "Dhanakawadi",
+      "population_voters_proxy": 52866,
+      "indicators": {
+        "heat_exposure_proxy": 58.4,
+        "flood_screening_proxy": 45.2,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 59.5
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 20.0,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 0,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 1,
+        "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+        "pca_x": 0.984,
+        "pca_y": 0.462
+      }
+    },
+    {
+      "ward_num": 53,
+      "ward_title": "PL Deshpande Udyan",
+      "area_zone": "Tilak Road",
+      "population_voters_proxy": 36272,
+      "indicators": {
+        "heat_exposure_proxy": 58.4,
+        "flood_screening_proxy": 47.7,
+        "water_stress_proxy": 52.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 59.2
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 20.0,
+        "underground_drainage_slums_pct": 90.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 0,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 1,
+        "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+        "pca_x": 1.152,
+        "pca_y": -1.265
+      }
+    },
+    {
+      "ward_num": 55,
+      "ward_title": "Janata Vasahat",
+      "area_zone": "Tilak Road",
+      "population_voters_proxy": 33860,
+      "indicators": {
+        "heat_exposure_proxy": 58.4,
+        "flood_screening_proxy": 46.5,
+        "water_stress_proxy": 52.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 58.8
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 20.0,
+        "underground_drainage_slums_pct": 95.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 0,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 1,
+        "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+        "pca_x": 1.001,
+        "pca_y": -0.982
+      }
+    },
+    {
+      "ward_num": 23,
+      "ward_title": "Junabazaar Kumbharwada",
+      "area_zone": "Dhole Patil",
+      "population_voters_proxy": 28969,
+      "indicators": {
+        "heat_exposure_proxy": 55.5,
+        "flood_screening_proxy": 55.5,
+        "water_stress_proxy": 52.0,
+        "green_deficit_proxy": 80.2,
+        "composite_vulnerability_score": 58.7
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 1.35,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 33,
+        "mapped_parks_osm": 1,
+        "hospitals_count": 3,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 1,
+        "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+        "pca_x": 0.387,
+        "pca_y": -1.228
+      }
+    },
+    {
+      "ward_num": 30,
+      "ward_title": "Popularnagar Malwadi",
+      "area_zone": "Warje Karvenagar",
+      "population_voters_proxy": 46092,
+      "indicators": {
+        "heat_exposure_proxy": 58.4,
+        "flood_screening_proxy": 42.2,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 58.5
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 30.0,
+        "underground_drainage_slums_pct": 90.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 0,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 1,
+        "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+        "pca_x": 1.18,
+        "pca_y": 0.071
+      }
+    },
+    {
+      "ward_num": 2,
+      "ward_title": "Kharadi Infotech Park",
+      "area_zone": "Nagar Road",
+      "population_voters_proxy": 40567,
+      "indicators": {
+        "heat_exposure_proxy": 58.4,
+        "flood_screening_proxy": 40.4,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 57.8
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 33.33,
+        "underground_drainage_slums_pct": 90.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 0,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 1,
+        "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+        "pca_x": 1.145,
+        "pca_y": 0.129
+      }
+    },
+    {
+      "ward_num": 40,
+      "ward_title": "Collectorate",
+      "area_zone": "Dhole Patil",
+      "population_voters_proxy": 25854,
+      "indicators": {
+        "heat_exposure_proxy": 61.6,
+        "flood_screening_proxy": 44.1,
+        "water_stress_proxy": 52.0,
+        "green_deficit_proxy": 80.3,
+        "composite_vulnerability_score": 56.8
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 22.0,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 6,
+        "mapped_parks_osm": 5,
+        "hospitals_count": 9,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 1,
+        "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+        "pca_x": 0.136,
+        "pca_y": -0.845
+      }
+    },
+    {
+      "ward_num": 69,
+      "ward_title": "Dhankawadi Padmavati",
+      "area_zone": "Dhanakawadi",
+      "population_voters_proxy": 29171,
+      "indicators": {
+        "heat_exposure_proxy": 58.4,
+        "flood_screening_proxy": 39.7,
+        "water_stress_proxy": 52.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 56.4
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 30.0,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 0,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 1,
+        "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+        "pca_x": 0.741,
+        "pca_y": -0.517
+      }
+    },
+    {
+      "ward_num": 32,
+      "ward_title": "Karvenagar - Gosavivasti",
+      "area_zone": "Warje Karvenagar",
+      "population_voters_proxy": 31113,
+      "indicators": {
+        "heat_exposure_proxy": 58.4,
+        "flood_screening_proxy": 35.5,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 56.1
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 40.0,
+        "underground_drainage_slums_pct": 95.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 0,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 0,
+        "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+        "pca_x": 0.923,
+        "pca_y": 0.533
+      }
+    },
+    {
+      "ward_num": 25,
+      "ward_title": "Wadarwadi-Pandavnagar",
+      "area_zone": "Ghole Road",
+      "population_voters_proxy": 28563,
+      "indicators": {
+        "heat_exposure_proxy": 58.4,
+        "flood_screening_proxy": 34.2,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 55.7
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 40.0,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 1,
+        "hospitals_count": 0,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 0,
+        "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+        "pca_x": 0.77,
+        "pca_y": 0.819
+      }
+    },
+    {
+      "ward_num": 75,
+      "ward_title": "Katraj Dairy",
+      "area_zone": "Dhanakawadi",
+      "population_voters_proxy": 37622,
+      "indicators": {
+        "heat_exposure_proxy": 58.4,
+        "flood_screening_proxy": 34.2,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 55.7
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 40.0,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 0,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 0,
+        "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+        "pca_x": 0.77,
+        "pca_y": 0.819
+      }
+    },
+    {
+      "ward_num": 43,
+      "ward_title": "Sadhana Vidyalay",
+      "area_zone": "Hadapsar",
+      "population_voters_proxy": 29308,
+      "indicators": {
+        "heat_exposure_proxy": 58.4,
+        "flood_screening_proxy": 33.7,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 55.5
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 50.0,
+        "underground_drainage_slums_pct": 80.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 0,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 1,
+        "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+        "pca_x": 1.27,
+        "pca_y": -0.141
+      }
+    },
+    {
+      "ward_num": 36,
+      "ward_title": "Kamla Nehru Park",
+      "area_zone": "Ghole Road",
+      "population_voters_proxy": 28693,
+      "indicators": {
+        "heat_exposure_proxy": 56.0,
+        "flood_screening_proxy": 48.0,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 63.8,
+        "composite_vulnerability_score": 55.0
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 15.0,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 39,
+        "mapped_parks_osm": 5,
+        "hospitals_count": 14,
+        "schools_count": 19,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 2,
+        "archetype_name": "Socio-Ecological Water Stress & Slum Deficit",
+        "pca_x": -1.804,
+        "pca_y": -0.416
+      }
+    },
+    {
+      "ward_num": 51,
+      "ward_title": "Tilak Smarak Mandir",
+      "area_zone": "Kasba Vishrambagwada ",
+      "population_voters_proxy": 27480,
+      "indicators": {
+        "heat_exposure_proxy": 58.6,
+        "flood_screening_proxy": 39.7,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 73.0,
+        "composite_vulnerability_score": 54.4
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 30.0,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 14,
+        "mapped_parks_osm": 6,
+        "hospitals_count": 9,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 0,
+        "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+        "pca_x": -0.136,
+        "pca_y": 0.354
+      }
+    },
+    {
+      "ward_num": 68,
+      "ward_title": "Sahakarnagar - Taljai",
+      "area_zone": "Sahakarnagar",
+      "population_voters_proxy": 30420,
+      "indicators": {
+        "heat_exposure_proxy": 58.4,
+        "flood_screening_proxy": 28.7,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 53.7
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 50.0,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 0,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 0,
+        "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+        "pca_x": 0.663,
+        "pca_y": 0.997
+      }
+    },
+    {
+      "ward_num": 58,
+      "ward_title": "Mahatma Phule Smarak",
+      "area_zone": "Kasba Vishrambagwada ",
+      "population_voters_proxy": 31214,
+      "indicators": {
+        "heat_exposure_proxy": 60.8,
+        "flood_screening_proxy": 32.1,
+        "water_stress_proxy": 47.2,
+        "green_deficit_proxy": 93.3,
+        "composite_vulnerability_score": 53.6
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 43.75,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 2,
+        "hospitals_count": 3,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 1,
+        "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+        "pca_x": 0.424,
+        "pca_y": -0.981
+      }
+    },
+    {
+      "ward_num": 20,
+      "ward_title": "Magarpatta City",
+      "area_zone": "Dhole Patil",
+      "population_voters_proxy": 34653,
+      "indicators": {
+        "heat_exposure_proxy": 58.4,
+        "flood_screening_proxy": 26.9,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 53.1
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 53.33,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 0,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 0,
+        "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+        "pca_x": 0.628,
+        "pca_y": 1.056
+      }
+    },
+    {
+      "ward_num": 9,
+      "ward_title": "Baner Balewadi",
+      "area_zone": "Aundh",
+      "population_voters_proxy": 43227,
+      "indicators": {
+        "heat_exposure_proxy": 61.1,
+        "flood_screening_proxy": 31.8,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 76.7,
+        "composite_vulnerability_score": 53.0
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 49.0,
+        "underground_drainage_slums_pct": 90.0,
+        "mapped_trees_osm": 20,
+        "mapped_parks_osm": 4,
+        "hospitals_count": 8,
+        "schools_count": 5,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 0,
+        "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+        "pca_x": -0.065,
+        "pca_y": 0.126
+      }
+    },
+    {
+      "ward_num": 1,
+      "ward_title": "Lohegaon Airport",
+      "area_zone": "Yerwada",
+      "population_voters_proxy": 43263,
+      "indicators": {
+        "heat_exposure_proxy": 53.4,
+        "flood_screening_proxy": 48.8,
+        "water_stress_proxy": 44.0,
+        "green_deficit_proxy": 67.3,
+        "composite_vulnerability_score": 52.5
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 18.02,
+        "underground_drainage_slums_pct": 90.0,
+        "mapped_trees_osm": 12,
+        "mapped_parks_osm": 8,
+        "hospitals_count": 4,
+        "schools_count": 2,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 1,
+        "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+        "pca_x": -0.2,
+        "pca_y": -2.826
+      }
+    },
+    {
+      "ward_num": 61,
+      "ward_title": "Kedar Vasti - Azadnagar",
+      "area_zone": "Kondhwa",
+      "population_voters_proxy": 38029,
+      "indicators": {
+        "heat_exposure_proxy": 58.4,
+        "flood_screening_proxy": 24.5,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 52.3
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 60.0,
+        "underground_drainage_slums_pct": 95.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 0,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 0,
+        "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+        "pca_x": 0.709,
+        "pca_y": 0.89
+      }
+    },
+    {
+      "ward_num": 66,
+      "ward_title": "Adinath Society",
+      "area_zone": "Sahakarnagar",
+      "population_voters_proxy": 34558,
+      "indicators": {
+        "heat_exposure_proxy": 58.4,
+        "flood_screening_proxy": 23.2,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 51.8
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 60.0,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 0,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 0,
+        "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+        "pca_x": 0.556,
+        "pca_y": 1.176
+      }
+    },
+    {
+      "ward_num": 29,
+      "ward_title": "Bavdhan Khurd",
+      "area_zone": "Kothrud",
+      "population_voters_proxy": 40177,
+      "indicators": {
+        "heat_exposure_proxy": 58.4,
+        "flood_screening_proxy": 22.7,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 51.6
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 61.0,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 0,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 0,
+        "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+        "pca_x": 0.546,
+        "pca_y": 1.192
+      }
+    },
+    {
+      "ward_num": 27,
+      "ward_title": "Sutardara-Kishkindha Naga",
+      "area_zone": "Kothrud",
+      "population_voters_proxy": 34171,
+      "indicators": {
+        "heat_exposure_proxy": 58.4,
+        "flood_screening_proxy": 21.6,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 92.3,
+        "composite_vulnerability_score": 50.8
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 63.0,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 2,
+        "mapped_parks_osm": 2,
+        "hospitals_count": 0,
+        "schools_count": 1,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 0,
+        "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+        "pca_x": 0.406,
+        "pca_y": 1.194
+      }
+    },
+    {
+      "ward_num": 34,
+      "ward_title": "Gujrat Colony",
+      "area_zone": "Kothrud",
+      "population_voters_proxy": 29451,
+      "indicators": {
+        "heat_exposure_proxy": 61.0,
+        "flood_screening_proxy": 21.0,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 86.3,
+        "composite_vulnerability_score": 50.6
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 64.0,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 14,
+        "mapped_parks_osm": 2,
+        "hospitals_count": 6,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 0,
+        "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+        "pca_x": 0.102,
+        "pca_y": 1.14
+      }
+    },
+    {
+      "ward_num": 50,
+      "ward_title": "Mahatma Phule Mandai",
+      "area_zone": "Kasba Vishrambagwada ",
+      "population_voters_proxy": 31056,
+      "indicators": {
+        "heat_exposure_proxy": 65.8,
+        "flood_screening_proxy": 12.2,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 93.3,
+        "composite_vulnerability_score": 50.3
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 80.0,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 2,
+        "hospitals_count": 8,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 0,
+        "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+        "pca_x": 0.224,
+        "pca_y": 1.525
+      }
+    },
+    {
+      "ward_num": 28,
+      "ward_title": "ARDE - Mhatobanagar",
+      "area_zone": "Kothrud",
+      "population_voters_proxy": 40854,
+      "indicators": {
+        "heat_exposure_proxy": 61.1,
+        "flood_screening_proxy": 19.4,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 86.7,
+        "composite_vulnerability_score": 50.2
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 67.0,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 4,
+        "hospitals_count": 4,
+        "schools_count": 2,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 0,
+        "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+        "pca_x": 0.085,
+        "pca_y": 1.196
+      }
+    },
+    {
+      "ward_num": 67,
+      "ward_title": "Aranyeshwar Taware Colony",
+      "area_zone": "Sahakarnagar",
+      "population_voters_proxy": 30963,
+      "indicators": {
+        "heat_exposure_proxy": 58.4,
+        "flood_screening_proxy": 17.7,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 49.9
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 70.0,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 0,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 0,
+        "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+        "pca_x": 0.449,
+        "pca_y": 1.355
+      }
+    },
+    {
+      "ward_num": 73,
+      "ward_title": "Balajinagar Vaibhavnagar",
+      "area_zone": "Dhanakawadi",
+      "population_voters_proxy": 31838,
+      "indicators": {
+        "heat_exposure_proxy": 58.4,
+        "flood_screening_proxy": 17.7,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 49.9
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 70.0,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 0,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 0,
+        "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+        "pca_x": 0.449,
+        "pca_y": 1.355
+      }
+    },
+    {
+      "ward_num": 48,
+      "ward_title": "Palkhi Vithoba Mandir",
+      "area_zone": "Bhawani",
+      "population_voters_proxy": 30608,
+      "indicators": {
+        "heat_exposure_proxy": 59.4,
+        "flood_screening_proxy": 15.2,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 49.4
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 74.5,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 1,
+        "mapped_parks_osm": 1,
+        "hospitals_count": 1,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 0,
+        "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+        "pca_x": 0.395,
+        "pca_y": 1.438
+      }
+    },
+    {
+      "ward_num": 64,
+      "ward_title": "Salisbury Park",
+      "area_zone": "Bibewadi",
+      "population_voters_proxy": 33114,
+      "indicators": {
+        "heat_exposure_proxy": 58.4,
+        "flood_screening_proxy": 16.0,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 49.3
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 80.0,
+        "underground_drainage_slums_pct": 85.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 0,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 0,
+        "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+        "pca_x": 0.799,
+        "pca_y": 0.678
+      }
+    },
+    {
+      "ward_num": 70,
+      "ward_title": "Bibvewadi and KK Market",
+      "area_zone": "Bibewadi",
+      "population_voters_proxy": 38542,
+      "indicators": {
+        "heat_exposure_proxy": 58.4,
+        "flood_screening_proxy": 15.0,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 48.9
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 75.0,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 0,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 0,
+        "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+        "pca_x": 0.397,
+        "pca_y": 1.442
+      }
+    },
+    {
+      "ward_num": 17,
+      "ward_title": "Agakhan Palace",
+      "area_zone": "Nagar Road",
+      "population_voters_proxy": 30708,
+      "indicators": {
+        "heat_exposure_proxy": 57.1,
+        "flood_screening_proxy": 31.2,
+        "water_stress_proxy": 52.0,
+        "green_deficit_proxy": 66.7,
+        "composite_vulnerability_score": 48.7
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 50.0,
+        "underground_drainage_slums_pct": 90.0,
+        "mapped_trees_osm": 60,
+        "mapped_parks_osm": 1,
+        "hospitals_count": 10,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 1,
+        "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+        "pca_x": -0.461,
+        "pca_y": -1.1
+      }
+    },
+    {
+      "ward_num": 4,
+      "ward_title": "Nagpur Chawl",
+      "area_zone": "Nagar Road",
+      "population_voters_proxy": 30280,
+      "indicators": {
+        "heat_exposure_proxy": 55.4,
+        "flood_screening_proxy": 26.0,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 72.5,
+        "composite_vulnerability_score": 48.4
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 55.88,
+        "underground_drainage_slums_pct": 98.0,
+        "mapped_trees_osm": 15,
+        "mapped_parks_osm": 6,
+        "hospitals_count": 6,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 0,
+        "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+        "pca_x": -0.355,
+        "pca_y": 0.689
+      }
+    },
+    {
+      "ward_num": 71,
+      "ward_title": "Shivaji Market, Gultekdi",
+      "area_zone": "Bibewadi",
+      "population_voters_proxy": 36764,
+      "indicators": {
+        "heat_exposure_proxy": 58.4,
+        "flood_screening_proxy": 13.2,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 48.3
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 85.0,
+        "underground_drainage_slums_pct": 85.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 0,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 0,
+        "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+        "pca_x": 0.744,
+        "pca_y": 0.769
+      }
+    },
+    {
+      "ward_num": 39,
+      "ward_title": "KEM Hospital",
+      "area_zone": "Bhawani",
+      "population_voters_proxy": 30322,
+      "indicators": {
+        "heat_exposure_proxy": 63.3,
+        "flood_screening_proxy": 12.2,
+        "water_stress_proxy": 52.0,
+        "green_deficit_proxy": 92.2,
+        "composite_vulnerability_score": 48.1
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 80.0,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 9,
+        "mapped_parks_osm": 1,
+        "hospitals_count": 6,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 0,
+        "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+        "pca_x": 0.049,
+        "pca_y": 0.348
+      }
+    },
+    {
+      "ward_num": 33,
+      "ward_title": "Dahanukar Colony",
+      "area_zone": "Warje Karvenagar",
+      "population_voters_proxy": 30856,
+      "indicators": {
+        "heat_exposure_proxy": 60.4,
+        "flood_screening_proxy": 10.0,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 47.9
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 90.0,
+        "underground_drainage_slums_pct": 92.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 2,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 0,
+        "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+        "pca_x": 0.491,
+        "pca_y": 1.218
+      }
+    },
+    {
+      "ward_num": 10,
+      "ward_title": "Pashan Sutarwadi",
+      "area_zone": "Aundh",
+      "population_voters_proxy": 29669,
+      "indicators": {
+        "heat_exposure_proxy": 57.4,
+        "flood_screening_proxy": 14.7,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 90.0,
+        "composite_vulnerability_score": 47.7
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 80.0,
+        "underground_drainage_slums_pct": 90.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 3,
+        "hospitals_count": 0,
+        "schools_count": 1,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 0,
+        "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+        "pca_x": 0.422,
+        "pca_y": 0.897
+      }
+    },
+    {
+      "ward_num": 31,
+      "ward_title": "Shivane - Warje - Ramnagar",
+      "area_zone": "Warje Karvenagar",
+      "population_voters_proxy": 37688,
+      "indicators": {
+        "heat_exposure_proxy": 58.4,
+        "flood_screening_proxy": 10.0,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 95.0,
+        "composite_vulnerability_score": 47.2
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 90.0,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 0,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 0,
+        "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+        "pca_x": 0.3,
+        "pca_y": 1.605
+      }
+    },
+    {
+      "ward_num": 35,
+      "ward_title": "Deenanath Mangeshkar Hospital",
+      "area_zone": "Warje Karvenagar",
+      "population_voters_proxy": 31643,
+      "indicators": {
+        "heat_exposure_proxy": 55.4,
+        "flood_screening_proxy": 17.7,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 79.8,
+        "composite_vulnerability_score": 46.6
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 70.0,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 7,
+        "mapped_parks_osm": 5,
+        "hospitals_count": 1,
+        "schools_count": 2,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 0,
+        "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+        "pca_x": -0.226,
+        "pca_y": 1.153
+      }
+    },
+    {
+      "ward_num": 11,
+      "ward_title": "Janwadi-Gokhalenagar",
+      "area_zone": "Ghole Road",
+      "population_voters_proxy": 31707,
+      "indicators": {
+        "heat_exposure_proxy": 51.8,
+        "flood_screening_proxy": 23.2,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 73.3,
+        "composite_vulnerability_score": 46.2
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 60.0,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 0,
+        "mapped_parks_osm": 8,
+        "hospitals_count": 2,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 0,
+        "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+        "pca_x": -0.396,
+        "pca_y": 0.883
+      }
+    },
+    {
+      "ward_num": 12,
+      "ward_title": "Model Colony",
+      "area_zone": "Ghole Road",
+      "population_voters_proxy": 26416,
+      "indicators": {
+        "heat_exposure_proxy": 46.8,
+        "flood_screening_proxy": 39.7,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 41.0,
+        "composite_vulnerability_score": 45.4
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 30.0,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 78,
+        "mapped_parks_osm": 6,
+        "hospitals_count": 8,
+        "schools_count": 3,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 2,
+        "archetype_name": "Socio-Ecological Water Stress & Slum Deficit",
+        "pca_x": -1.597,
+        "pca_y": -0.1
+      }
+    },
+    {
+      "ward_num": 24,
+      "ward_title": "Balgandharva",
+      "area_zone": "Ghole Road",
+      "population_voters_proxy": 28249,
+      "indicators": {
+        "heat_exposure_proxy": 38.2,
+        "flood_screening_proxy": 40.0,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 19.5,
+        "composite_vulnerability_score": 39.3
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 29.5,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 141,
+        "mapped_parks_osm": 3,
+        "hospitals_count": 12,
+        "schools_count": 4,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 2,
+        "archetype_name": "Socio-Ecological Water Stress & Slum Deficit",
+        "pca_x": -2.837,
+        "pca_y": -0.487
+      }
+    },
+    {
+      "ward_num": 6,
+      "ward_title": "Bopodi Gaonthan",
+      "area_zone": "Aundh",
+      "population_voters_proxy": 37475,
+      "indicators": {
+        "heat_exposure_proxy": 27.4,
+        "flood_screening_proxy": 54.2,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 10.0,
+        "composite_vulnerability_score": 39.1
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 3.6,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 178,
+        "mapped_parks_osm": 1,
+        "hospitals_count": 1,
+        "schools_count": 2,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 2,
+        "archetype_name": "Socio-Ecological Water Stress & Slum Deficit",
+        "pca_x": -2.559,
+        "pca_y": -0.992
+      }
+    },
+    {
+      "ward_num": 26,
+      "ward_title": "MIT - Kelewadi",
+      "area_zone": "Kothrud",
+      "population_voters_proxy": 31357,
+      "indicators": {
+        "heat_exposure_proxy": 40.4,
+        "flood_screening_proxy": 23.2,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 44.8,
+        "composite_vulnerability_score": 38.0
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 60.0,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 97,
+        "mapped_parks_osm": 2,
+        "hospitals_count": 2,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 2,
+        "archetype_name": "Socio-Ecological Water Stress & Slum Deficit",
+        "pca_x": -1.637,
+        "pca_y": 0.492
+      }
+    },
+    {
+      "ward_num": 57,
+      "ward_title": "Kadakmal Ali Hirabaug",
+      "area_zone": "Sahakarnagar",
+      "population_voters_proxy": 28266,
+      "indicators": {
+        "heat_exposure_proxy": 42.4,
+        "flood_screening_proxy": 23.2,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 40.0,
+        "composite_vulnerability_score": 38.0
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 60.0,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 80,
+        "mapped_parks_osm": 6,
+        "hospitals_count": 6,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 2,
+        "archetype_name": "Socio-Ecological Water Stress & Slum Deficit",
+        "pca_x": -1.874,
+        "pca_y": 0.432
+      }
+    },
+    {
+      "ward_num": 21,
+      "ward_title": "Koregaon Park",
+      "area_zone": "Dhole Patil",
+      "population_voters_proxy": 26650,
+      "indicators": {
+        "heat_exposure_proxy": 34.4,
+        "flood_screening_proxy": 44.4,
+        "water_stress_proxy": 44.0,
+        "green_deficit_proxy": 10.0,
+        "composite_vulnerability_score": 35.7
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 21.4,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 137,
+        "mapped_parks_osm": 7,
+        "hospitals_count": 11,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 2,
+        "archetype_name": "Socio-Ecological Water Stress & Slum Deficit",
+        "pca_x": -3.126,
+        "pca_y": -2.993
+      }
+    },
+    {
+      "ward_num": 5,
+      "ward_title": "Vishrantwadi Mhaske Vasti",
+      "area_zone": "Yerwada",
+      "population_voters_proxy": 40788,
+      "indicators": {
+        "heat_exposure_proxy": 36.1,
+        "flood_screening_proxy": 25.7,
+        "water_stress_proxy": 52.0,
+        "green_deficit_proxy": 31.7,
+        "composite_vulnerability_score": 34.2
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 60.0,
+        "underground_drainage_slums_pct": 90.0,
+        "mapped_trees_osm": 130,
+        "mapped_parks_osm": 1,
+        "hospitals_count": 2,
+        "schools_count": 1,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 2,
+        "archetype_name": "Socio-Ecological Water Stress & Slum Deficit",
+        "pca_x": -2.048,
+        "pca_y": -1.414
+      }
+    },
+    {
+      "ward_num": 8,
+      "ward_title": "Aundh ITI",
+      "area_zone": "Aundh",
+      "population_voters_proxy": 31933,
+      "indicators": {
+        "heat_exposure_proxy": 44.6,
+        "flood_screening_proxy": 12.2,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 35.3,
+        "composite_vulnerability_score": 34.2
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 80.0,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 96,
+        "mapped_parks_osm": 5,
+        "hospitals_count": 4,
+        "schools_count": 7,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 2,
+        "archetype_name": "Socio-Ecological Water Stress & Slum Deficit",
+        "pca_x": -2.375,
+        "pca_y": 0.716
+      }
+    },
+    {
+      "ward_num": 37,
+      "ward_title": "Shaniwarwada",
+      "area_zone": "Kasba Vishrambagwada ",
+      "population_voters_proxy": 33922,
+      "indicators": {
+        "heat_exposure_proxy": 31.4,
+        "flood_screening_proxy": 23.2,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 10.0,
+        "composite_vulnerability_score": 29.6
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 60.0,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 221,
+        "mapped_parks_osm": 1,
+        "hospitals_count": 5,
+        "schools_count": 2,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 2,
+        "archetype_name": "Socio-Ecological Water Stress & Slum Deficit",
+        "pca_x": -3.186,
+        "pca_y": 0.022
+      }
+    },
+    {
+      "ward_num": 52,
+      "ward_title": "Vaikunth Smashanbhoomi",
+      "area_zone": "Tilak Road",
+      "population_voters_proxy": 34703,
+      "indicators": {
+        "heat_exposure_proxy": 31.4,
+        "flood_screening_proxy": 23.2,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 10.0,
+        "composite_vulnerability_score": 29.6
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 60.0,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 547,
+        "mapped_parks_osm": 4,
+        "hospitals_count": 7,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 2,
+        "archetype_name": "Socio-Ecological Water Stress & Slum Deficit",
+        "pca_x": -3.186,
+        "pca_y": 0.022
+      }
+    },
+    {
+      "ward_num": 14,
+      "ward_title": "Deccan College",
+      "area_zone": "Yerwada",
+      "population_voters_proxy": 32284,
+      "indicators": {
+        "heat_exposure_proxy": 33.6,
+        "flood_screening_proxy": 14.7,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 23.0,
+        "composite_vulnerability_score": 29.4
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 80.0,
+        "underground_drainage_slums_pct": 90.0,
+        "mapped_trees_osm": 134,
+        "mapped_parks_osm": 3,
+        "hospitals_count": 4,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 2,
+        "archetype_name": "Socio-Ecological Water Stress & Slum Deficit",
+        "pca_x": -2.512,
+        "pca_y": -0.017
+      }
+    },
+    {
+      "ward_num": 13,
+      "ward_title": "Narveer Tanajiwadi",
+      "area_zone": "Ghole Road",
+      "population_voters_proxy": 27524,
+      "indicators": {
+        "heat_exposure_proxy": 31.7,
+        "flood_screening_proxy": 17.7,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 18.2,
+        "composite_vulnerability_score": 29.0
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 70.0,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 117,
+        "mapped_parks_osm": 7,
+        "hospitals_count": 3,
+        "schools_count": 1,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 2,
+        "archetype_name": "Socio-Ecological Water Stress & Slum Deficit",
+        "pca_x": -2.917,
+        "pca_y": 0.308
+      }
+    },
+    {
+      "ward_num": 38,
+      "ward_title": "Kasba Peth",
+      "area_zone": "Kasba Vishrambagwada ",
+      "population_voters_proxy": 35904,
+      "indicators": {
+        "heat_exposure_proxy": 35.2,
+        "flood_screening_proxy": 10.0,
+        "water_stress_proxy": 52.0,
+        "green_deficit_proxy": 26.8,
+        "composite_vulnerability_score": 27.6
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 100.0,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 133,
+        "mapped_parks_osm": 2,
+        "hospitals_count": 3,
+        "schools_count": 1,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 2,
+        "archetype_name": "Socio-Ecological Water Stress & Slum Deficit",
+        "pca_x": -2.824,
+        "pca_y": -0.48
+      }
+    },
+    {
+      "ward_num": 22,
+      "ward_title": "Naidu Hospital",
+      "area_zone": "Dhole Patil",
+      "population_voters_proxy": 28145,
+      "indicators": {
+        "heat_exposure_proxy": 26.6,
+        "flood_screening_proxy": 25.9,
+        "water_stress_proxy": 44.0,
+        "green_deficit_proxy": 15.5,
+        "composite_vulnerability_score": 27.3
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 55.1,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 169,
+        "mapped_parks_osm": 0,
+        "hospitals_count": 0,
+        "schools_count": 0,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 2,
+        "archetype_name": "Socio-Ecological Water Stress & Slum Deficit",
+        "pca_x": -3.123,
+        "pca_y": -2.317
+      }
+    },
+    {
+      "ward_num": 16,
+      "ward_title": "Subhashnagar",
+      "area_zone": "Yerwada",
+      "population_voters_proxy": 25716,
+      "indicators": {
+        "heat_exposure_proxy": 26.4,
+        "flood_screening_proxy": 13.5,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 10.0,
+        "composite_vulnerability_score": 24.5
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 80.0,
+        "underground_drainage_slums_pct": 95.0,
+        "mapped_trees_osm": 1842,
+        "mapped_parks_osm": 3,
+        "hospitals_count": 1,
+        "schools_count": 1,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 2,
+        "archetype_name": "Socio-Ecological Water Stress & Slum Deficit",
+        "pca_x": -3.217,
+        "pca_y": 0.084
+      }
+    },
+    {
+      "ward_num": 7,
+      "ward_title": "Pune University",
+      "area_zone": "Aundh",
+      "population_voters_proxy": 29448,
+      "indicators": {
+        "heat_exposure_proxy": 27.4,
+        "flood_screening_proxy": 10.0,
+        "water_stress_proxy": 60.0,
+        "green_deficit_proxy": 10.0,
+        "composite_vulnerability_score": 23.6
+      },
+      "evidence": {
+        "stormwater_drain_coverage_pct": 90.0,
+        "underground_drainage_slums_pct": 100.0,
+        "mapped_trees_osm": 381,
+        "mapped_parks_osm": 5,
+        "hospitals_count": 1,
+        "schools_count": 2,
+        "forecast_max_temp_c": 34.349998474121094,
+        "forecast_precipitation_sum_mm": 0.6000000238418579
+      },
+      "confidence": "Medium (Model Forecast & Verified OpenCity Proxies)",
+      "limitations_and_gaps": [
+        "Local stormwater pipe condition & blockages unmeasured",
+        "Historical flood complaints not geocoded",
+        "Groundwater levels derived from district-level trends, not local well sensors"
+      ],
+      "ai_archetype": {
+        "cluster_id": 2,
+        "archetype_name": "Socio-Ecological Water Stress & Slum Deficit",
+        "pca_x": -3.418,
+        "pca_y": 0.444
+      }
+    }
+  ]
+}

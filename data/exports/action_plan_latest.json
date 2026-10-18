@@ -1,0 +1,84 @@
+{
+  "generated_at_utc": "2026-10-18T05:03:19.859740+00:00",
+  "pilot_area": "Pune Pilot, Maharashtra, India",
+  "target_ward": "Ward #1: Lohegaon Airport",
+  "budget_constraints": {
+    "total_budget_inr": 50000.0,
+    "allocated_spend_inr": 0.0,
+    "remaining_budget_inr": 50000.0,
+    "equity_weight_factor": 1.0
+  },
+  "performance_metrics": {
+    "total_interventions_selected": 0,
+    "total_units_allocated": 0,
+    "total_benefit_points": 0.0,
+    "workforce_demand_person_months": 0.0,
+    "estimated_implementation_horizon_months": 0,
+    "solver_status": "Optimal (Zero Allocation)",
+    "solver_name": "PuLP-CBC"
+  },
+  "portfolio": [],
+  "rejected_candidates": [
+    {
+      "id": "INT-HEAT-01",
+      "title": "Urban Shade Corridors & Native Canopy Planting",
+      "category": "Heat & Urban Cooling",
+      "cost_per_unit_inr": 250000,
+      "reason": "BUDGET_INSUFFICIENT: Unit cost (INR 250,000) exceeds available budget (INR 50,000.0)."
+    },
+    {
+      "id": "INT-HEAT-02",
+      "title": "Cool Roof Reflective Coating Pilots in High-Density Areas",
+      "category": "Heat & Urban Cooling",
+      "cost_per_unit_inr": 120000,
+      "reason": "BUDGET_INSUFFICIENT: Unit cost (INR 120,000) exceeds available budget (INR 50,000.0)."
+    },
+    {
+      "id": "INT-HEAT-03",
+      "title": "Shaded Bus Stops & Public Cooling Kiosks with Drinking Water",
+      "category": "Heat & Urban Cooling",
+      "cost_per_unit_inr": 180000,
+      "reason": "BUDGET_INSUFFICIENT: Unit cost (INR 180,000) exceeds available budget (INR 50,000.0)."
+    },
+    {
+      "id": "INT-FLOOD-01",
+      "title": "Critical Stormwater Drain Desilting & Inlet Clearing",
+      "category": "Flood & Stormwater",
+      "cost_per_unit_inr": 350000,
+      "reason": "BUDGET_INSUFFICIENT: Unit cost (INR 350,000) exceeds available budget (INR 50,000.0)."
+    },
+    {
+      "id": "INT-FLOOD-02",
+      "title": "Bioretention Rain Gardens & Permeable Soakaways",
+      "category": "Flood & Stormwater",
+      "cost_per_unit_inr": 280000,
+      "reason": "BUDGET_INSUFFICIENT: Unit cost (INR 280,000) exceeds available budget (INR 50,000.0)."
+    },
+    {
+      "id": "INT-FLOOD-03",
+      "title": "Neighborhood Retention Basins & Nalla Naturalization",
+      "category": "Flood & Stormwater",
+      "cost_per_unit_inr": 850000,
+      "reason": "BUDGET_INSUFFICIENT: Unit cost (INR 850,000) exceeds available budget (INR 50,000.0)."
+    },
+    {
+      "id": "INT-WATER-01",
+      "title": "Decentralized Rainwater Harvesting in Municipal Schools & Complexes",
+      "category": "Water Security",
+      "cost_per_unit_inr": 220000,
+      "reason": "BUDGET_INSUFFICIENT: Unit cost (INR 220,000) exceeds available budget (INR 50,000.0)."
+    },
+    {
+      "id": "INT-WATER-02",
+      "title": "Acoustic Pipeline Leak Detection & Pressure Management",
+      "category": "Water Security",
+      "cost_per_unit_inr": 400000,
+      "reason": "BUDGET_INSUFFICIENT: Unit cost (INR 400,000) exceeds available budget (INR 50,000.0)."
+    }
+  ],
+  "assumptions_and_limitations": [
+    "Budget is lower than the minimum unit cost of any candidate intervention.",
+    "Zero actions were selected; no unbacked or fractional commitments were made.",
+    "Costs and benefit points are engineering screening proxies, not contractual tender costs."
+  ]
+}

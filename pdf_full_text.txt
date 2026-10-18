@@ -1,0 +1,545 @@
+=== PAGE 1 ===
+CLIMATEADAPT PUNE  |  DETAILED IMPLEMENTATION GUIDE 
+Working specification • Validate all data sources before making decisions 
+ClimateAdapt Pune 
+End-to-End Implementation Guide 
+From climate data to climate action 
+Detailed project, data, analytics, optimization, dashboard and reporting specification 
+Pilot: Pune, Maharashtra, India 
+Prepared: 17 October 2026 
+ 
+ 
+
+
+=== PAGE 2 ===
+CLIMATEADAPT PUNE  |  DETAILED IMPLEMENTATION GUIDE 
+Working specification • Validate all data sources before making decisions 
+How to use this guide 
+This is a complete working specification, not a claim that every feature has already been implemented or every dataset has 
+been downloaded. Work through the phases in order, preserve original files, and only activate analyses when the required 
+data and metadata are available. 
+Project status reflected here: OSM GeoJSON layers and some OpenCity drainage resources have been reported downloaded; 
+an official 2011 Census workbook and Maharashtra groundwater resource report have been located/downloaded; the 
+Open-Meteo API test succeeded. Sentinel-2 and DEM downloads, local flood records and local groundwater monitoring data 
+are not confirmed. 
+Table of contents 
+1. 
+1. Project overview 
+2. 
+2. Feature specification 
+3. 
+3. Data inventory and current collection status 
+4. 
+4. Recommended folder structure 
+5. 
+5. End-to-end implementation workflow 
+6. 
+6. Indicator framework 
+7. 
+7. Intervention catalogue and planning logic 
+8. 
+8. Database and API design 
+9. 
+9. Dashboard design 
+10. 10. PDF report contents 
+11. 11. Testing and acceptance criteria 
+12. 12. Responsible use, uncertainty and known limitations 
+13. 13. Suggested development order for the current project 
+14. 14. Suggested README and demo narrative 
+15. 15. Reference sources and attribution 
+ 
+ 
+
+
+=== PAGE 3 ===
+CLIMATEADAPT PUNE  |  DETAILED IMPLEMENTATION GUIDE 
+Working specification • Validate all data sources before making decisions 
+1. Project overview 
+Purpose 
+ClimateAdapt Pune is an AI-assisted climate adaptation action planner for a defined pilot area in Pune. It combines climate, 
+geographic, infrastructure, environmental and population data to identify potential vulnerability, explain the evidence 
+behind it, recommend practical interventions, compare plans under a budget, and produce a transparent report and 
+dashboard. 
+Core principle 
+The system must distinguish measured or officially reported facts from model forecasts, proxies, assumptions and missing 
+data. A map layer being present does not prove that infrastructure is functional; absence of complaint records does not 
+mean there were no floods; a model estimate is not a field measurement. 
+Pilot scope 
+Start with the current Pune pilot bounding box (approximately 18.50–18.60 latitude and 73.80–73.90 longitude). Keep the 
+geographic extent configurable so the system can later support another ward, campus, housing society or city. 
+Primary users 
+Municipal planners, ward officers, campus or society administrators, climate-resilience teams, researchers and community 
+organizations. 
+Main outputs 
+A data-quality summary, vulnerability indicators with evidence, an interactive map, ranked interventions, a budget-aware 
+action plan, scenario comparison, downloadable report, and a record of assumptions and data freshness. 
+ 
+2. Feature specification 
+A. Geographic project setup 
+Allow a user to select a study area using a ward boundary, uploaded GeoJSON, or a configured bounding box. Show the 
+study-area boundary, coordinate reference system, area, source and last-updated date. Validate geometry, repair invalid 
+polygons where safe, and clip spatial layers to the study area. 
+B. Data-source and freshness panel 
+For each layer show source, download/retrieval date, period covered, geographic resolution, units, license/attribution, 
+processing status and confidence. Flag stale, incomplete, mismatched or unavailable data. Provide a source register and 
+data dictionary. 
+C. Heat exposure and heat-vulnerability analysis 
+Use temperature, apparent temperature, humidity, land-cover/vegetation, built-up context and population where 
+compatible data exist. Summarize hot periods and seasonal patterns; map heat-related proxies such as low vegetation 
+cover and high built-up density. Keep exposure separate from sensitivity and adaptive capacity. Do not label the result as a 
+validated heat-risk prediction without validation data. 
+D. Flood and intense-rainfall screening 
+Use rainfall totals/probability, elevation/terrain derivatives when available, waterways, drainage infrastructure, 
+impervious/built-up proxies and verified historical flood reports if available. Show low-lying areas and drainage proximity 
+as screening indicators, not proof of flooding. Mark complaint history and drain condition as missing until supported by 
+records. 
+
+
+=== PAGE 4 ===
+CLIMATEADAPT PUNE  |  DETAILED IMPLEMENTATION GUIDE 
+Working specification • Validate all data sources before making decisions 
+E. Water-stress and drought screening 
+Use rainfall history, evapotranspiration, soil-moisture model estimates, groundwater resource reports and verified water-
+supply information. Distinguish district/taluka resource assessments from local monitoring-well measurements. Where 
+local groundwater levels are absent, present regional context and clearly label local groundwater status as unavailable. 
+F. Green-cover and nature-based resilience 
+Use Sentinel-2 imagery when downloaded and appropriate cloud-free coverage is confirmed. Derive NDVI from B08 (near-
+infrared) and B04 (red) bands using (B08 - B04) / (B08 + B04). Map vegetation/green-space proxies and OSM parks, 
+gardens, grass and woodlands. Explain that NDVI is a vegetation signal, not a direct measure of tree health, shade quality or 
+public accessibility. 
+G. Population and vulnerable groups 
+Use official census or other authoritative population data only when the geographic units match or can be defensibly 
+crosswalked. Show total population and available age-group indicators. Never divide city population equally among wards 
+or assume historic census boundaries equal current ward boundaries. If a defensible match is not possible, mark the 
+statistic unavailable. 
+H. Infrastructure and essential services 
+Map OSM buildings, roads, schools, hospitals, clinics, drinking-water points, waterways, water bodies, parks and green 
+spaces. Include downloaded official/OpenCity stormwater-drain and coverage datasets after inspecting file format, 
+metadata and fields. Presence of a drain line or coverage polygon does not establish condition, capacity, blockage status or 
+actual service performance. 
+I. Evidence-backed explanations 
+Every indicator and recommendation should show a human-readable explanation, the input layers used, dates and 
+resolution, known gaps, and whether it is an observation, proxy, forecast or assumption. Let users inspect evidence rather 
+than presenting an unexplained single score. 
+J. Intervention catalogue 
+Provide editable interventions such as shade trees/corridors, cool roofs, shaded bus stops/walking routes, rainwater 
+harvesting, permeable surfaces, rain gardens, drainage inspection and maintenance, stormwater inlet clearing, 
+detention/retention areas, restoration of waterways, water conservation, drought contingency planning and 
+protection/restoration of green spaces. Each entry should have applicability conditions, expected benefits, estimated cost 
+range, lead time, maintenance needs, responsible stakeholder and evidence source. 
+K. Budget-aware action planning 
+Let users set a budget, time horizon, constraints, intervention eligibility and priorities. Rank interventions using 
+transparent weighted criteria such as risk reduction, population benefit, equity, cost, feasibility, co-benefits and 
+maintenance. Provide a simple baseline ranking first; optionally use an optimization solver to choose a portfolio under 
+budget and constraints. Display the rationale and trade-offs. 
+L. Scenario simulator 
+Allow users to change assumptions such as a heatwave, heavy-rainfall scenario, vegetation improvement, water-supply 
+restriction or budget change. Compare baseline and proposed actions using clearly labelled proxy indicators. Never imply a 
+physically validated impact simulation unless calibrated models and suitable local data exist. 
+M. Equity and fairness 
+Show which neighborhoods or sectors benefit, where data are missing, and whether the plan directs resources only to 
+areas with better data. If population or vulnerability data are incomplete, surface that limitation. Provide configurable 
+equity weights and explain how they affect rankings. 
+
+
+=== PAGE 5 ===
+CLIMATEADAPT PUNE  |  DETAILED IMPLEMENTATION GUIDE 
+Working specification • Validate all data sources before making decisions 
+N. Interactive dashboard and map 
+Provide overview cards, time-series charts, layer toggles, a map legend, filters, data-source details, ward/sector drill-down, 
+before/after scenario comparison and an evidence panel. Include accessible colors, readable labels, mobile-friendly layout 
+and a clear explanation of uncertainty. 
+O. Report generation and exports 
+Generate a downloadable PDF and CSV/GeoJSON exports where relevant. The report should include study-area scope, date, 
+sources, methods, data-quality notes, indicators, maps/charts, prioritized actions, costs, assumptions, uncertainty, 
+limitations and next data-collection steps. 
+P. Administration and auditability 
+Keep configuration separate from code; log ingestion time and processing outcomes; version indicator definitions and 
+action-plan runs; validate uploaded files; protect secrets in environment variables; avoid exposing private data; and retain 
+enough metadata to reproduce a result. 
+ 
+3. Data inventory and current collection status 
+Ward boundary 
+Preferred source: official municipal ward boundaries or a verified boundary file. If unavailable, the pilot bounding box can 
+be used temporarily and must be labelled as a study extent, not an official ward boundary. 
+OpenStreetMap 
+Files already reported saved under data/raw/osm/: parks.geojson, buildings.geojson, roads.geojson, trees.geojson, 
+schools.geojson, hospitals.geojson, waterways.geojson, water_bodies.geojson, clinics.geojson, gardens.geojson, 
+grass.geojson, woodlands.geojson, drinking_water.geojson. Inspect feature counts, geometry types, timestamps if available 
+and coverage before analysis. 
+Drainage 
+Stormwater-drain resources and ward-level drainage CSVs were reported downloaded from OpenCity. Inspect actual 
+filenames, formats, columns, units, spatial coverage, provenance and license before integrating. Do not assume all 
+downloaded resources are valid GeoJSON; KML/KMZ or tabular files may need conversion. 
+Weather 
+Open-Meteo Forecast API test succeeded. The response contained current, hourly and daily variables for coordinates 
+18.523726, 73.86876, including temperature, relative humidity, apparent temperature, precipitation, cloud cover, wind, 
+evapotranspiration, ET0, soil moisture estimates and UV index. The initial generated request used a different coordinate 
+pair; use a documented, intentional pilot point and keep its coordinates in metadata. Forecast data must remain separate 
+from historical climate data. 
+Population 
+An official Census Digital Library 2011 Primary Census Abstract file was found for Pune district. Before use, check sheet 
+names, geographic level and whether its ward/village/town units align with the current study area. Do not infer current 
+pilot population from a mismatched geography. 
+Groundwater 
+A Maharashtra Groundwater Resource Estimation report for 2024 was downloaded, and a Pune row was located. Interpret 
+values only after confirming the exact column headers and geographic level. Regional resource estimates are not equivalent 
+to current groundwater levels in local wells. 
+
+
+=== PAGE 6 ===
+CLIMATEADAPT PUNE  |  DETAILED IMPLEMENTATION GUIDE 
+Working specification • Validate all data sources before making decisions 
+Sentinel-2 
+A 15 October 2026 Sentinel-2 L2A product was identified, with product-level cloud cover reported around 8.1%. It is not 
+confirmed that the product was downloaded or that the pilot area is cloud-free. Inspect pilot-area coverage before 
+calculating NDVI. 
+DEM/elevation 
+No confirmed DEM download is recorded. Obtain a suitable elevation raster from a credible source, document resolution 
+and vertical datum, and derive slope/flow-related indicators only after validating the raster. 
+Missing or unverified 
+Historical flood complaint records, local drain blockage/condition, local groundwater-monitoring time series, and some 
+OSM layers (such as drains, wells, community centres and transport stops) have not been confirmed. Treat these as 
+missing, not zero. 
+ 
+4. Recommended folder structure 
+Project layout 
+climateadapt-pune/ 
+  data/ 
+    raw/ 
+      wards/ 
+      weather/ 
+      osm/ 
+      sentinel2/ 
+      dem/ 
+      population/ 
+      official_reports/ 
+    processed/ 
+    exports/ 
+  backend/ 
+    app/ 
+      main.py 
+      database.py 
+      models.py 
+      schemas.py 
+    routes/ 
+  scripts/ 
+    fetch_weather.py 
+    download_osm_notes.md 
+    validate_data.py 
+    process_indicators.py 
+    build_action_plan.py 
+    generate_report.py 
+  frontend/ 
+  reports/ 
+  requirements.txt 
+  .env 
+  README.md 
+ 
+Data handling rule 
+Keep downloaded originals unchanged under data/raw/. Save cleaned or transformed datasets under data/processed/. 
+Save user-facing tables, maps and reports under data/exports/ or reports/. Never silently overwrite raw source files. 
+ 
+
+
+=== PAGE 7 ===
+CLIMATEADAPT PUNE  |  DETAILED IMPLEMENTATION GUIDE 
+Working specification • Validate all data sources before making decisions 
+5. End-to-end implementation workflow 
+Phase 1 — Establish the study area 
+Confirm the bounding box or official boundary, coordinate system and pilot metadata. Add a project configuration file for 
+area name, extent, timezone, source locations and run date. Validate that all later layers are clipped to the same study area. 
+Phase 2 — Inventory and validate raw files 
+Create a data manifest listing filename, type, source, retrieval date, coverage, CRS, feature/row count and status. Run 
+scripts/validate_data.py to check JSON/GeoJSON validity, CSV/XLSX/PDF presence, empty files, invalid geometries, 
+duplicate records, missing fields, coordinate ranges and obvious unit problems. Report issues instead of silently deleting 
+data. 
+Phase 3 — Fetch weather 
+Use scripts/fetch_weather.py to request Open-Meteo data with requests. Save the complete response as 
+data/raw/weather/pune_forecast_raw.json, plus hourly and daily CSVs. Include retrieval timestamp, coordinates, timezone 
+and data_type='forecast'. Handle HTTP failures, timeouts and malformed responses. Do not describe forecast output as 
+historical observations. 
+Phase 4 — Inspect OSM and official infrastructure data 
+Load each GeoJSON and report counts and geometry types. Inspect OpenCity stormwater resources and drainage CSV 
+headers before transforming. Reproject layers to a suitable projected CRS for area/distance calculations; retain source CRS 
+metadata. Avoid using latitude/longitude degrees for planar area or distance calculations. 
+Phase 5 — Acquire historical climate and environmental layers 
+Fetch historical weather separately from a suitable historical API/source and define a meaningful time window (for 
+example, multiple years where available). Record data provenance and whether values are reanalysis/modelled or station 
+observations. Inspect Sentinel-2 image coverage and clouds; derive NDVI only after downloading the bands. Obtain a 
+suitable DEM if terrain-based flood screening is in scope. 
+Phase 6 — Population and groundwater validation 
+Inspect Census workbook sheets, geography and columns; map records only where a reliable boundary correspondence 
+exists. Inspect groundwater report headings and geographic unit before parsing the Pune row. Record unavailable local 
+measures as missing. 
+Phase 7 — Clean and standardize 
+Standardize dates to ISO format, units, column names, null handling and CRS. Deduplicate records where appropriate. 
+Preserve raw values and add provenance fields. Distinguish true zero from null/missing. Create a data-quality report. 
+Phase 8 — Database and spatial storage 
+For a small prototype, GeoJSON/CSV files may be sufficient initially. For multi-layer queries and a production-style app, use 
+PostgreSQL with PostGIS. Create tables for study areas, data sources, weather observations/forecasts, infrastructure 
+features, population statistics, indicators, interventions, action-plan runs and audit metadata. Add spatial indexes and 
+foreign keys. Use migrations or repeatable SQL scripts. 
+Phase 9 — Calculate indicators 
+Implement reproducible indicator functions in scripts/process_indicators.py. Store formula, input layer versions, spatial 
+unit, time window, normalization method, output units and limitations with every indicator. Use min-max or percentile 
+scaling only when appropriate and document the reference population. Do not mix incomparable scales without 
+normalization. 
+Phase 10 — Build the action plan 
+In scripts/build_action_plan.py, combine evidence-backed vulnerability indicators with intervention eligibility, cost 
+estimates and benefit assumptions. Start with a transparent weighted ranking. Add budget optimization only after inputs 
+
+
+=== PAGE 8 ===
+CLIMATEADAPT PUNE  |  DETAILED IMPLEMENTATION GUIDE 
+Working specification • Validate all data sources before making decisions 
+and constraints are defined. Generate a machine-readable action-plan JSON/CSV containing scores, reasons, costs, 
+dependencies and confidence. 
+Phase 11 — Generate a mini-report early 
+Use scripts/generate_report.py to create a small evidence-led Pune report before building the full dashboard. Include 
+current data inventory, sample maps/charts, a few indicators, candidate interventions and missing-data warnings. This 
+catches data issues early. 
+Phase 12 — Backend API 
+Use FastAPI or the framework already selected in the project. Create endpoints for project metadata, data-source status, 
+indicators, map features, interventions, action-plan runs, scenario comparisons and report downloads. Validate 
+request/response schemas, handle errors and document the API. 
+Phase 13 — Frontend dashboard 
+Build a React dashboard if that is the chosen frontend. Create a map view, overview page, vulnerability detail, intervention 
+planner, scenario comparison and report/export area. Fetch all displayed values from the API and label the source/time 
+window. 
+Phase 14 — Test, document and demonstrate 
+Test data ingestion, spatial alignment, missing-data handling, calculations, budget constraints, API responses, exports and 
+dashboard states. Prepare a demo scenario, sample report, README, architecture diagram and known-limitations list. 
+ 
+6. Indicator framework 
+Heat screening 
+Candidate inputs: maximum temperature/apparent temperature, frequency of hot days if historical data support it, 
+vegetation/NDVI, built-up density, shade proxies and population exposure. Potential output: heat exposure score and 
+separate sensitivity/adaptive-capacity indicators. Do not infer individual health outcomes. 
+Flood screening 
+Candidate inputs: rainfall intensity/totals, DEM-derived low-lying areas and slope, waterways, drainage 
+proximity/coverage and verified flood history. Potential output: screening priority, not a calibrated flood probability unless 
+a validated hydrologic/hydraulic model exists. 
+Water stress 
+Candidate inputs: historical precipitation deficit, ET0, soil moisture estimates, verified water supply information and 
+groundwater resource context. Potential output: water-stress screening with a clear distinction between regional and local 
+evidence. 
+Green-cover deficit 
+Candidate inputs: NDVI, land cover, mapped parks/gardens/woodlands and population distribution. Potential output: 
+green-cover proxy or access-gap estimate. Do not claim public accessibility without access/entrance data. 
+Equity 
+Where population or vulnerability indicators are reliable, compare who benefits and whether high-need areas are served. 
+Keep a visible warning where demographic data are old, coarse or mismatched. 
+Composite score 
+If a composite score is used, publish the formula, weights, normalization, missing-data policy and sensitivity to weights. 
+Provide component scores beside the composite. Avoid false precision such as reporting several decimal places for weak 
+proxies. 
+
+
+=== PAGE 9 ===
+CLIMATEADAPT PUNE  |  DETAILED IMPLEMENTATION GUIDE 
+Working specification • Validate all data sources before making decisions 
+ 
+7. Intervention catalogue and planning logic 
+Heat actions 
+Tree/shade corridors; cool-roof pilots; shaded public waiting areas; shade for walking routes; protection of existing tree 
+canopy; heat-risk communication. Check water availability, species suitability, utility conflicts, maintenance and land 
+ownership. 
+Flood actions 
+Drain inspection/maintenance; inlet cleaning; rain gardens; permeable surfaces; detention/retention areas; restoration of 
+natural drainage corridors; targeted drainage upgrades after engineering review. Do not recommend construction based 
+only on proximity or a coarse map. 
+Water actions 
+Rainwater harvesting; leak detection and repair; water-use efficiency; drought contingency plans; groundwater 
+monitoring; recharge measures only after hydrogeological assessment; protection of local water bodies. 
+Green/nature actions 
+Protect existing green spaces; native planting; restore degraded patches; connect green corridors; create small shade/rest 
+areas. Track maintenance and survival rather than counting planting events alone. 
+Ranking criteria 
+Risk reduction, population served, equity, cost, feasibility, implementation time, co-benefits, maintenance burden, evidence 
+strength and reversibility. Weights should be configurable and visible. 
+Budget optimization 
+Decision variable x_i indicates whether intervention i is selected (or its scale). A simple formulation maximizes total 
+weighted benefit subject to sum(cost_i × x_i) <= budget and eligibility/dependency constraints. Benefit and cost estimates 
+must be labelled as estimates and should be adjustable. 
+Scenario comparison 
+Compare baseline and intervention portfolio under the same assumptions. Display change in proxy indicators, budget used, 
+people/areas potentially served, confidence and unresolved risks. Avoid presenting proxy deltas as guaranteed real-world 
+outcomes. 
+ 
+8. Database and API design 
+Suggested entities 
+Project/StudyArea; DataSource; DataAsset; WeatherRecord; SpatialFeature; PopulationStatistic; IndicatorDefinition; 
+IndicatorResult; Intervention; InterventionCostAssumption; ActionPlan; ActionPlanItem; Scenario; ReportArtifact; 
+ProcessingRun. 
+Important fields 
+Each data asset should include source_url, provider, retrieved_at, period_start/end, geometry/CRS, resolution, license, 
+data_type, processing_version and quality_status. Indicator results should include formula_version, spatial_unit, 
+input_asset_ids, value, unit, confidence/quality label and limitations. 
+
+
+=== PAGE 10 ===
+CLIMATEADAPT PUNE  |  DETAILED IMPLEMENTATION GUIDE 
+Working specification • Validate all data sources before making decisions 
+API endpoints 
+GET /health; GET /api/project; GET /api/data-sources; GET /api/indicators; GET /api/map-layers; GET 
+/api/interventions; POST /api/action-plans; POST /api/scenarios/compare; GET /api/reports; GET 
+/api/reports/{id}/download. Adapt prefixes and conventions to the existing app. 
+Security 
+Keep credentials in .env and never commit secrets. Validate uploads and file types. Limit file sizes, use parameterized SQL, 
+set CORS deliberately, and avoid exposing private information or internal file paths. 
+ 
+9. Dashboard design 
+Overview 
+Study area, last data refresh, source completeness, major screening indicators, budget and action-plan status. Every card 
+should show period, units and source or link to details. 
+Map explorer 
+Toggle heat, flood-screening, water-stress, green-cover and infrastructure layers. Include legend, opacity controls, click-to-
+inspect features and layer metadata. Use clear labels for unavailable or proxy layers. 
+Risk details 
+Show component scores, underlying evidence, data resolution, known limitations and missing-data warnings. Let users 
+compare neighborhoods only when spatial units and inputs are comparable. 
+Action planner 
+Budget control, priority weights, time horizon, eligible interventions and constraints. Display selected actions, estimated 
+costs, expected proxy benefits, equity distribution and why each item was selected. 
+Scenario studio 
+Change assumptions and compare baseline with alternatives. Include side-by-side indicators and a clear statement of 
+which parts are modelled, assumed or observed. 
+Reports and exports 
+Generate PDF, CSV and appropriate spatial exports. Include the exact run timestamp and configuration so a result can be 
+reproduced. 
+ 
+10. PDF report contents 
+Recommended sections 
+Title and study area; executive summary; scope and methodology; data inventory and source dates; data-quality and 
+coverage map; heat screening; flood screening; water-stress screening; green-cover analysis; population/equity 
+assessment; prioritized interventions; budget and scenario comparison; implementation roadmap; limitations and 
+uncertainty; missing-data collection plan; sources and attribution. 
+Visuals 
+Study-area map, layer coverage, temperature time series, rainfall chart, NDVI/green-cover map where available, 
+infrastructure map, indicator comparison chart, action portfolio and budget breakdown. 
+
+
+=== PAGE 11 ===
+CLIMATEADAPT PUNE  |  DETAILED IMPLEMENTATION GUIDE 
+Working specification • Validate all data sources before making decisions 
+Reproducibility 
+Report should include project configuration, processing run ID, indicator formula versions, data timestamps, intervention 
+cost assumptions and source links. 
+ 
+11. Testing and acceptance criteria 
+Ingestion tests 
+A valid source downloads and parses; failed requests produce useful errors; original data are retained; timestamps and 
+metadata are recorded. 
+Geospatial tests 
+CRS is recognized; invalid geometries are reported; layers align spatially; area/distance calculations use a projected CRS; 
+data are clipped to the pilot area. 
+Data-quality tests 
+Nulls are not silently converted to zero; duplicates and unexpected units are flagged; forecast and historical data are 
+separated; geographic mismatch is detected. 
+Indicator tests 
+Known sample inputs produce expected outputs; formulas and normalization are versioned; missing input handling is 
+deterministic; component scores are inspectable. 
+Planner tests 
+Selected interventions do not exceed the budget; dependencies and eligibility are respected; rankings respond predictably 
+to weight changes; cost assumptions are visible. 
+Report/API/UI tests 
+Report exports open correctly; API schemas are validated; errors are handled; maps show legends; loading/empty/error 
+states are clear; accessibility and basic responsive layout are checked. 
+Acceptance definition 
+A demonstrable MVP should ingest and validate real sourced data, show at least one reliable indicator and one explicitly 
+labelled proxy, explain its evidence, produce a constrained action plan, compare a scenario, and generate a report without 
+fabricating missing values. 
+ 
+12. Responsible use, uncertainty and known limitations 
+No invented data 
+Never create fake drain conditions, flood events, groundwater levels, ward populations or vegetation values to fill gaps. Use 
+null/missing and explain what data would resolve the gap. 
+No overclaiming 
+A forecast is not an observation. A proxy score is not a validated probability. Regional groundwater estimates are not local 
+well measurements. OSM completeness varies. Satellite cloud cover must be checked over the study area. 
+
+
+=== PAGE 12 ===
+CLIMATEADAPT PUNE  |  DETAILED IMPLEMENTATION GUIDE 
+Working specification • Validate all data sources before making decisions 
+Uncertainty 
+Use qualitative confidence labels tied to source quality, freshness, spatial resolution and validation. If a numeric confidence 
+score is used, define how it is calculated and validate it. 
+Human review 
+Engineering decisions such as drainage upgrades, recharge interventions or construction require qualified local 
+assessment and approvals. The tool supports planning; it does not replace official warnings or engineering design. 
+Privacy and equity 
+Use aggregated population data where possible. Do not expose household-level sensitive information. Track which 
+communities are underrepresented because of missing data and allow planners to flag those gaps. 
+ 
+13. Suggested development order for the current project 
+First 
+Inspect and validate the data files already collected. Keep the current folder structure. 
+Second 
+Make scripts/fetch_weather.py save Open-Meteo raw JSON plus hourly/daily CSVs, including source and retrieval 
+metadata. 
+Third 
+Inspect OpenCity stormwater resources and the Census workbook, recording actual filenames, formats and column 
+headers. 
+Fourth 
+Confirm whether Sentinel-2 and a DEM have actually been downloaded; do not treat identified products as downloaded 
+assets. 
+Fifth 
+Build validate_data.py and a machine-readable data manifest. 
+Sixth 
+Create a small first-pass indicator pipeline with only supported inputs and explicit missing-data handling. 
+Seventh 
+Generate an early mini-report before investing time in a complex dashboard. 
+Eighth 
+Build action ranking and budget constraints; add scenario comparisons after baseline calculations are tested. 
+Ninth 
+Build backend and React dashboard against stable API responses. 
+Tenth 
+Run acceptance tests, document limitations and prepare the demo. 
+ 
+
+
+=== PAGE 13 ===
+CLIMATEADAPT PUNE  |  DETAILED IMPLEMENTATION GUIDE 
+Working specification • Validate all data sources before making decisions 
+14. Suggested README and demo narrative 
+README essentials 
+Project objective; setup instructions; environment variables; folder structure; data source register; how to run 
+ingestion/validation/processing/report scripts; how to launch backend/frontend; known limitations; license/attribution; 
+test commands. 
+Demo flow 
+Select Pune pilot area → inspect source completeness → open a climate screening layer → inspect why a location is flagged 
+→ choose a budget and priorities → compare an intervention portfolio → view equity and uncertainty → export the report. 
+Honest demo language 
+Say 'screening indicator' or 'proxy' when appropriate. Explain which datasets are available and which are missing. Do not 
+claim the system predicts exact flood events or proves an intervention's impact unless validated. 
+ 
+15. Reference sources and attribution 
+Open-Meteo 
+Forecast API: https://api.open-meteo.com/v1/forecast. Document API parameters, retrieval time, coordinates and forecast 
+nature. 
+OpenStreetMap 
+Data: https://www.openstreetmap.org/ and Overpass Turbo: https://overpass-turbo.eu/. Follow OpenStreetMap 
+attribution and applicable ODbL requirements. 
+OpenCity Pune stormwater data 
+https://data.opencity.in/dataset/pune-stormwater-drains and 
+https://data.opencity.in/dataset/?tags=City%20Services&groups=pune. Verify individual resource metadata, license and 
+update date. 
+Census of India 
+Pune district 2011 Primary Census Abstract record: https://censusindia.gov.in/nada/index.php/catalog/6712. Verify 
+geography and workbook fields before analysis. 
+GSDA Maharashtra 
+Groundwater resources and monitoring information: https://gsda.maharashtra.gov.in/en-dashboard/ and 
+https://gsda.maharashtra.gov.in/en-national-hydrology-project-2/. Confirm report headers and spatial level. 
+India-WRIS 
+https://indiawris.gov.in/wris/. Check availability and metadata for relevant hydrology data. 
+Copernicus Browser 
+https://browser.dataspace.copernicus.eu/. Verify product footprint, tile, sensing date and cloud cover over the actual pilot 
+area. 
+Bhuvan / NRSC 
+https://bhuvan.nrsc.gov.in/ and DEM help: https://bhuvan-
+app3.nrsc.gov.in/data/download/help/source/html/introduction.htm. Verify download terms and raster metadata. 
+ 
+
+

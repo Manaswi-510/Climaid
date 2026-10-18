@@ -1,0 +1,250 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2026-10-17T14:25:21Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2270799516",
+        "amenity": "drinking_water"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.8536062,
+          18.5081801
+        ]
+      },
+      "id": "node/2270799516"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2618478651",
+        "amenity": "drinking_water"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.8587062,
+          18.5008044
+        ]
+      },
+      "id": "node/2618478651"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2618478723",
+        "amenity": "drinking_water"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.8411664,
+          18.5079677
+        ]
+      },
+      "id": "node/2618478723"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2859985577",
+        "amenity": "drinking_water"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.8448992,
+          18.5231144
+        ]
+      },
+      "id": "node/2859985577"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2939229812",
+        "amenity": "drinking_water"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.8556267,
+          18.5009817
+        ]
+      },
+      "id": "node/2939229812"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12299285915",
+        "amenity": "drinking_water",
+        "drinking_water": "yes",
+        "indoor": "yes",
+        "man_made": "water_tap"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.8740098,
+          18.5293041
+        ]
+      },
+      "id": "node/12299285915"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12299285928",
+        "amenity": "drinking_water",
+        "drinking_water": "yes",
+        "indoor": "yes",
+        "man_made": "water_tap"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.8743665,
+          18.5293186
+        ]
+      },
+      "id": "node/12299285928"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13602977729",
+        "amenity": "drinking_water"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.8714732,
+          18.5293816
+        ]
+      },
+      "id": "node/13602977729"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13602977731",
+        "amenity": "drinking_water"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.8719341,
+          18.5294054
+        ]
+      },
+      "id": "node/13602977731"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13602977736",
+        "amenity": "drinking_water"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.874066,
+          18.5294941
+        ]
+      },
+      "id": "node/13602977736"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13958000890",
+        "amenity": "drinking_water",
+        "indoor": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.872684,
+          18.5288931
+        ]
+      },
+      "id": "node/13958000890"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13958011010",
+        "amenity": "drinking_water",
+        "indoor": "yes",
+        "ref": "3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.8727151,
+          18.5288948
+        ]
+      },
+      "id": "node/13958011010"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13958011023",
+        "amenity": "drinking_water",
+        "charge:conditional": "5 INR / liter",
+        "fee": "yes",
+        "indoor": "yes",
+        "operator": "Om Gayatri Enterprises"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.8729127,
+          18.5289021
+        ]
+      },
+      "id": "node/13958011023"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13958011044",
+        "amenity": "drinking_water",
+        "indoor": "yes",
+        "ref": "1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.8727049,
+          18.5288943
+        ]
+      },
+      "id": "node/13958011044"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13958011052",
+        "amenity": "drinking_water",
+        "indoor": "yes",
+        "ref": "2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.8727098,
+          18.5288945
+        ]
+      },
+      "id": "node/13958011052"
+    }
+  ]
+}

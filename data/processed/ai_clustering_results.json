@@ -1,0 +1,1262 @@
+{
+  "generated_at_utc": "2026-10-17T18:21:43.346083+00:00",
+  "methodology": "Unsupervised Multi-Hazard Vulnerability Clustering & Latent Space Embedding",
+  "model_parameters": {
+    "algorithm": "KMeans",
+    "n_clusters": 4,
+    "scaling": "StandardScaler (Z-score)",
+    "dimensionality_reduction": "PCA (2 components)",
+    "random_state": 42
+  },
+  "model_metrics": {
+    "silhouette_score": 0.308,
+    "explained_variance_ratio": [
+      0.392,
+      0.229
+    ],
+    "total_explained_variance": 0.621,
+    "pca_loadings": {
+      "PC1": {
+        "heat_exposure": 0.583,
+        "flood_screening": 0.315,
+        "water_stress": 0.073,
+        "green_deficit": 0.622,
+        "slum_drainage": -0.265,
+        "receptors": -0.315
+      },
+      "PC2": {
+        "heat_exposure": 0.188,
+        "flood_screening": -0.526,
+        "water_stress": 0.622,
+        "green_deficit": 0.191,
+        "slum_drainage": 0.507,
+        "receptors": -0.083
+      }
+    }
+  },
+  "cluster_profiles": {
+    "Cluster_0": {
+      "cluster_id": 0,
+      "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+      "primary_concern": "Stormwater drainage gaps, high flood screening proxy, slum drainage distress",
+      "recommended_focus": "Inlet clearing, bioswales, retention basins, underground pipe reinforcement",
+      "centroid_values": {
+        "heat_exposure": 58.8,
+        "flood_screening": 21.6,
+        "water_stress": 59.7,
+        "green_deficit": 90.2,
+        "slum_drainage": 97.4,
+        "receptors": 2.4
+      },
+      "wards_count": 27,
+      "sample_wards": [
+        "Karvenagar - Gosavivasti",
+        "Wadarwadi-Pandavnagar",
+        "Katraj Dairy",
+        "Tilak Smarak Mandir"
+      ]
+    },
+    "Cluster_1": {
+      "cluster_id": 1,
+      "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+      "primary_concern": "Elevated apparent temperature, low vegetation, high concentration of schools/clinics",
+      "recommended_focus": "Cool roof retrofits, shade tree corridors, cool bus stops, public misting/hydration",
+      "centroid_values": {
+        "heat_exposure": 58.8,
+        "flood_screening": 48.6,
+        "water_stress": 56.7,
+        "green_deficit": 91.7,
+        "slum_drainage": 93.7,
+        "receptors": 1.7
+      },
+      "wards_count": 31,
+      "sample_wards": [
+        "Arunkumar Vaidya Stadium",
+        "Ghorpade Garden",
+        "Upper Indiranagar",
+        "Mohammadwadi"
+      ]
+    },
+    "Cluster_2": {
+      "cluster_id": 2,
+      "archetype_name": "Socio-Ecological Water Stress & Slum Deficit",
+      "primary_concern": "High soil moisture deficit, low municipal water budget, slum sanitation gap",
+      "recommended_focus": "Decentralized rainwater harvesting, community water conservation, drainage connections",
+      "centroid_values": {
+        "heat_exposure": 35.9,
+        "flood_screening": 26.4,
+        "water_stress": 57.2,
+        "green_deficit": 24.7,
+        "slum_drainage": 98.5,
+        "receptors": 7.5
+      },
+      "wards_count": 17,
+      "sample_wards": [
+        "Kamla Nehru Park",
+        "Model Colony",
+        "Balgandharva",
+        "Bopodi Gaonthan"
+      ]
+    },
+    "Cluster_3": {
+      "cluster_id": 3,
+      "archetype_name": "Moderate Vulnerability & Nature-Buffered",
+      "primary_concern": "Relatively balanced tree canopy and drainage, moderate baseline risk",
+      "recommended_focus": "Preservation of existing green cover, proactive drain maintenance, urban biodiversity",
+      "centroid_values": {
+        "heat_exposure": 58.4,
+        "flood_screening": 75.2,
+        "water_stress": 52.0,
+        "green_deficit": 95.0,
+        "slum_drainage": 20.0,
+        "receptors": 0.0
+      },
+      "wards_count": 1,
+      "sample_wards": [
+        "Vadgaon Sheri - Ganesh Nagar"
+      ]
+    }
+  },
+  "ward_assignments": [
+    {
+      "ward_num": 19,
+      "ward_title": "Vadgaon Sheri - Ganesh Nagar",
+      "area_zone": "Nagar Road",
+      "cluster_id": 3,
+      "archetype_name": "Moderate Vulnerability & Nature-Buffered",
+      "pca_x": 3.471,
+      "pca_y": -5.575,
+      "vulnerability_scores": {
+        "heat": 58.4,
+        "flood": 75.2,
+        "water_stress": 52.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 47,
+      "ward_title": "Arunkumar Vaidya Stadium",
+      "area_zone": "Bhawani",
+      "cluster_id": 1,
+      "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+      "pca_x": 1.134,
+      "pca_y": 0.16,
+      "vulnerability_scores": {
+        "heat": 64.4,
+        "flood": 54.8,
+        "water_stress": 60.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 65,
+      "ward_title": "Ghorpade Garden",
+      "area_zone": "Bhawani",
+      "cluster_id": 1,
+      "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+      "pca_x": 1.06,
+      "pca_y": 0.145,
+      "vulnerability_scores": {
+        "heat": 63.8,
+        "flood": 54.6,
+        "water_stress": 60.0,
+        "green_deficit": 93.3
+      }
+    },
+    {
+      "ward_num": 72,
+      "ward_title": "Upper Indiranagar",
+      "area_zone": "Bibewadi",
+      "cluster_id": 1,
+      "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+      "pca_x": 1.636,
+      "pca_y": -0.722,
+      "vulnerability_scores": {
+        "heat": 58.4,
+        "flood": 59.1,
+        "water_stress": 60.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 45,
+      "ward_title": "Mohammadwadi",
+      "area_zone": "Hadapsar",
+      "cluster_id": 1,
+      "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+      "pca_x": 1.659,
+      "pca_y": -2.175,
+      "vulnerability_scores": {
+        "heat": 58.4,
+        "flood": 60.7,
+        "water_stress": 52.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 3,
+      "ward_title": "Vimannagar Sanjay Park",
+      "area_zone": "Nagar Road",
+      "cluster_id": 1,
+      "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+      "pca_x": 1.437,
+      "pca_y": -0.358,
+      "vulnerability_scores": {
+        "heat": 58.4,
+        "flood": 55.4,
+        "water_stress": 60.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 63,
+      "ward_title": "Bhagyodaynagar",
+      "area_zone": "Kondhwa",
+      "cluster_id": 1,
+      "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+      "pca_x": 1.568,
+      "pca_y": -0.608,
+      "vulnerability_scores": {
+        "heat": 58.4,
+        "flood": 55.6,
+        "water_stress": 60.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 59,
+      "ward_title": "Kashewadi Gurunanaknagar",
+      "area_zone": "Bhawani",
+      "cluster_id": 1,
+      "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+      "pca_x": 0.924,
+      "pca_y": 0.094,
+      "vulnerability_scores": {
+        "heat": 60.4,
+        "flood": 54.6,
+        "water_stress": 60.0,
+        "green_deficit": 90.0
+      }
+    },
+    {
+      "ward_num": 54,
+      "ward_title": "Suncity Wadgaon Budruk",
+      "area_zone": "Tilak Road",
+      "cluster_id": 1,
+      "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+      "pca_x": 1.394,
+      "pca_y": -0.286,
+      "vulnerability_scores": {
+        "heat": 58.4,
+        "flood": 53.2,
+        "water_stress": 60.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 62,
+      "ward_title": "Kondhwa Budruk, Gokulnagar",
+      "area_zone": "Kondhwa",
+      "cluster_id": 1,
+      "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+      "pca_x": 1.394,
+      "pca_y": -0.286,
+      "vulnerability_scores": {
+        "heat": 58.4,
+        "flood": 53.2,
+        "water_stress": 60.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 42,
+      "ward_title": "Ward 42",
+      "area_zone": "Hadapsar",
+      "cluster_id": 1,
+      "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+      "pca_x": 1.212,
+      "pca_y": 0.055,
+      "vulnerability_scores": {
+        "heat": 58.4,
+        "flood": 51.7,
+        "water_stress": 60.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 74,
+      "ward_title": "Bharati Vidyapeeth",
+      "area_zone": "Dhanakawadi",
+      "cluster_id": 1,
+      "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+      "pca_x": 1.098,
+      "pca_y": 0.27,
+      "vulnerability_scores": {
+        "heat": 58.4,
+        "flood": 51.1,
+        "water_stress": 60.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 44,
+      "ward_title": "Gliding Centre",
+      "area_zone": "Hadapsar",
+      "cluster_id": 1,
+      "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+      "pca_x": 1.122,
+      "pca_y": 0.224,
+      "vulnerability_scores": {
+        "heat": 58.4,
+        "flood": 51.0,
+        "water_stress": 60.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 60,
+      "ward_title": "Mahatma Phule Peth Kashewadi Bhawani Peth",
+      "area_zone": "Bhawani",
+      "cluster_id": 1,
+      "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+      "pca_x": 0.792,
+      "pca_y": 0.041,
+      "vulnerability_scores": {
+        "heat": 58.1,
+        "flood": 54.8,
+        "water_stress": 60.0,
+        "green_deficit": 86.7
+      }
+    },
+    {
+      "ward_num": 49,
+      "ward_title": "Dr. Kotnis Hospital",
+      "area_zone": "Kasba Vishrambagwada ",
+      "cluster_id": 1,
+      "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+      "pca_x": 0.964,
+      "pca_y": -0.907,
+      "vulnerability_scores": {
+        "heat": 60.4,
+        "flood": 51.8,
+        "water_stress": 52.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 18,
+      "ward_title": "Vadgaon Sheri",
+      "area_zone": "Nagar Road",
+      "cluster_id": 1,
+      "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+      "pca_x": 0.99,
+      "pca_y": -0.933,
+      "vulnerability_scores": {
+        "heat": 58.4,
+        "flood": 52.5,
+        "water_stress": 52.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 46,
+      "ward_title": "Wanavdi - Ramtekdi",
+      "area_zone": "Kondhwa",
+      "cluster_id": 1,
+      "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+      "pca_x": 1.087,
+      "pca_y": 0.276,
+      "vulnerability_scores": {
+        "heat": 58.4,
+        "flood": 47.9,
+        "water_stress": 60.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 15,
+      "ward_title": "Rajguru Road",
+      "area_zone": "Yerwada",
+      "cluster_id": 1,
+      "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+      "pca_x": 1.275,
+      "pca_y": -0.112,
+      "vulnerability_scores": {
+        "heat": 58.3,
+        "flood": 47.7,
+        "water_stress": 60.0,
+        "green_deficit": 94.7
+      }
+    },
+    {
+      "ward_num": 56,
+      "ward_title": "Sarasbaug Parvati",
+      "area_zone": "Tilak Road",
+      "cluster_id": 1,
+      "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+      "pca_x": 1.478,
+      "pca_y": -0.497,
+      "vulnerability_scores": {
+        "heat": 59.4,
+        "flood": 44.7,
+        "water_stress": 60.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 41,
+      "ward_title": "Sopan Baug - Vikasnagar",
+      "area_zone": "Kondhwa",
+      "cluster_id": 1,
+      "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+      "pca_x": 1.084,
+      "pca_y": 0.27,
+      "vulnerability_scores": {
+        "heat": 58.4,
+        "flood": 45.1,
+        "water_stress": 60.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 76,
+      "ward_title": "Katraj Maulinagar",
+      "area_zone": "Dhanakawadi",
+      "cluster_id": 1,
+      "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+      "pca_x": 0.984,
+      "pca_y": 0.462,
+      "vulnerability_scores": {
+        "heat": 58.4,
+        "flood": 45.2,
+        "water_stress": 60.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 53,
+      "ward_title": "PL Deshpande Udyan",
+      "area_zone": "Tilak Road",
+      "cluster_id": 1,
+      "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+      "pca_x": 1.152,
+      "pca_y": -1.265,
+      "vulnerability_scores": {
+        "heat": 58.4,
+        "flood": 47.7,
+        "water_stress": 52.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 55,
+      "ward_title": "Janata Vasahat",
+      "area_zone": "Tilak Road",
+      "cluster_id": 1,
+      "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+      "pca_x": 1.001,
+      "pca_y": -0.982,
+      "vulnerability_scores": {
+        "heat": 58.4,
+        "flood": 46.5,
+        "water_stress": 52.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 23,
+      "ward_title": "Junabazaar Kumbharwada",
+      "area_zone": "Dhole Patil",
+      "cluster_id": 1,
+      "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+      "pca_x": 0.387,
+      "pca_y": -1.228,
+      "vulnerability_scores": {
+        "heat": 55.5,
+        "flood": 55.5,
+        "water_stress": 52.0,
+        "green_deficit": 80.2
+      }
+    },
+    {
+      "ward_num": 30,
+      "ward_title": "Popularnagar Malwadi",
+      "area_zone": "Warje Karvenagar",
+      "cluster_id": 1,
+      "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+      "pca_x": 1.18,
+      "pca_y": 0.071,
+      "vulnerability_scores": {
+        "heat": 58.4,
+        "flood": 42.2,
+        "water_stress": 60.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 2,
+      "ward_title": "Kharadi Infotech Park",
+      "area_zone": "Nagar Road",
+      "cluster_id": 1,
+      "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+      "pca_x": 1.145,
+      "pca_y": 0.129,
+      "vulnerability_scores": {
+        "heat": 58.4,
+        "flood": 40.4,
+        "water_stress": 60.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 40,
+      "ward_title": "Collectorate",
+      "area_zone": "Dhole Patil",
+      "cluster_id": 1,
+      "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+      "pca_x": 0.136,
+      "pca_y": -0.845,
+      "vulnerability_scores": {
+        "heat": 61.6,
+        "flood": 44.1,
+        "water_stress": 52.0,
+        "green_deficit": 80.3
+      }
+    },
+    {
+      "ward_num": 69,
+      "ward_title": "Dhankawadi Padmavati",
+      "area_zone": "Dhanakawadi",
+      "cluster_id": 1,
+      "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+      "pca_x": 0.741,
+      "pca_y": -0.517,
+      "vulnerability_scores": {
+        "heat": 58.4,
+        "flood": 39.7,
+        "water_stress": 52.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 32,
+      "ward_title": "Karvenagar - Gosavivasti",
+      "area_zone": "Warje Karvenagar",
+      "cluster_id": 0,
+      "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+      "pca_x": 0.923,
+      "pca_y": 0.533,
+      "vulnerability_scores": {
+        "heat": 58.4,
+        "flood": 35.5,
+        "water_stress": 60.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 25,
+      "ward_title": "Wadarwadi-Pandavnagar",
+      "area_zone": "Ghole Road",
+      "cluster_id": 0,
+      "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+      "pca_x": 0.77,
+      "pca_y": 0.819,
+      "vulnerability_scores": {
+        "heat": 58.4,
+        "flood": 34.2,
+        "water_stress": 60.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 75,
+      "ward_title": "Katraj Dairy",
+      "area_zone": "Dhanakawadi",
+      "cluster_id": 0,
+      "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+      "pca_x": 0.77,
+      "pca_y": 0.819,
+      "vulnerability_scores": {
+        "heat": 58.4,
+        "flood": 34.2,
+        "water_stress": 60.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 43,
+      "ward_title": "Sadhana Vidyalay",
+      "area_zone": "Hadapsar",
+      "cluster_id": 1,
+      "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+      "pca_x": 1.27,
+      "pca_y": -0.141,
+      "vulnerability_scores": {
+        "heat": 58.4,
+        "flood": 33.7,
+        "water_stress": 60.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 36,
+      "ward_title": "Kamla Nehru Park",
+      "area_zone": "Ghole Road",
+      "cluster_id": 2,
+      "archetype_name": "Socio-Ecological Water Stress & Slum Deficit",
+      "pca_x": -1.804,
+      "pca_y": -0.416,
+      "vulnerability_scores": {
+        "heat": 56.0,
+        "flood": 48.0,
+        "water_stress": 60.0,
+        "green_deficit": 63.8
+      }
+    },
+    {
+      "ward_num": 51,
+      "ward_title": "Tilak Smarak Mandir",
+      "area_zone": "Kasba Vishrambagwada ",
+      "cluster_id": 0,
+      "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+      "pca_x": -0.136,
+      "pca_y": 0.354,
+      "vulnerability_scores": {
+        "heat": 58.6,
+        "flood": 39.7,
+        "water_stress": 60.0,
+        "green_deficit": 73.0
+      }
+    },
+    {
+      "ward_num": 68,
+      "ward_title": "Sahakarnagar - Taljai",
+      "area_zone": "Sahakarnagar",
+      "cluster_id": 0,
+      "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+      "pca_x": 0.663,
+      "pca_y": 0.997,
+      "vulnerability_scores": {
+        "heat": 58.4,
+        "flood": 28.7,
+        "water_stress": 60.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 58,
+      "ward_title": "Mahatma Phule Smarak",
+      "area_zone": "Kasba Vishrambagwada ",
+      "cluster_id": 1,
+      "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+      "pca_x": 0.424,
+      "pca_y": -0.981,
+      "vulnerability_scores": {
+        "heat": 60.8,
+        "flood": 32.1,
+        "water_stress": 47.2,
+        "green_deficit": 93.3
+      }
+    },
+    {
+      "ward_num": 20,
+      "ward_title": "Magarpatta City",
+      "area_zone": "Dhole Patil",
+      "cluster_id": 0,
+      "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+      "pca_x": 0.628,
+      "pca_y": 1.056,
+      "vulnerability_scores": {
+        "heat": 58.4,
+        "flood": 26.9,
+        "water_stress": 60.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 9,
+      "ward_title": "Baner Balewadi",
+      "area_zone": "Aundh",
+      "cluster_id": 0,
+      "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+      "pca_x": -0.065,
+      "pca_y": 0.126,
+      "vulnerability_scores": {
+        "heat": 61.1,
+        "flood": 31.8,
+        "water_stress": 60.0,
+        "green_deficit": 76.7
+      }
+    },
+    {
+      "ward_num": 1,
+      "ward_title": "Lohegaon Airport",
+      "area_zone": "Yerwada",
+      "cluster_id": 1,
+      "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+      "pca_x": -0.2,
+      "pca_y": -2.826,
+      "vulnerability_scores": {
+        "heat": 53.4,
+        "flood": 48.8,
+        "water_stress": 44.0,
+        "green_deficit": 67.3
+      }
+    },
+    {
+      "ward_num": 61,
+      "ward_title": "Kedar Vasti - Azadnagar",
+      "area_zone": "Kondhwa",
+      "cluster_id": 0,
+      "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+      "pca_x": 0.709,
+      "pca_y": 0.89,
+      "vulnerability_scores": {
+        "heat": 58.4,
+        "flood": 24.5,
+        "water_stress": 60.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 66,
+      "ward_title": "Adinath Society",
+      "area_zone": "Sahakarnagar",
+      "cluster_id": 0,
+      "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+      "pca_x": 0.556,
+      "pca_y": 1.176,
+      "vulnerability_scores": {
+        "heat": 58.4,
+        "flood": 23.2,
+        "water_stress": 60.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 29,
+      "ward_title": "Bavdhan Khurd",
+      "area_zone": "Kothrud",
+      "cluster_id": 0,
+      "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+      "pca_x": 0.546,
+      "pca_y": 1.192,
+      "vulnerability_scores": {
+        "heat": 58.4,
+        "flood": 22.7,
+        "water_stress": 60.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 27,
+      "ward_title": "Sutardara-Kishkindha Naga",
+      "area_zone": "Kothrud",
+      "cluster_id": 0,
+      "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+      "pca_x": 0.406,
+      "pca_y": 1.194,
+      "vulnerability_scores": {
+        "heat": 58.4,
+        "flood": 21.6,
+        "water_stress": 60.0,
+        "green_deficit": 92.3
+      }
+    },
+    {
+      "ward_num": 34,
+      "ward_title": "Gujrat Colony",
+      "area_zone": "Kothrud",
+      "cluster_id": 0,
+      "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+      "pca_x": 0.102,
+      "pca_y": 1.14,
+      "vulnerability_scores": {
+        "heat": 61.0,
+        "flood": 21.0,
+        "water_stress": 60.0,
+        "green_deficit": 86.3
+      }
+    },
+    {
+      "ward_num": 50,
+      "ward_title": "Mahatma Phule Mandai",
+      "area_zone": "Kasba Vishrambagwada ",
+      "cluster_id": 0,
+      "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+      "pca_x": 0.224,
+      "pca_y": 1.525,
+      "vulnerability_scores": {
+        "heat": 65.8,
+        "flood": 12.2,
+        "water_stress": 60.0,
+        "green_deficit": 93.3
+      }
+    },
+    {
+      "ward_num": 28,
+      "ward_title": "ARDE - Mhatobanagar",
+      "area_zone": "Kothrud",
+      "cluster_id": 0,
+      "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+      "pca_x": 0.085,
+      "pca_y": 1.196,
+      "vulnerability_scores": {
+        "heat": 61.1,
+        "flood": 19.4,
+        "water_stress": 60.0,
+        "green_deficit": 86.7
+      }
+    },
+    {
+      "ward_num": 67,
+      "ward_title": "Aranyeshwar Taware Colony",
+      "area_zone": "Sahakarnagar",
+      "cluster_id": 0,
+      "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+      "pca_x": 0.449,
+      "pca_y": 1.355,
+      "vulnerability_scores": {
+        "heat": 58.4,
+        "flood": 17.7,
+        "water_stress": 60.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 73,
+      "ward_title": "Balajinagar Vaibhavnagar",
+      "area_zone": "Dhanakawadi",
+      "cluster_id": 0,
+      "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+      "pca_x": 0.449,
+      "pca_y": 1.355,
+      "vulnerability_scores": {
+        "heat": 58.4,
+        "flood": 17.7,
+        "water_stress": 60.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 48,
+      "ward_title": "Palkhi Vithoba Mandir",
+      "area_zone": "Bhawani",
+      "cluster_id": 0,
+      "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+      "pca_x": 0.395,
+      "pca_y": 1.438,
+      "vulnerability_scores": {
+        "heat": 59.4,
+        "flood": 15.2,
+        "water_stress": 60.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 64,
+      "ward_title": "Salisbury Park",
+      "area_zone": "Bibewadi",
+      "cluster_id": 0,
+      "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+      "pca_x": 0.799,
+      "pca_y": 0.678,
+      "vulnerability_scores": {
+        "heat": 58.4,
+        "flood": 16.0,
+        "water_stress": 60.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 70,
+      "ward_title": "Bibvewadi and KK Market",
+      "area_zone": "Bibewadi",
+      "cluster_id": 0,
+      "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+      "pca_x": 0.397,
+      "pca_y": 1.442,
+      "vulnerability_scores": {
+        "heat": 58.4,
+        "flood": 15.0,
+        "water_stress": 60.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 17,
+      "ward_title": "Agakhan Palace",
+      "area_zone": "Nagar Road",
+      "cluster_id": 1,
+      "archetype_name": "Dense Urban Heat-Trap & High Receptors",
+      "pca_x": -0.461,
+      "pca_y": -1.1,
+      "vulnerability_scores": {
+        "heat": 57.1,
+        "flood": 31.2,
+        "water_stress": 52.0,
+        "green_deficit": 66.7
+      }
+    },
+    {
+      "ward_num": 4,
+      "ward_title": "Nagpur Chawl",
+      "area_zone": "Nagar Road",
+      "cluster_id": 0,
+      "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+      "pca_x": -0.355,
+      "pca_y": 0.689,
+      "vulnerability_scores": {
+        "heat": 55.4,
+        "flood": 26.0,
+        "water_stress": 60.0,
+        "green_deficit": 72.5
+      }
+    },
+    {
+      "ward_num": 71,
+      "ward_title": "Shivaji Market, Gultekdi",
+      "area_zone": "Bibewadi",
+      "cluster_id": 0,
+      "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+      "pca_x": 0.744,
+      "pca_y": 0.769,
+      "vulnerability_scores": {
+        "heat": 58.4,
+        "flood": 13.2,
+        "water_stress": 60.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 39,
+      "ward_title": "KEM Hospital",
+      "area_zone": "Bhawani",
+      "cluster_id": 0,
+      "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+      "pca_x": 0.049,
+      "pca_y": 0.348,
+      "vulnerability_scores": {
+        "heat": 63.3,
+        "flood": 12.2,
+        "water_stress": 52.0,
+        "green_deficit": 92.2
+      }
+    },
+    {
+      "ward_num": 33,
+      "ward_title": "Dahanukar Colony",
+      "area_zone": "Warje Karvenagar",
+      "cluster_id": 0,
+      "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+      "pca_x": 0.491,
+      "pca_y": 1.218,
+      "vulnerability_scores": {
+        "heat": 60.4,
+        "flood": 10.0,
+        "water_stress": 60.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 10,
+      "ward_title": "Pashan Sutarwadi",
+      "area_zone": "Aundh",
+      "cluster_id": 0,
+      "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+      "pca_x": 0.422,
+      "pca_y": 0.897,
+      "vulnerability_scores": {
+        "heat": 57.4,
+        "flood": 14.7,
+        "water_stress": 60.0,
+        "green_deficit": 90.0
+      }
+    },
+    {
+      "ward_num": 31,
+      "ward_title": "Shivane - Warje - Ramnagar",
+      "area_zone": "Warje Karvenagar",
+      "cluster_id": 0,
+      "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+      "pca_x": 0.3,
+      "pca_y": 1.605,
+      "vulnerability_scores": {
+        "heat": 58.4,
+        "flood": 10.0,
+        "water_stress": 60.0,
+        "green_deficit": 95.0
+      }
+    },
+    {
+      "ward_num": 35,
+      "ward_title": "Deenanath Mangeshkar Hospital",
+      "area_zone": "Warje Karvenagar",
+      "cluster_id": 0,
+      "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+      "pca_x": -0.226,
+      "pca_y": 1.153,
+      "vulnerability_scores": {
+        "heat": 55.4,
+        "flood": 17.7,
+        "water_stress": 60.0,
+        "green_deficit": 79.8
+      }
+    },
+    {
+      "ward_num": 11,
+      "ward_title": "Janwadi-Gokhalenagar",
+      "area_zone": "Ghole Road",
+      "cluster_id": 0,
+      "archetype_name": "Severe Drainage-Deficit & High Flood Vulnerability",
+      "pca_x": -0.396,
+      "pca_y": 0.883,
+      "vulnerability_scores": {
+        "heat": 51.8,
+        "flood": 23.2,
+        "water_stress": 60.0,
+        "green_deficit": 73.3
+      }
+    },
+    {
+      "ward_num": 12,
+      "ward_title": "Model Colony",
+      "area_zone": "Ghole Road",
+      "cluster_id": 2,
+      "archetype_name": "Socio-Ecological Water Stress & Slum Deficit",
+      "pca_x": -1.597,
+      "pca_y": -0.1,
+      "vulnerability_scores": {
+        "heat": 46.8,
+        "flood": 39.7,
+        "water_stress": 60.0,
+        "green_deficit": 41.0
+      }
+    },
+    {
+      "ward_num": 24,
+      "ward_title": "Balgandharva",
+      "area_zone": "Ghole Road",
+      "cluster_id": 2,
+      "archetype_name": "Socio-Ecological Water Stress & Slum Deficit",
+      "pca_x": -2.837,
+      "pca_y": -0.487,
+      "vulnerability_scores": {
+        "heat": 38.2,
+        "flood": 40.0,
+        "water_stress": 60.0,
+        "green_deficit": 19.5
+      }
+    },
+    {
+      "ward_num": 6,
+      "ward_title": "Bopodi Gaonthan",
+      "area_zone": "Aundh",
+      "cluster_id": 2,
+      "archetype_name": "Socio-Ecological Water Stress & Slum Deficit",
+      "pca_x": -2.559,
+      "pca_y": -0.992,
+      "vulnerability_scores": {
+        "heat": 27.4,
+        "flood": 54.2,
+        "water_stress": 60.0,
+        "green_deficit": 10.0
+      }
+    },
+    {
+      "ward_num": 26,
+      "ward_title": "MIT - Kelewadi",
+      "area_zone": "Kothrud",
+      "cluster_id": 2,
+      "archetype_name": "Socio-Ecological Water Stress & Slum Deficit",
+      "pca_x": -1.637,
+      "pca_y": 0.492,
+      "vulnerability_scores": {
+        "heat": 40.4,
+        "flood": 23.2,
+        "water_stress": 60.0,
+        "green_deficit": 44.8
+      }
+    },
+    {
+      "ward_num": 57,
+      "ward_title": "Kadakmal Ali Hirabaug",
+      "area_zone": "Sahakarnagar",
+      "cluster_id": 2,
+      "archetype_name": "Socio-Ecological Water Stress & Slum Deficit",
+      "pca_x": -1.874,
+      "pca_y": 0.432,
+      "vulnerability_scores": {
+        "heat": 42.4,
+        "flood": 23.2,
+        "water_stress": 60.0,
+        "green_deficit": 40.0
+      }
+    },
+    {
+      "ward_num": 21,
+      "ward_title": "Koregaon Park",
+      "area_zone": "Dhole Patil",
+      "cluster_id": 2,
+      "archetype_name": "Socio-Ecological Water Stress & Slum Deficit",
+      "pca_x": -3.126,
+      "pca_y": -2.993,
+      "vulnerability_scores": {
+        "heat": 34.4,
+        "flood": 44.4,
+        "water_stress": 44.0,
+        "green_deficit": 10.0
+      }
+    },
+    {
+      "ward_num": 5,
+      "ward_title": "Vishrantwadi Mhaske Vasti",
+      "area_zone": "Yerwada",
+      "cluster_id": 2,
+      "archetype_name": "Socio-Ecological Water Stress & Slum Deficit",
+      "pca_x": -2.048,
+      "pca_y": -1.414,
+      "vulnerability_scores": {
+        "heat": 36.1,
+        "flood": 25.7,
+        "water_stress": 52.0,
+        "green_deficit": 31.7
+      }
+    },
+    {
+      "ward_num": 8,
+      "ward_title": "Aundh ITI",
+      "area_zone": "Aundh",
+      "cluster_id": 2,
+      "archetype_name": "Socio-Ecological Water Stress & Slum Deficit",
+      "pca_x": -2.375,
+      "pca_y": 0.716,
+      "vulnerability_scores": {
+        "heat": 44.6,
+        "flood": 12.2,
+        "water_stress": 60.0,
+        "green_deficit": 35.3
+      }
+    },
+    {
+      "ward_num": 37,
+      "ward_title": "Shaniwarwada",
+      "area_zone": "Kasba Vishrambagwada ",
+      "cluster_id": 2,
+      "archetype_name": "Socio-Ecological Water Stress & Slum Deficit",
+      "pca_x": -3.186,
+      "pca_y": 0.022,
+      "vulnerability_scores": {
+        "heat": 31.4,
+        "flood": 23.2,
+        "water_stress": 60.0,
+        "green_deficit": 10.0
+      }
+    },
+    {
+      "ward_num": 52,
+      "ward_title": "Vaikunth Smashanbhoomi",
+      "area_zone": "Tilak Road",
+      "cluster_id": 2,
+      "archetype_name": "Socio-Ecological Water Stress & Slum Deficit",
+      "pca_x": -3.186,
+      "pca_y": 0.022,
+      "vulnerability_scores": {
+        "heat": 31.4,
+        "flood": 23.2,
+        "water_stress": 60.0,
+        "green_deficit": 10.0
+      }
+    },
+    {
+      "ward_num": 14,
+      "ward_title": "Deccan College",
+      "area_zone": "Yerwada",
+      "cluster_id": 2,
+      "archetype_name": "Socio-Ecological Water Stress & Slum Deficit",
+      "pca_x": -2.512,
+      "pca_y": -0.017,
+      "vulnerability_scores": {
+        "heat": 33.6,
+        "flood": 14.7,
+        "water_stress": 60.0,
+        "green_deficit": 23.0
+      }
+    },
+    {
+      "ward_num": 13,
+      "ward_title": "Narveer Tanajiwadi",
+      "area_zone": "Ghole Road",
+      "cluster_id": 2,
+      "archetype_name": "Socio-Ecological Water Stress & Slum Deficit",
+      "pca_x": -2.917,
+      "pca_y": 0.308,
+      "vulnerability_scores": {
+        "heat": 31.7,
+        "flood": 17.7,
+        "water_stress": 60.0,
+        "green_deficit": 18.2
+      }
+    },
+    {
+      "ward_num": 38,
+      "ward_title": "Kasba Peth",
+      "area_zone": "Kasba Vishrambagwada ",
+      "cluster_id": 2,
+      "archetype_name": "Socio-Ecological Water Stress & Slum Deficit",
+      "pca_x": -2.824,
+      "pca_y": -0.48,
+      "vulnerability_scores": {
+        "heat": 35.2,
+        "flood": 10.0,
+        "water_stress": 52.0,
+        "green_deficit": 26.8
+      }
+    },
+    {
+      "ward_num": 22,
+      "ward_title": "Naidu Hospital",
+      "area_zone": "Dhole Patil",
+      "cluster_id": 2,
+      "archetype_name": "Socio-Ecological Water Stress & Slum Deficit",
+      "pca_x": -3.123,
+      "pca_y": -2.317,
+      "vulnerability_scores": {
+        "heat": 26.6,
+        "flood": 25.9,
+        "water_stress": 44.0,
+        "green_deficit": 15.5
+      }
+    },
+    {
+      "ward_num": 16,
+      "ward_title": "Subhashnagar",
+      "area_zone": "Yerwada",
+      "cluster_id": 2,
+      "archetype_name": "Socio-Ecological Water Stress & Slum Deficit",
+      "pca_x": -3.217,
+      "pca_y": 0.084,
+      "vulnerability_scores": {
+        "heat": 26.4,
+        "flood": 13.5,
+        "water_stress": 60.0,
+        "green_deficit": 10.0
+      }
+    },
+    {
+      "ward_num": 7,
+      "ward_title": "Pune University",
+      "area_zone": "Aundh",
+      "cluster_id": 2,
+      "archetype_name": "Socio-Ecological Water Stress & Slum Deficit",
+      "pca_x": -3.418,
+      "pca_y": 0.444,
+      "vulnerability_scores": {
+        "heat": 27.4,
+        "flood": 10.0,
+        "water_stress": 60.0,
+        "green_deficit": 10.0
+      }
+    }
+  ]
+}

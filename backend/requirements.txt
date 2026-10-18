@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+requests
+pandas
+geopandas
+shapely
+pyproj
+sqlalchemy
+psycopg[binary]
+geoalchemy2
+python-dotenv
+reportlab
+matplotlib
+pulp>=2.8.0,<3.0.0

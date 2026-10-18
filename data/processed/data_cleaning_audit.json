@@ -1,0 +1,67 @@
+{
+  "executed_at_utc": "2026-10-17T18:20:38.723497+00:00",
+  "pilot_bbox": {
+    "min_lat": 18.5,
+    "max_lat": 18.6,
+    "min_lon": 73.8,
+    "max_lon": 73.9
+  },
+  "pipeline_status": "COMPLETED_SUCCESSFULLY",
+  "datasets_processed": [
+    {
+      "dataset": "River & Waterbodies",
+      "result": {
+        "count": 12,
+        "repaired": 0,
+        "clipped": 0,
+        "status": "VALID"
+      }
+    },
+    {
+      "dataset": "Natural Drainage Nallas",
+      "result": {
+        "count": 283,
+        "repaired": 0,
+        "clipped": 2792,
+        "status": "VALID"
+      }
+    },
+    {
+      "dataset": "SWD Utility Chambers",
+      "result": {
+        "count": 1532,
+        "repaired": 0,
+        "clipped": 2701,
+        "status": "VALID"
+      }
+    },
+    {
+      "dataset": "Stormwater Pipe Network",
+      "result": {
+        "status": "REUSED_EXISTING",
+        "size": 64669341
+      }
+    },
+    {
+      "dataset": "Census 2011 Primary Census Abstract",
+      "result": {
+        "total_records": 145,
+        "status": "VALID"
+      }
+    },
+    {
+      "dataset": "OpenCity Drainage Coverage",
+      "result": {
+        "prabhags": 76,
+        "status": "VALID"
+      }
+    }
+  ],
+  "principles_applied": [
+    "Preserved raw files in data/raw/",
+    "Clipped spatial infrastructure strictly to Pune pilot extent",
+    "Repaired invalid/self-intersecting geometries using Shapely make_valid",
+    "Explicitly separated Census 2011 boundary definitions from current ward bounds",
+    "Distinguished missing data from true zeros in municipal drainage coverage"
+  ]
+}

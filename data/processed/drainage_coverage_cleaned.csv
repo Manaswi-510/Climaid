@@ -1,0 +1,77 @@
+prabhag_no,prabhag_name,area_zone,swd_coverage_pct,ug_drainage_slums_pct,ug_drainage_society_pct,ug_drainage_chawls_pct
+1,Lohegaon,Yerwada,18.02,90,100.0,90
+2,Kharadi Infotech Park,Nagar Road,33.33,90,95.0,96
+3,VimanNagar Sanjay Park,Nagar Road,6.0,90,95.0,93
+4,Nagpur Chawl,Nagar Road,55.88,98,95.0,95
+5,Vishrantwadi,Yerwada,60.0,90,100.0,40
+6,Bopodi Gaonthan,Aundh,3.6,100,100.0,100
+7,Pune University,Aundh,90.0,100,100.0,100
+8,Aundh ITI,Aundh,80.0,100,100.0,100
+9,Baner Balewadi,Aundh,49.0,90,85.0,95
+10,Pashan Sutarwadi,Aundh,80.0,90,100.0,80
+11,Janwadi - Gokhalenagar,Ghole Road,60.0,100,100.0,100
+12,Model Colony,Ghole Road,30.0,100,100.0,100
+13,Narveer Tanajiwadi,Ghole Road,70.0,100,100.0,100
+14,Deccan College,Yerwada,80.0,90,100.0,90
+15,Rajguru Road,Yerwada,20.0,90,100.0,95
+16,Subashnagar,Yerwada,80.0,95,95.0,95
+17,Agakhan Palace,Nagar Road,50.0,90,90.0,100
+18,Vadgaon Sheri,Nagar Road,6.7,100,97.5,95
+19,Vadgaon Sheri - Ganesh Nagar,Nagar Road,1.8,20,100.0,95
+20,Magarpatta City,Dhole Patil,53.33,100,100.0,100
+21,Koregaon Park,Dhole Patil,21.4,100,100.0,100
+22,Naidu Hospital,Dhole Patil,55.1,100,100.0,100
+23,Junabazaar Kumbharwada,Dhole Patil,1.35,100,100.0,100
+24,Balgandharva,Ghole Road,29.5,100,100.0,100
+25,Wadarwadi Pandavnagar,Ghole Road,40.0,100,100.0,100
+26,MIT Kelewadi,Kothrud,60.0,100,100.0,100
+27,Sutardara - Kishkindha Nagar,Kothrud,63.0,100,100.0,100
+28,ARDE - Mhatobanagar,Kothrud,67.0,100,100.0,100
+29,Bavdhan Khurd,Kothrud,61.0,100,100.0,100
+30,Popularnagar Malwadi,Warje Karvenagar,30.0,90,100.0,90
+31,Shivane - Warje - Ramnagar,Warje Karvenagar,90.0,100,100.0,100
+32,Karvenagar - Gosavivasti,Warje Karvenagar,40.0,95,100.0,1
+33,Dahanukar Colony ,Warje Karvenagar,90.0,92,100.0,95
+34,Gujrat Colony,Kothrud,64.0,100,100.0,100
+35,Deenanth Mangeshkar Hospital,Warje Karvenagar,70.0,100,100.0,100
+36,Kamla Nehru Park,Ghole Road,15.0,100,100.0,100
+37,Shaniwarwada,Kasba Vishrambagwada ,60.0,100,100.0,100
+38,Kasba Peth,Kasba Vishrambagwada ,100.0,100,100.0,100
+39,KEM hospital,Bhawani,80.0,100,100.0,100
+40,Collectorate,Dhole Patil,22.0,100,100.0,100
+41,Sopan Baug Vikas Nagar,Kondhwa,22.0,96,95.0,96
+42,Lohiya Garden,Hadapsar,10.0,96,99.0,99
+43,Sadhana Vidyalaya,Hadapsar,50.0,80,90.0,90
+44,Gliding Centre,Hadapsar,10.0,99,100.0,99
+45,Mohammadwadi,Hadapsar,1.0,80,90.0,80
+46,Wanavdi - Ramtekdi,Kondhwa,16.0,98,100.0,100
+47,Arunkumar Vaidya Stadium,Bhawani,2.5,100,100.0,100
+48,Palkhi Vithoba Mandir,Bhawani,74.5,100,100.0,100
+49,Dr. Kotnis hospital,Kasba Vishrambagwada ,8.0,100,100.0,100
+50,Mahatma Phule Mandal,Kasba Vishrambagwada ,80.0,100,100.0,100
+51,Tilak Smarak Mandir,Kasba Vishrambagwada ,30.0,100,100.0,100
+52,Vaikunth Samshanbhoomi,Tilak Road,60.0,100,100.0,100
+53,PL Deshpande Udyan,Tilak Road,20.0,90,70.0,70
+54,Suncity Wadgaon Budruk,Tilak Road,10.0,90,100.0,90
+55,Janata Vasahat,Tilak Road,20.0,95,80.0,100
+56,Sarasbaug Parvati,Tilak Road,30.0,80,100.0,55
+57,Kadakmal Ali Hirabaug,Sahakarnagar,60.0,100,100.0,100
+58,Mahatma Phule Smarak,Kasba Vishrambagwada ,43.75,100,100.0,100
+59,Kashewadi Grunanaknagar,Bhawani,3.0,100,100.0,100
+60,Mahatma Phule Peth Kashewadi Bhawani Peth,Bhawani,2.5,100,100.0,100
+61,Kedar Vasti- Azadnagar,Kondhwa,60.0,95,100.0,100
+62,Kondhwa Budruk Gokulnagar,Kondhwa,10.0,90,90.0,90
+63,Bhagyodaynagar,Kondhwa,8.0,85,90.0,98
+64,Salisbury Park,Bibewadi,80.0,85,100.0,80
+65,Ghorpade Garden,Bhawani,3.0,100,100.0,100
+66,Adinath Society,Sahakarnagar,60.0,100,100.0,100
+67,Aranyeshwar Taware Colony,Sahakarnagar,70.0,100,100.0,100
+68,Taljai,Sahakarnagar,50.0,100,100.0,100
+69,Dhanakawadi Padmavati,Dhanakawadi,30.0,100,100.0,100
+70,Bibewadi and KK Market,Bibewadi,75.0,100,100.0,100
+71,Shivaji Market Gultekwadi,Bibewadi,85.0,85,100.0,90
+72,Upper Indiranagar,Bibewadi,1.5,85,100.0,85
+73,Balajinagar Vaibhavnagar,Dhanakawadi,70.0,100,100.0,100
+74,Bharti Vidyapeeth,Dhanakawadi,9.2,100,100.0,100
+75,Katraj Dairy,Dhanakawadi,40.0,100,100.0,100
+76,Katraj Maulinagar,Dhanakawadi,20.0,100,100.0,100

@@ -1,0 +1,516 @@
+{
+  "generated_at_utc": "2026-10-17T18:20:55.043274+00:00",
+  "total_assets_inventoried": 32,
+  "assets": [
+    {
+      "filename": "buildings.geojson",
+      "relative_path": "data/raw/osm/buildings.geojson",
+      "category": "osm",
+      "source": "OpenStreetMap via Overpass API",
+      "license": "ODbL 1.0",
+      "crs": "EPSG:4326 (WGS 84)",
+      "size_bytes": 64070,
+      "status": "VALID",
+      "feature_count": 69,
+      "geometry_types": {
+        "Polygon": 69
+      },
+      "bbox": [
+        18.5186,
+        73.8526,
+        18.5214,
+        73.8561
+      ]
+    },
+    {
+      "filename": "clinics.geojson",
+      "relative_path": "data/raw/osm/clinics.geojson",
+      "category": "osm",
+      "source": "OpenStreetMap via Overpass API",
+      "license": "ODbL 1.0",
+      "crs": "EPSG:4326 (WGS 84)",
+      "size_bytes": 84,
+      "status": "EMPTY",
+      "feature_count": 0,
+      "geometry_types": {},
+      "bbox": null
+    },
+    {
+      "filename": "drinking_water.geojson",
+      "relative_path": "data/raw/osm/drinking_water.geojson",
+      "category": "osm",
+      "source": "OpenStreetMap via Overpass API",
+      "license": "ODbL 1.0",
+      "crs": "EPSG:4326 (WGS 84)",
+      "size_bytes": 5263,
+      "status": "VALID",
+      "feature_count": 15,
+      "geometry_types": {
+        "Point": 15
+      },
+      "bbox": [
+        18.5008,
+        73.8412,
+        18.5295,
+        73.8744
+      ]
+    },
+    {
+      "filename": "gardens.geojson",
+      "relative_path": "data/raw/osm/gardens.geojson",
+      "category": "osm",
+      "source": "OpenStreetMap via Overpass API",
+      "license": "ODbL 1.0",
+      "crs": "EPSG:4326 (WGS 84)",
+      "size_bytes": 273631,
+      "status": "VALID",
+      "feature_count": 263,
+      "geometry_types": {
+        "Polygon": 222,
+        "Point": 41
+      },
+      "bbox": [
+        18.4994,
+        73.7998,
+        18.6,
+        73.9029
+      ]
+    },
+    {
+      "filename": "grass.geojson",
+      "relative_path": "data/raw/osm/grass.geojson",
+      "category": "osm",
+      "source": "OpenStreetMap via Overpass API",
+      "license": "ODbL 1.0",
+      "crs": "EPSG:4326 (WGS 84)",
+      "size_bytes": 387429,
+      "status": "VALID",
+      "feature_count": 142,
+      "geometry_types": {
+        "Polygon": 142
+      },
+      "bbox": [
+        18.5024,
+        73.8037,
+        18.5922,
+        73.8972
+      ]
+    },
+    {
+      "filename": "hospitals.geojson",
+      "relative_path": "data/raw/osm/hospitals.geojson",
+      "category": "osm",
+      "source": "OpenStreetMap via Overpass API",
+      "license": "ODbL 1.0",
+      "crs": "EPSG:4326 (WGS 84)",
+      "size_bytes": 188739,
+      "status": "VALID",
+      "feature_count": 267,
+      "geometry_types": {
+        "Polygon": 33,
+        "MultiPolygon": 1,
+        "Point": 233
+      },
+      "bbox": [
+        18.5,
+        73.8014,
+        18.5999,
+        73.9001
+      ]
+    },
+    {
+      "filename": "parks.geojson",
+      "relative_path": "data/raw/osm/parks.geojson",
+      "category": "osm",
+      "source": "OpenStreetMap via Overpass API",
+      "license": "ODbL 1.0",
+      "crs": "EPSG:4326 (WGS 84)",
+      "size_bytes": 73065,
+      "status": "VALID",
+      "feature_count": 179,
+      "geometry_types": {
+        "Point": 179
+      },
+      "bbox": [
+        18.5,
+        73.8009,
+        18.5997,
+        73.9002
+      ]
+    },
+    {
+      "filename": "roads.geojson",
+      "relative_path": "data/raw/osm/roads.geojson",
+      "category": "osm",
+      "source": "OpenStreetMap via Overpass API",
+      "license": "ODbL 1.0",
+      "crs": "EPSG:4326 (WGS 84)",
+      "size_bytes": 12094426,
+      "status": "VALID",
+      "feature_count": 17539,
+      "geometry_types": {
+        "Polygon": 31,
+        "LineString": 17508
+      },
+      "bbox": [
+        18.4943,
+        73.7909,
+        18.6144,
+        73.9061
+      ]
+    },
+    {
+      "filename": "schools.geojson",
+      "relative_path": "data/raw/osm/schools.geojson",
+      "category": "osm",
+      "source": "OpenStreetMap via Overpass API",
+      "license": "ODbL 1.0",
+      "crs": "EPSG:4326 (WGS 84)",
+      "size_bytes": 145241,
+      "status": "VALID",
+      "feature_count": 168,
+      "geometry_types": {
+        "Polygon": 103,
+        "Point": 65
+      },
+      "bbox": [
+        18.4993,
+        73.8013,
+        18.5958,
+        73.9006
+      ]
+    },
+    {
+      "filename": "trees.geojson",
+      "relative_path": "data/raw/osm/trees.geojson",
+      "category": "osm",
+      "source": "OpenStreetMap via Overpass API",
+      "license": "ODbL 1.0",
+      "crs": "EPSG:4326 (WGS 84)",
+      "size_bytes": 1762225,
+      "status": "VALID",
+      "feature_count": 5779,
+      "geometry_types": {
+        "Point": 5779
+      },
+      "bbox": [
+        18.5,
+        73.8,
+        18.596,
+        73.9
+      ]
+    },
+    {
+      "filename": "waterways.geojson",
+      "relative_path": "data/raw/osm/waterways.geojson",
+      "category": "osm",
+      "source": "OpenStreetMap via Overpass API",
+      "license": "ODbL 1.0",
+      "crs": "EPSG:4326 (WGS 84)",
+      "size_bytes": 419914,
+      "status": "VALID",
+      "feature_count": 58,
+      "geometry_types": {
+        "LineString": 57,
+        "MultiLineString": 1
+      },
+      "bbox": [
+        18.1139,
+        73.4946,
+        18.7039,
+        74.9548
+      ]
+    },
+    {
+      "filename": "water_bodies.geojson",
+      "relative_path": "data/raw/osm/water_bodies.geojson",
+      "category": "osm",
+      "source": "OpenStreetMap via Overpass API",
+      "license": "ODbL 1.0",
+      "crs": "EPSG:4326 (WGS 84)",
+      "size_bytes": 344410,
+      "status": "VALID",
+      "feature_count": 77,
+      "geometry_types": {
+        "Polygon": 77
+      },
+      "bbox": [
+        18.4973,
+        73.7892,
+        18.6035,
+        73.9158
+      ]
+    },
+    {
+      "filename": "woodlands.geojson",
+      "relative_path": "data/raw/osm/woodlands.geojson",
+      "category": "osm",
+      "source": "OpenStreetMap via Overpass API",
+      "license": "ODbL 1.0",
+      "crs": "EPSG:4326 (WGS 84)",
+      "size_bytes": 100821,
+      "status": "VALID",
+      "feature_count": 43,
+      "geometry_types": {
+        "Polygon": 43
+      },
+      "bbox": [
+        18.5002,
+        73.7803,
+        18.5979,
+        73.9002
+      ]
+    },
+    {
+      "filename": "pcmc-electoral-wards.geojson",
+      "relative_path": "data/raw/wards/GeoData/pcmc-electoral-wards.geojson",
+      "category": "administrative_boundary",
+      "source": "DataMeet Pune Chapter / PMC Election Commission",
+      "license": "CC BY-SA 2.5 IN",
+      "crs": "EPSG:4326 (WGS 84)",
+      "size_bytes": 168077,
+      "status": "VALID",
+      "feature_count": 66
+    },
+    {
+      "filename": "pune-admin-wards.geojson",
+      "relative_path": "data/raw/wards/GeoData/pune-admin-wards.geojson",
+      "category": "administrative_boundary",
+      "source": "DataMeet Pune Chapter / PMC Election Commission",
+      "license": "CC BY-SA 2.5 IN",
+      "crs": "EPSG:4326 (WGS 84)",
+      "size_bytes": 297307,
+      "status": "VALID",
+      "feature_count": 15
+    },
+    {
+      "filename": "pune-electoral-wards.geojson",
+      "relative_path": "data/raw/wards/GeoData/pune-electoral-wards.geojson",
+      "category": "administrative_boundary",
+      "source": "DataMeet Pune Chapter / PMC Election Commission",
+      "license": "CC BY-SA 2.5 IN",
+      "crs": "EPSG:4326 (WGS 84)",
+      "size_bytes": 367715,
+      "status": "VALID",
+      "feature_count": 76
+    },
+    {
+      "filename": "pune-admin-ward-offices.csv",
+      "relative_path": "data/raw/wards/CSVs/pune-admin-ward-offices.csv",
+      "category": "administrative_tabular",
+      "source": "DataMeet Pune Chapter / PMC",
+      "license": "CC BY-SA 2.5 IN",
+      "size_bytes": 3006,
+      "status": "VALID",
+      "row_count": 14,
+      "columns": [
+        "name",
+        "description",
+        "lon",
+        "lat"
+      ],
+      "null_count": 0
+    },
+    {
+      "filename": "pune-wards-info.csv",
+      "relative_path": "data/raw/wards/CSVs/pune-wards-info.csv",
+      "category": "administrative_tabular",
+      "source": "DataMeet Pune Chapter / PMC",
+      "license": "CC BY-SA 2.5 IN",
+      "size_bytes": 26976,
+      "status": "VALID",
+      "row_count": 77,
+      "columns": [
+        "name",
+        "wardnum",
+        "title",
+        "adminward",
+        "ER_A",
+        "ER_B",
+        "voters",
+        "male_voters",
+        "female_voters",
+        "total_polling_buildings",
+        "total_polling_stations",
+        "PB.building",
+        "PB.SRA",
+        "PB.road",
+        "PB.electrical",
+        "PB.drainage",
+        "PB.water",
+        "PB.total",
+        "areas"
+      ],
+      "null_count": 15
+    },
+    {
+      "filename": "PMC Stormwater Drains Map.kmz",
+      "relative_path": "data/raw/official_reports/PMC Stormwater Drains Map.kmz",
+      "category": "stormwater_and_infrastructure",
+      "source": "OpenCity Pune Drainage / PMC",
+      "size_bytes": 22184109,
+      "status": "VALID",
+      "format": "KML/KMZ spatial layer",
+      "notes": "Unconverted spatial vector layer. Needs conversion to GeoJSON before spatial joins."
+    },
+    {
+      "filename": "pmc_swd_utlitiy_chambers.kml",
+      "relative_path": "data/raw/official_reports/pmc_swd_utlitiy_chambers.kml",
+      "category": "stormwater_and_infrastructure",
+      "source": "OpenCity Pune Drainage / PMC",
+      "size_bytes": 2774676,
+      "status": "VALID",
+      "format": "KML/KMZ spatial layer",
+      "notes": "Unconverted spatial vector layer. Needs conversion to GeoJSON before spatial joins."
+    },
+    {
+      "filename": "Pune Nalla Map.kml",
+      "relative_path": "data/raw/official_reports/Pune Nalla Map.kml",
+      "category": "stormwater_and_infrastructure",
+      "source": "OpenCity Pune Drainage / PMC",
+      "size_bytes": 2761475,
+      "status": "VALID",
+      "format": "KML/KMZ spatial layer",
+      "notes": "Unconverted spatial vector layer. Needs conversion to GeoJSON before spatial joins."
+    },
+    {
+      "filename": "Pune Stormwater Drains Coverage Data.csv",
+      "relative_path": "data/raw/official_reports/Pune Stormwater Drains Coverage Data.csv",
+      "category": "stormwater_and_infrastructure",
+      "source": "OpenCity Pune Drainage / PMC",
+      "size_bytes": 2883,
+      "status": "VALID",
+      "row_count": 76,
+      "columns": [
+        "Prabhag_no",
+        "Area",
+        "Prabhag Name",
+        "Percentage_of_roads_with_storm_water_drainage"
+      ]
+    },
+    {
+      "filename": "Pune Underground Drainage Coverage.csv",
+      "relative_path": "data/raw/official_reports/Pune Underground Drainage Coverage.csv",
+      "category": "stormwater_and_infrastructure",
+      "source": "OpenCity Pune Drainage / PMC",
+      "size_bytes": 3610,
+      "status": "VALID",
+      "row_count": 76,
+      "columns": [
+        "Prabhag_no",
+        "Area",
+        "Prabhag Name",
+        "%_of_hh_with_underground_drainage_connection_in_society_data",
+        "%_hh_with_underground_drainage_connection_in_slums_data",
+        "%_of_hh_with_underground_drainage_connection_in_chawls_and_gaothan_data"
+      ]
+    },
+    {
+      "filename": "River  Waterbody Map.kml",
+      "relative_path": "data/raw/official_reports/River  Waterbody Map.kml",
+      "category": "stormwater_and_infrastructure",
+      "source": "OpenCity Pune Drainage / PMC",
+      "size_bytes": 70784,
+      "status": "VALID",
+      "format": "KML/KMZ spatial layer",
+      "notes": "Unconverted spatial vector layer. Needs conversion to GeoJSON before spatial joins."
+    },
+    {
+      "filename": "pune_forecast_current.json",
+      "relative_path": "data/raw/weather/pune_forecast_current.json",
+      "category": "weather_forecast",
+      "source": "Open-Meteo Weather Forecast API",
+      "license": "Non-commercial / Open-Meteo terms",
+      "status": "VALID",
+      "size_bytes": 579,
+      "data_type": "forecast_current"
+    },
+    {
+      "filename": "pune_forecast_daily.csv",
+      "relative_path": "data/raw/weather/pune_forecast_daily.csv",
+      "category": "weather_forecast",
+      "source": "Open-Meteo Weather Forecast API",
+      "license": "Non-commercial / Open-Meteo terms",
+      "status": "VALID",
+      "size_bytes": 1367,
+      "row_count": 7,
+      "columns": [
+        "date",
+        "temperature_2m_max",
+        "temperature_2m_min",
+        "apparent_temperature_max",
+        "apparent_temperature_min",
+        "precipitation_sum",
+        "precipitation_probability_max",
+        "wind_speed_10m_max",
+        "shortwave_radiation_sum",
+        "et0_fao_evapotranspiration",
+        "uv_index_max"
+      ]
+    },
+    {
+      "filename": "pune_forecast_hourly.csv",
+      "relative_path": "data/raw/weather/pune_forecast_hourly.csv",
+      "category": "weather_forecast",
+      "source": "Open-Meteo Weather Forecast API",
+      "license": "Non-commercial / Open-Meteo terms",
+      "status": "VALID",
+      "size_bytes": 34886,
+      "row_count": 168,
+      "columns": [
+        "datetime",
+        "temperature_2m",
+        "relative_humidity_2m",
+        "apparent_temperature",
+        "rain",
+        "precipitation_probability",
+        "precipitation",
+        "cloud_cover",
+        "wind_speed_10m",
+        "wind_gusts_10m",
+        "evapotranspiration",
+        "et0_fao_evapotranspiration",
+        "soil_moisture_0_to_1cm",
+        "soil_moisture_9_to_27cm"
+      ]
+    },
+    {
+      "filename": "pune_forecast_raw.json",
+      "relative_path": "data/raw/weather/pune_forecast_raw.json",
+      "category": "weather_forecast",
+      "source": "Open-Meteo Weather Forecast API",
+      "license": "Non-commercial / Open-Meteo terms",
+      "status": "VALID",
+      "size_bytes": 2239,
+      "data_type": "forecast"
+    },
+    {
+      "identifier": "sentinel2",
+      "description": "Satellite imagery (NDVI analysis)",
+      "status": "MISSING_UNVERIFIED",
+      "category": "external_environmental_or_census",
+      "notes": "Not yet confirmed downloaded locally. As per core project principle: do not invent dummy measurements. Missing data flagged as missing."
+    },
+    {
+      "identifier": "dem",
+      "description": "Digital Elevation Model / Terrain",
+      "status": "MISSING_UNVERIFIED",
+      "category": "external_environmental_or_census",
+      "notes": "Not yet confirmed downloaded locally. As per core project principle: do not invent dummy measurements. Missing data flagged as missing."
+    },
+    {
+      "identifier": "population",
+      "description": "Census 2011 Primary Census Abstract",
+      "status": "CONFIRMED_DOWNLOADED",
+      "category": "external_environmental_or_census",
+      "notes": "Not yet confirmed downloaded locally. As per core project principle: do not invent dummy measurements. Missing data flagged as missing."
+    },
+    {
+      "identifier": "groundwater",
+      "description": "GSDA Local Monitoring Wells",
+      "status": "MISSING_UNVERIFIED",
+      "category": "external_environmental_or_census",
+      "notes": "Not yet confirmed downloaded locally. As per core project principle: do not invent dummy measurements. Missing data flagged as missing."
+    }
+  ]
+}

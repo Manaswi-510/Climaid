@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "source": "Open-Meteo Weather Forecast API",
+    "url": "https://api.open-meteo.com/v1/forecast",
+    "data_type": "forecast",
+    "retrieval_timestamp_utc": "2026-10-17T17:37:02.513998+00:00",
+    "pilot_area": "Pune Pilot, Maharashtra, India",
+    "requested_coordinates": {
+      "latitude": 18.523726,
+      "longitude": 73.86876
+    },
+    "resolved_coordinates": {
+      "latitude": 18.523725509643555,
+      "longitude": 73.86875915527344
+    },
+    "elevation_m": 557.0,
+    "timezone": "Asia/Kolkata",
+    "utc_offset_seconds": 19800,
+    "disclaimer": "This dataset represents a short-term model forecast and not historical climate observations."
+  },
+  "current": {
+    "retrieved_at_utc": "2026-10-17T17:37:02.513998+00:00",
+    "data_type": "forecast_current",
+    "source": "Open-Meteo Forecast API",
+    "latitude": 18.523725509643555,
+    "longitude": 73.86875915527344,
+    "elevation_m": 557.0,
+    "timezone": "Asia/Kolkata",
+    "time_epoch": 1792258200,
+    "temperature_2m_c": 25.149999618530273,
+    "relative_humidity_2m_pct": 80.71402740478516,
+    "apparent_temperature_c": 29.028884887695312,
+    "precipitation_mm": 0.0,
+    "cloud_cover_pct": 3.0,
+    "wind_speed_10m_kmh": 5.634891033172607,
+    "wind_gusts_10m_kmh": 15.119998931884766
+  },
+  "hourly_summary": {
+    "interval_seconds": 3600,
+    "variables": [
+      "temperature_2m",
+      "relative_humidity_2m",
+      "apparent_temperature",
+      "rain",
+      "precipitation_probability",
+      "precipitation",
+      "cloud_cover",
+      "wind_speed_10m",
+      "wind_gusts_10m",
+      "evapotranspiration",
+      "et0_fao_evapotranspiration",
+      "soil_moisture_0_to_1cm",
+      "soil_moisture_9_to_27cm"
+    ],
+    "record_count": 168
+  },
+  "daily_summary": {
+    "interval_seconds": 86400,
+    "variables": [
+      "temperature_2m_max",
+      "temperature_2m_min",
+      "apparent_temperature_max",
+      "apparent_temperature_min",
+      "precipitation_sum",
+      "precipitation_probability_max",
+      "wind_speed_10m_max",
+      "shortwave_radiation_sum",
+      "et0_fao_evapotranspiration",
+      "uv_index_max"
+    ],
+    "record_count": 7
+  }
+}

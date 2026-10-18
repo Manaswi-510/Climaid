@@ -1,0 +1,849 @@
+{
+ "url": "http://127.0.0.1:5173",
+ "at": "2026-10-17T18:53:31.522Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 2,
+   "filled": [
+    0.87,
+    0.82
+   ],
+   "motion": {
+    "elements": 16,
+    "css": 16,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 1,
+    "playingVideos": 1
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 1742,
+     "screens": 1.9,
+     "words": 300,
+     "img": 2,
+     "video": 1,
+     "canvas": 0,
+     "svg": 9,
+     "sections": 0,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 4,
+     "uiAbuse": false,
+     "realPictures": 3,
+     "videoCount": 1,
+     "uiPictures": 2,
+     "pictureSamples": [
+      "shaheen-bagh-pune-camp-02.jpg",
+      "poona-club-0.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": []
+    },
+    "hero": {
+     "text": "Pune Climate Adaptation",
+     "words": 3,
+     "chars": 23,
+     "lines": 1,
+     "size": 35.2,
+     "vw": 2.4,
+     "font": "General Sans",
+     "weight": 700,
+     "tracking": -0.01,
+     "leading": 1.15,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.47,
+     "top": 401,
+     "tag": "h2",
+     "kind": "heading"
+    },
+    "h1": null,
+    "headings": [
+     {
+      "text": "Pune Climate Adaptation",
+      "words": 3,
+      "chars": 23,
+      "lines": 1,
+      "size": 35.2,
+      "vw": 2.4,
+      "font": "General Sans",
+      "weight": 700,
+      "tracking": -0.01,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.47,
+      "top": 401,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 1,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "General Sans",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      13,
+      14,
+      16,
+      19
+     ],
+     "sizeCount": 4,
+     "notLoaded": [],
+     "body": {
+      "font": "General Sans",
+      "size": 16,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 12.1
+     },
+     "measureChars": 70,
+     "max": {
+      "size": 35.2,
+      "vw": 2.4,
+      "font": "General Sans",
+      "text": "Pune Climate Adaptation"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.02,
+     "centerShare": 0.05,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070c14",
+     "bodyBgHsl": {
+      "h": 217,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#0f1726",
+       "top": 337,
+       "hsl": {
+        "h": 219,
+        "s": 0.43,
+        "l": 0.1
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#cbd5e1",
+       "share": 0.56
+      },
+      {
+       "color": "#f8fafc",
+       "share": 0.27
+      },
+      {
+       "color": "#22d3ee",
+       "share": 0.07
+      },
+      {
+       "color": "#34d399",
+       "share": 0.04
+      },
+      {
+       "color": "#10b981",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#0f1726",
+      "hsl": {
+       "h": 219,
+       "s": 0.43,
+       "l": 0.1
+      },
+      "fg": "#f8fafc"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 1,
+     "radius": 4,
+     "height": 52,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Overview"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 0,
+     "roundedMedia": 2,
+     "mediaRadius": 4,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 995
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.2
+     }
+    ],
+    "nav": {
+     "links": 0,
+     "fixed": true,
+     "height": 109,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "general sans"
+    ]
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 3,
+   "filled": [
+    0.9,
+    0.96,
+    0.84
+   ],
+   "motion": {
+    "elements": 16,
+    "css": 16,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 1,
+    "playingVideos": 1
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 2715,
+     "screens": 2.7,
+     "words": 300,
+     "img": 2,
+     "video": 1,
+     "canvas": 0,
+     "svg": 9,
+     "sections": 0,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 4,
+     "uiAbuse": false,
+     "realPictures": 3,
+     "videoCount": 1,
+     "uiPictures": 2,
+     "pictureSamples": [
+      "shaheen-bagh-pune-camp-02.jpg",
+      "poona-club-0.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": []
+    },
+    "hero": {
+     "text": "Pune Climate Adaptation",
+     "words": 3,
+     "chars": 23,
+     "lines": 1,
+     "size": 25.6,
+     "vw": 3.3,
+     "font": "General Sans",
+     "weight": 700,
+     "tracking": -0.01,
+     "leading": 1.15,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.9,
+     "top": 434,
+     "tag": "h2",
+     "kind": "heading"
+    },
+    "h1": null,
+    "headings": [],
+    "headingSummary": {
+     "count": 0,
+     "maxLines": 0,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "General Sans",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      13,
+      14,
+      16,
+      19
+     ],
+     "sizeCount": 4,
+     "notLoaded": [],
+     "body": {
+      "font": "General Sans",
+      "size": 16,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 12.1
+     },
+     "measureChars": 70,
+     "max": {
+      "size": 25.6,
+      "vw": 3.3,
+      "font": "General Sans",
+      "text": "Pune Climate Adaptation"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.02,
+     "centerShare": 0.05,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070c14",
+     "bodyBgHsl": {
+      "h": 217,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#0f1726",
+       "top": 686,
+       "hsl": {
+        "h": 219,
+        "s": 0.43,
+        "l": 0.1
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#cbd5e1",
+       "share": 0.56
+      },
+      {
+       "color": "#f8fafc",
+       "share": 0.27
+      },
+      {
+       "color": "#22d3ee",
+       "share": 0.07
+      },
+      {
+       "color": "#34d399",
+       "share": 0.04
+      },
+      {
+       "color": "#10b981",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#0f1726",
+      "hsl": {
+       "h": 219,
+       "s": 0.43,
+       "l": 0.1
+      },
+      "fg": "#f8fafc"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 1,
+     "radius": 4,
+     "height": 52,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Overview"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 0,
+     "roundedMedia": 2,
+     "mediaRadius": 4,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 1935
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.32
+     }
+    ],
+    "nav": {
+     "links": 0,
+     "fixed": false,
+     "height": 158,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "general sans"
+    ]
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 4,
+   "filled": [
+    0.88,
+    0.87,
+    0.83,
+    0.91
+   ],
+   "motion": {
+    "elements": 16,
+    "css": 16,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 1,
+    "playingVideos": 1
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 2819,
+     "screens": 3.3,
+     "words": 300,
+     "img": 2,
+     "video": 1,
+     "canvas": 0,
+     "svg": 9,
+     "sections": 0,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 4,
+     "uiAbuse": false,
+     "realPictures": 3,
+     "videoCount": 1,
+     "uiPictures": 4,
+     "pictureSamples": [
+      "shaheen-bagh-pune-camp-02.jpg",
+      "poona-club-0.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": []
+    },
+    "hero": {
+     "text": "Pune Climate Adaptation",
+     "words": 3,
+     "chars": 23,
+     "lines": 1,
+     "size": 25.6,
+     "vw": 6.6,
+     "font": "General Sans",
+     "weight": 700,
+     "tracking": -0.01,
+     "leading": 1.15,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.79,
+     "top": 607,
+     "tag": "h2",
+     "kind": "heading"
+    },
+    "h1": null,
+    "headings": [
+     {
+      "text": "Pune Climate Adaptation",
+      "words": 3,
+      "chars": 23,
+      "lines": 1,
+      "size": 25.6,
+      "vw": 6.6,
+      "font": "General Sans",
+      "weight": 700,
+      "tracking": -0.01,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.79,
+      "top": 607,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "25.1°C",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 25.6,
+      "vw": 6.6,
+      "font": "General Sans",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.24,
+      "top": 848,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "42.3%",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 25.6,
+      "vw": 6.6,
+      "font": "General Sans",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.24,
+      "top": 848,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "5,779",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 25.6,
+      "vw": 6.6,
+      "font": "General Sans",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.24,
+      "top": 848,
+      "tag": "div",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 4,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "General Sans",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      13,
+      14,
+      16,
+      19
+     ],
+     "sizeCount": 4,
+     "notLoaded": [],
+     "body": {
+      "font": "General Sans",
+      "size": 16,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 12.1
+     },
+     "measureChars": 35,
+     "max": {
+      "size": 25.6,
+      "vw": 6.6,
+      "font": "General Sans",
+      "text": "Pune Climate Adaptation"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.02,
+     "centerShare": 0.05,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070c14",
+     "bodyBgHsl": {
+      "h": 217,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#0f1726",
+       "top": 223,
+       "hsl": {
+        "h": 219,
+        "s": 0.43,
+        "l": 0.1
+       }
+      },
+      {
+       "color": "#162032",
+       "top": 2110,
+       "hsl": {
+        "h": 219,
+        "s": 0.39,
+        "l": 0.14
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#cbd5e1",
+       "share": 0.56
+      },
+      {
+       "color": "#f8fafc",
+       "share": 0.27
+      },
+      {
+       "color": "#22d3ee",
+       "share": 0.07
+      },
+      {
+       "color": "#34d399",
+       "share": 0.04
+      },
+      {
+       "color": "#10b981",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#0f1726",
+      "hsl": {
+       "h": 219,
+       "s": 0.43,
+       "l": 0.1
+      },
+      "fg": "#f8fafc"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 1,
+     "radius": 4,
+     "height": 52,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Overview"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 0,
+     "roundedMedia": 2,
+     "mediaRadius": 4,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 0,
+     "fixed": false,
+     "height": 207,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "general sans"
+    ]
+   },
+   "consoleErrors": []
+  }
+ ],
+ "findings": [],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "C:\\Users\\Manaswi\\Desktop\\ClimatePune\\.taste-skill\\inspect\\desktop-fold.jpg",
+   "pages": [
+    "C:\\Users\\Manaswi\\Desktop\\ClimatePune\\.taste-skill\\inspect\\desktop-page-01.jpg"
+   ]
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "C:\\Users\\Manaswi\\Desktop\\ClimatePune\\.taste-skill\\inspect\\tablet-fold.jpg",
+   "pages": [
+    "C:\\Users\\Manaswi\\Desktop\\ClimatePune\\.taste-skill\\inspect\\tablet-page-01.jpg"
+   ]
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "C:\\Users\\Manaswi\\Desktop\\ClimatePune\\.taste-skill\\inspect\\mobile-fold.jpg",
+   "pages": [
+    "C:\\Users\\Manaswi\\Desktop\\ClimatePune\\.taste-skill\\inspect\\mobile-page-01.jpg"
+   ]
+  }
+ ]
+}
