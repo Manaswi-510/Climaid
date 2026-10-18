@@ -1,13 +1,13 @@
 {
-  "generated_at_utc": "2026-10-18T17:57:15.308550+00:00",
+  "generated_at_utc": "2026-10-18T19:03:10.138057+00:00",
   "target_ward": "Ward #19: Vadgaon Sheri - Ganesh Nagar",
   "resource_summary": {
     "total_budget_inr": 5000000.0,
-    "allocated_spend_inr": 5000000.0,
-    "remaining_budget_inr": 0.0,
-    "workforce_demand_person_months": 75.0,
-    "actions_selected_count": 5,
-    "unallocated_budget_explanation": "100.0% of the target municipal budget was allocated to selected actions."
+    "allocated_spend_inr": 360000.0,
+    "remaining_budget_inr": 4640000.0,
+    "workforce_demand_person_months": 6.0,
+    "actions_selected_count": 1,
+    "unallocated_budget_explanation": "Residual budget of INR 4,640,000 remained unallocated because the workforce capacity limit (6.0 person-months) was reached."
   },
   "baseline_scenario": {
     "name": "Current Baseline (Vadgaon Sheri - Ganesh Nagar)",
@@ -37,20 +37,20 @@
     "notes": "Simulated stormwater inundation at drainage constriction points and low-elevation junctions."
   },
   "post_adaptation_scenario": {
-    "name": "Post-Implementation Portfolio Outcome (INR 5,000,000)",
-    "heat_proxy": 39.6,
+    "name": "Post-Implementation Portfolio Outcome (INR 360,000)",
+    "heat_proxy": 54.8,
     "flood_proxy": 75.2,
-    "water_stress_proxy": 49.8,
-    "green_deficit_proxy": 93.2,
-    "composite_vulnerability": 61.6,
-    "net_vulnerability_reduction_pct": 10.5,
-    "notes": "Modelled estimate reflecting 5 adaptation actions. Notice: Only indicators with defensible physical mechanisms are subtracted. Directional maintenance actions (such as drain desilting) contribute to resilience but do not claim uncalibrated flood probability drops."
+    "water_stress_proxy": 52.0,
+    "green_deficit_proxy": 95.0,
+    "composite_vulnerability": 67.5,
+    "net_vulnerability_reduction_pct": 1.9,
+    "notes": "Modelled estimate reflecting 1 adaptation actions. Notice: Only indicators with defensible physical mechanisms are subtracted. Directional maintenance actions (such as drain desilting) contribute to resilience but do not claim uncalibrated flood probability drops."
   },
   "indicator_changes": {
     "heat_exposure_proxy": {
       "baseline": 58.4,
-      "proposed": 39.6,
-      "delta": -18.8,
+      "proposed": 54.8,
+      "delta": -3.6,
       "status": "MODELLED_ESTIMATE",
       "notes": "Driven by cool roof albedo reflectance and pedestrian shade canopy planting."
     },
@@ -63,119 +63,44 @@
     },
     "water_stress_proxy": {
       "baseline": 52.0,
-      "proposed": 49.8,
-      "delta": -2.2,
-      "status": "MODELLED_ESTIMATE",
+      "proposed": 52.0,
+      "delta": 0.0,
+      "status": "UNCHANGED",
       "notes": "Driven by decentralized institutional rainwater harvesting."
     },
     "green_deficit_proxy": {
       "baseline": 95.0,
-      "proposed": 93.2,
-      "delta": -1.8,
-      "status": "MODELLED_ESTIMATE",
+      "proposed": 95.0,
+      "delta": 0.0,
+      "status": "UNCHANGED",
       "notes": "Driven by native roadside shade corridors and vegetated bioretention swales."
     },
     "composite_vulnerability_score": {
       "baseline": 68.8,
-      "proposed": 61.6,
-      "delta": -7.2,
+      "proposed": 67.5,
+      "delta": -1.3,
       "status": "MODELLED_COMPOSITE_RECOMPUTATION",
       "notes": "Recomputed strictly from updated constituent proxies using standard Pune weights (0.35 Heat + 0.35 Flood + 0.15 Water + 0.15 Green)."
     }
   },
   "impact_breakdown": [
     {
-      "id": "INT-HEAT-03",
-      "title": "Shaded Bus Stops & Public Cooling Kiosks with Drinking Water",
-      "allocated_units": 12,
-      "unit": "station kiosk",
-      "spend_inr": 2160000,
-      "workforce_person_months": 30.0,
-      "site_suitability_status": "SUITABLE_CONFIRMED",
-      "quantified_effects": [],
-      "directional_effects": [
-        "Commuter thermal refuge during heatwaves",
-        "Public hydration access"
-      ]
-    },
-    {
       "id": "INT-HEAT-02",
       "title": "Cool Roof Reflective Coating in High-Density Receptors",
-      "allocated_units": 15,
+      "allocated_units": 3,
       "unit": "building cluster",
-      "spend_inr": 1800000,
-      "workforce_person_months": 30.0,
+      "spend_inr": 360000,
+      "workforce_person_months": 6.0,
       "site_suitability_status": "SUITABLE_CONFIRMED",
       "quantified_effects": [
-        "heat_exposure_proxy: -18.0 (Modelled)"
+        "heat_exposure_proxy: -3.6 (Modelled)"
       ],
       "directional_effects": [
         "Indoor thermal comfort in uninsulated tin/asbestos housing"
       ]
-    },
-    {
-      "id": "INT-WATER-01",
-      "title": "Decentralized Rainwater Harvesting in Municipal Complexes",
-      "allocated_units": 2,
-      "unit": "building installation",
-      "spend_inr": 440000,
-      "workforce_person_months": 6.0,
-      "site_suitability_status": "SUITABLE_CONFIRMED",
-      "quantified_effects": [
-        "water_stress_proxy: -2.2 (Modelled)"
-      ],
-      "directional_effects": [
-        "Decentralized non-potable substitution",
-        "Aquifer table recharge"
-      ]
-    },
-    {
-      "id": "INT-FLOOD-01",
-      "title": "Critical Stormwater Drain Desilting & Inlet Trash Screens",
-      "allocated_units": 1,
-      "unit": "major drain ward section",
-      "spend_inr": 350000,
-      "workforce_person_months": 5.0,
-      "site_suitability_status": "SUITABLE_CONFIRMED",
-      "quantified_effects": [],
-      "directional_effects": [
-        "Conduit clearing",
-        "Removal of plastic/debris bottlenecks",
-        "Vector-borne disease reduction"
-      ]
-    },
-    {
-      "id": "INT-HEAT-01",
-      "title": "Urban Shade Corridors & Native Canopy Planting",
-      "allocated_units": 1,
-      "unit": "km corridor",
-      "spend_inr": 250000,
-      "workforce_person_months": 4.0,
-      "site_suitability_status": "SUITABLE_CONFIRMED",
-      "quantified_effects": [
-        "green_deficit_proxy: -1.8 (Modelled)",
-        "heat_exposure_proxy: -0.8 (Modelled)"
-      ],
-      "directional_effects": [
-        "Pedestrian shade comfort",
-        "Biodiversity corridor connectivity"
-      ]
     }
   ],
-  "directional_interventions": [
-    {
-      "id": "INT-HEAT-03",
-      "title": "Shaded Bus Stops & Public Cooling Kiosks with Drinking Water",
-      "benefit_direction": "Positive Localized Resilience",
-      "notes": "Cooling kiosks provide acute localized commuter relief; numerical effect on macro ward-level surface temperature is physically negligible and unavailable."
-    },
-    {
-      "id": "INT-FLOOD-01",
-      "title": "Critical Stormwater Drain Desilting & Inlet Trash Screens",
-      "benefit_direction": "Positive Localized Resilience",
-      "notes": "Desilting restores baseline designed pipe conveyance. However, it does not enlarge pipe capacity or provide a defensible numerical reduction in extreme storm flood probability."
-    }
-  ],
+  "directional_interventions": [],
   "data_provenance_and_limitations": [
     "Tree and green space counts from OpenStreetMap are crowd-sourced and incomplete; not equivalent to satellite canopy cover.",
     "Temperature forecasts are city-level from Open-Meteo, not localized ward-level telemetry.",

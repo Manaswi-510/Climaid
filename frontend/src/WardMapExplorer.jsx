@@ -9,27 +9,27 @@ import {
   Search, SlidersHorizontal, BarChart3,
 } from 'lucide-react';
 
-const API_BASE = 'http://127.0.0.1:8000';
+const API_BASE = '';
 
 /* ── Palette: Climaid Brand + 3D Isometric GIS Layers ── */
 const P = {
   brandBlue: '#00669E',
   riverBlue: '#0284C7',
   cyanWater: '#38BDF8',
-  brandGreen:'#22C55E',
-  foliage:   '#16A34A',
-  purpleRisk:'#8B5CF6',
+  brandGreen: '#22C55E',
+  foliage: '#16A34A',
+  purpleRisk: '#8B5CF6',
   amberHeat: '#F59E0B',
-  high:      '#EF4444',
-  mid:       '#F59E0B',
-  teal:      '#0284C7',
-  pastel:    '#93C5FD',
-  silver:    '#E2E8F0',
-  none:      '#334155',
+  high: '#EF4444',
+  mid: '#F59E0B',
+  teal: '#0284C7',
+  pastel: '#93C5FD',
+  silver: '#E2E8F0',
+  none: '#334155',
 };
 
 const PILOT_BOUNDS = [[18.44, 73.77], [18.63, 73.96]];
-const PUNE_CENTER  = [18.535, 73.855];
+const PUNE_CENTER = [18.535, 73.855];
 
 /* ── Choropleth colour matching the 4 GIS layers ───────────────── */
 export function getChoroplethColor(v) {
@@ -42,59 +42,59 @@ export function getChoroplethColor(v) {
 
 /* ── Metric config ─────────────────────────────────────────────── */
 export const METRIC_CONFIG = {
-  composite: { label:'Composite Vulnerability', shortLabel:'Composite', icon:Sparkles,  color:'#22C55E',  desc:'Weighted multi-factor screening: heat, drainage, water, green deficit.' },
-  heat:      { label:'Heat Exposure',           shortLabel:'Heat',      icon:Flame,     color:'#F59E0B',  desc:'Surface temperature anomaly proxy from satellite thermals and building density.' },
-  flood:     { label:'Flood & Drainage',        shortLabel:'Flood',     icon:Waves,     color:'#0284C7',  desc:'Runoff deficit proxy from stormwater inlet records and nalla proximity.' },
-  water:     { label:'Water Stress',            shortLabel:'Water',     icon:Droplets,  color:'#38BDF8',  desc:'Supply pressure proxy from pipeline network and population density.' },
-  green:     { label:'Green-Space Deficit',     shortLabel:'Green',     icon:TreePine,  color:'#16A34A',  desc:'Ecological gap: civic parks and mapped trees vs. ward population.' },
+  composite: { label: 'Composite Vulnerability', shortLabel: 'Composite', icon: Sparkles, color: '#22C55E', desc: 'Weighted multi-factor screening: heat, drainage, water, green deficit.' },
+  heat: { label: 'Heat Exposure', shortLabel: 'Heat', icon: Flame, color: '#F59E0B', desc: 'Surface temperature anomaly proxy from satellite thermals and building density.' },
+  flood: { label: 'Flood & Drainage', shortLabel: 'Flood', icon: Waves, color: '#0284C7', desc: 'Runoff deficit proxy from stormwater inlet records and nalla proximity.' },
+  water: { label: 'Water Stress', shortLabel: 'Water', icon: Droplets, color: '#38BDF8', desc: 'Supply pressure proxy from pipeline network and population density.' },
+  green: { label: 'Green-Space Deficit', shortLabel: 'Green', icon: TreePine, color: '#16A34A', desc: 'Ecological gap: civic parks and mapped trees vs. ward population.' },
 };
 
 /* ── SVG div-icons for Leaflet ─────────────────────────────────── */
-const makeIcon = (html, size = 20) => L.divIcon({ html, className:'', iconSize:[size,size], iconAnchor:[size/2,size/2] });
+const makeIcon = (html, size = 20) => L.divIcon({ html, className: '', iconSize: [size, size], iconAnchor: [size / 2, size / 2] });
 
-const TREE_ICON   = makeIcon(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#22C55E" stroke="#14532D" stroke-width="1.5"><path d="M12 22v-7"/><path d="M9 12H5l7-10 7 10h-4"/><path d="M9 17h6"/></svg>`, 18);
+const TREE_ICON = makeIcon(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#22C55E" stroke="#14532D" stroke-width="1.5"><path d="M12 22v-7"/><path d="M9 12H5l7-10 7 10h-4"/><path d="M9 17h6"/></svg>`, 18);
 const HEALTH_ICON = makeIcon(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#EF4444" stroke="white" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M12 7v10M7 12h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>`, 18);
-const PARK_ICON   = makeIcon(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#16A34A" stroke="#86EFAC" stroke-width="1"><circle cx="12" cy="12" r="10"/><path d="M8 15s1.5 2 4 2 4-2 4-2" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none"/><circle cx="9" cy="10" r="1.5" fill="white"/><circle cx="15" cy="10" r="1.5" fill="white"/></svg>`, 16);
+const PARK_ICON = makeIcon(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#16A34A" stroke="#86EFAC" stroke-width="1"><circle cx="12" cy="12" r="10"/><path d="M8 15s1.5 2 4 2 4-2 4-2" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none"/><circle cx="9" cy="10" r="1.5" fill="white"/><circle cx="15" cy="10" r="1.5" fill="white"/></svg>`, 16);
 
 /* ── Vulnerability label ───────────────────────────────────────── */
 function vulnLabel(s) {
-  if (s >= 75) return { text:'Higher Concern',   color:'#EF4444' };
-  if (s >= 60) return { text:'Moderate Concern', color:'#F59E0B' };
-  if (s >= 45) return { text:'Some Concern',     color:'#0284C7' };
-  return             { text:'Lower Concern',     color:'#22C55E' };
+  if (s >= 75) return { text: 'Higher Concern', color: '#EF4444' };
+  if (s >= 60) return { text: 'Moderate Concern', color: '#F59E0B' };
+  if (s >= 45) return { text: 'Some Concern', color: '#0284C7' };
+  return { text: 'Lower Concern', color: '#22C55E' };
 }
 
 /* ── Contributing factors ──────────────────────────────────────── */
 function getFactors(ward) {
   if (!ward) return [];
-  const f   = [];
-  const swd  = ward.evidence?.stormwater_drain_coverage_pct ?? 0;
+  const f = [];
+  const swd = ward.evidence?.stormwater_drain_coverage_pct ?? 0;
   const heat = ward.indicators?.heat_exposure_proxy ?? 0;
-  const water= ward.indicators?.water_stress_proxy ?? 0;
-  const green= ward.indicators?.green_deficit_proxy ?? 0;
-  const flood= ward.indicators?.flood_screening_proxy ?? 0;
+  const water = ward.indicators?.water_stress_proxy ?? 0;
+  const green = ward.indicators?.green_deficit_proxy ?? 0;
+  const flood = ward.indicators?.flood_screening_proxy ?? 0;
   const temp = ward.evidence?.forecast_max_temp_c ?? null;
-  if (swd  < 30)  f.push({ icon:Waves,       color:'#0284C7', text:`Only ${swd.toFixed(1)}% stormwater drain coverage — elevated flash-runoff risk.` });
-  if (heat >= 60) f.push({ icon:Flame,       color:'#F59E0B', text:`High heat proxy (${heat}/100) — dense built-surface thermal absorption.` });
-  if (water>= 60) f.push({ icon:Droplets,    color:'#38BDF8', text:`Water supply stress (${water}/100) — distribution network sensitivity.` });
-  if (green>= 60) f.push({ icon:TreePine,    color:'#22C55E', text:`Canopy deficit (${green}/100) — reduced natural cooling buffer.` });
-  if (flood>= 70) f.push({ icon:CloudRain,   color:'#0284C7', text:`Drainage deficit score (${flood}/100) — stormwater system overload risk.` });
+  if (swd < 30) f.push({ icon: Waves, color: '#0284C7', text: `Only ${swd.toFixed(1)}% stormwater drain coverage — elevated flash-runoff risk.` });
+  if (heat >= 60) f.push({ icon: Flame, color: '#F59E0B', text: `High heat proxy (${heat}/100) — dense built-surface thermal absorption.` });
+  if (water >= 60) f.push({ icon: Droplets, color: '#38BDF8', text: `Water supply stress (${water}/100) — distribution network sensitivity.` });
+  if (green >= 60) f.push({ icon: TreePine, color: '#22C55E', text: `Canopy deficit (${green}/100) — reduced natural cooling buffer.` });
+  if (flood >= 70) f.push({ icon: CloudRain, color: '#0284C7', text: `Drainage deficit score (${flood}/100) — stormwater system overload risk.` });
   if (temp != null && temp > 36)
-                  f.push({ icon:Thermometer, color:'#EF4444', text:`Forecast peak ${temp.toFixed(1)}°C — urban heat island compounding factor.` });
-  if (!f.length)  f.push({ icon:CheckCircle2,color:'#22C55E', text:`Moderate baseline. SWD: ${swd.toFixed(1)}%. Balanced municipal indicator profile.` });
+    f.push({ icon: Thermometer, color: '#EF4444', text: `Forecast peak ${temp.toFixed(1)}°C — urban heat island compounding factor.` });
+  if (!f.length) f.push({ icon: CheckCircle2, color: '#22C55E', text: `Moderate baseline. SWD: ${swd.toFixed(1)}%. Balanced municipal indicator profile.` });
   return f;
 }
 
 /* ── Layer definitions matching the 3D isometric stack ──────────── */
 const LAYER_DEFS = [
-  { key:'wards',       label:'Ward boundaries',   color:'#E2E8F0', icon:MapPin,     desc:'76 electoral wards' },
-  { key:'nallas',      label:'Drainage nallas',   color:'#0284C7', icon:Waves,      desc:'Natural channels' },
-  { key:'chambers',    label:'Stormwater inlets', color:'#8B5CF6', icon:Droplets,   desc:'1,532 SWD chambers' },
-  { key:'waterbodies', label:'Rivers & water',    color:'#38BDF8', icon:Droplets,   desc:'PMC official data' },
-  { key:'parks',       label:'Parks & gardens',   color:'#22C55E', icon:TreePine,   desc:'OSM civic green' },
-  { key:'hospitals',   label:'Healthcare',         color:'#EF4444', icon:Heart,      desc:'OSM medical facilities' },
-  { key:'trees',       label:'Canopy trees',       color:'#16A34A', icon:TreePine,   desc:'5.7k mapped trees' },
-  { key:'pipes',       label:'SWD pipe network',  color:'#A855F7', icon:Activity,   desc:'Viewport-loaded' },
+  { key: 'wards', label: 'Ward boundaries', color: '#E2E8F0', icon: MapPin, desc: '76 electoral wards' },
+  { key: 'nallas', label: 'Drainage nallas', color: '#0284C7', icon: Waves, desc: 'Natural channels' },
+  { key: 'chambers', label: 'Stormwater inlets', color: '#8B5CF6', icon: Droplets, desc: '1,532 SWD chambers' },
+  { key: 'waterbodies', label: 'Rivers & water', color: '#38BDF8', icon: Droplets, desc: 'PMC official data' },
+  { key: 'parks', label: 'Parks & gardens', color: '#22C55E', icon: TreePine, desc: 'OSM civic green' },
+  { key: 'hospitals', label: 'Healthcare', color: '#EF4444', icon: Heart, desc: 'OSM medical facilities' },
+  { key: 'trees', label: 'Canopy trees', color: '#16A34A', icon: TreePine, desc: '5.7k mapped trees' },
+  { key: 'pipes', label: 'SWD pipe network', color: '#A855F7', icon: Activity, desc: 'Viewport-loaded' },
 ];
 
 /* ── Animated progress bar ─────────────────────────────────────── */
@@ -105,8 +105,8 @@ function AnimBar({ value, color, delay = 0 }) {
     return () => clearTimeout(t);
   }, [value, delay]);
   return (
-    <div style={{ width:'100%', height:5, background:'rgba(255,255,255,0.08)', borderRadius:3, overflow:'hidden' }}>
-      <div style={{ width:`${w}%`, height:'100%', background:color, borderRadius:3, transition:'width 700ms cubic-bezier(0.22,1,0.36,1)' }} />
+    <div style={{ width: '100%', height: 5, background: 'rgba(255,255,255,0.08)', borderRadius: 3, overflow: 'hidden' }}>
+      <div style={{ width: `${w}%`, height: '100%', background: color, borderRadius: 3, transition: 'width 700ms cubic-bezier(0.22,1,0.36,1)' }} />
     </div>
   );
 }
@@ -118,8 +118,8 @@ function HumidityRing({ pct }) {
     <svg width={48} height={48} viewBox="0 0 48 48">
       <circle cx={24} cy={24} r={r} fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth={5} />
       <circle cx={24} cy={24} r={r} fill="none" stroke={P.teal} strokeWidth={5}
-        strokeDasharray={`${(s/100)*circ} ${circ}`} strokeLinecap="round"
-        transform="rotate(-90 24 24)" style={{ transition:'stroke-dasharray 900ms ease' }} />
+        strokeDasharray={`${(s / 100) * circ} ${circ}`} strokeLinecap="round"
+        transform="rotate(-90 24 24)" style={{ transition: 'stroke-dasharray 900ms ease' }} />
       <text x={24} y={28} textAnchor="middle" fontSize={10} fill={P.pastel} fontWeight={700}>{Math.round(pct)}%</text>
     </svg>
   );
@@ -138,7 +138,7 @@ function TempSparkline({ data }) {
     return `${x},${y}`;
   }).join(' ');
   return (
-    <svg width={W} height={H} style={{ display:'block', flexShrink:0 }}>
+    <svg width={W} height={H} style={{ display: 'block', flexShrink: 0 }}>
       <polyline points={pts} fill="none" stroke="#F87171" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
       {data.map((d, i) => {
         const x = (i / (data.length - 1)) * W;
@@ -164,30 +164,30 @@ function HudVulnBadge({ ward }) {
    ═══════════════════════════════════════════════════════════════════ */
 export default function WardMapExplorer({ wardData = [], selectedWard, onSelectWard, onClearWard }) {
   const navigate = useNavigate();
-  const mapRef   = useRef(null);
-  const mapInst  = useRef(null);
-  const lgRef    = useRef({});
-  const canvas   = useRef(null);
-  const cache    = useRef({});
+  const mapRef = useRef(null);
+  const mapInst = useRef(null);
+  const lgRef = useRef({});
+  const canvas = useRef(null);
+  const cache = useRef({});
 
-  const [layers,       setLayers]       = useState({ wards:true, nallas:true, chambers:true, waterbodies:true, parks:false, hospitals:false, trees:false, pipes:false });
-  const [loadingL,     setLoadingL]     = useState({});
-  const [metric,       setMetric]       = useState('composite');
-  const [zoom,         setZoom]         = useState(12);
-  const [weather,      setWeather]      = useState(null);
-  const [detailOpen,   setDetailOpen]   = useState(false);
-  const [hoveredWard,      setHoveredWard]      = useState(null);
-  const [showWardList,     setShowWardList]     = useState(false);
-  const [wardSearch,       setWardSearch]       = useState('');
-  const [sidebarTab,       setSidebarTab]       = useState(selectedWard ? 'ward' : 'layers');
-  const [layersExpanded,   setLayersExpanded]   = useState(true);
-  const [metricsExpanded,  setMetricsExpanded]  = useState(true);
+  const [layers, setLayers] = useState({ wards: true, nallas: true, chambers: true, waterbodies: true, parks: false, hospitals: false, trees: false, pipes: false });
+  const [loadingL, setLoadingL] = useState({});
+  const [metric, setMetric] = useState('composite');
+  const [zoom, setZoom] = useState(12);
+  const [weather, setWeather] = useState(null);
+  const [detailOpen, setDetailOpen] = useState(false);
+  const [hoveredWard, setHoveredWard] = useState(null);
+  const [showWardList, setShowWardList] = useState(false);
+  const [wardSearch, setWardSearch] = useState('');
+  const [sidebarTab, setSidebarTab] = useState(selectedWard ? 'ward' : 'layers');
+  const [layersExpanded, setLayersExpanded] = useState(true);
+  const [metricsExpanded, setMetricsExpanded] = useState(true);
   const activeHoverLayerRef = useRef(null);
-  const geoJsonWardsRef     = useRef(null);
-  const selectedWardRef     = useRef(selectedWard);
-  const wardLookupRef       = useRef(null);
-  const metricRef           = useRef(metric);
-  const getValRef           = useRef(null);
+  const geoJsonWardsRef = useRef(null);
+  const selectedWardRef = useRef(selectedWard);
+  const wardLookupRef = useRef(null);
+  const metricRef = useRef(metric);
+  const getValRef = useRef(null);
 
   useEffect(() => { selectedWardRef.current = selectedWard; }, [selectedWard]);
   useEffect(() => { metricRef.current = metric; }, [metric]);
@@ -208,18 +208,18 @@ export default function WardMapExplorer({ wardData = [], selectedWard, onSelectW
   /* City-wide stats */
   const stats = useMemo(() => {
     if (!wardData.length) return null;
-    const avg = arr => arr.reduce((a,b)=>a+b,0)/arr.length;
+    const avg = arr => arr.reduce((a, b) => a + b, 0) / arr.length;
     const scores = wardData.map(w => w.indicators?.composite_vulnerability_score ?? 0);
-    const temps  = wardData.map(w => w.evidence?.forecast_max_temp_c ?? 0).filter(Boolean);
-    const high   = wardData.filter(w => (w.indicators?.composite_vulnerability_score ?? 0) >= 75).length;
-    const mid    = wardData.filter(w => { const s=w.indicators?.composite_vulnerability_score??0; return s>=60&&s<75; }).length;
+    const temps = wardData.map(w => w.evidence?.forecast_max_temp_c ?? 0).filter(Boolean);
+    const high = wardData.filter(w => (w.indicators?.composite_vulnerability_score ?? 0) >= 75).length;
+    const mid = wardData.filter(w => { const s = w.indicators?.composite_vulnerability_score ?? 0; return s >= 60 && s < 75; }).length;
     return {
-      avgComp:  avg(scores).toFixed(1),
-      avgHeat:  avg(wardData.map(w=>w.indicators?.heat_exposure_proxy??0)).toFixed(1),
-      avgFlood: avg(wardData.map(w=>w.indicators?.flood_screening_proxy??0)).toFixed(1),
-      avgWater: avg(wardData.map(w=>w.indicators?.water_stress_proxy??0)).toFixed(1),
-      avgGreen: avg(wardData.map(w=>w.indicators?.green_deficit_proxy??0)).toFixed(1),
-      avgTemp:  temps.length ? avg(temps).toFixed(1) : 'N/A',
+      avgComp: avg(scores).toFixed(1),
+      avgHeat: avg(wardData.map(w => w.indicators?.heat_exposure_proxy ?? 0)).toFixed(1),
+      avgFlood: avg(wardData.map(w => w.indicators?.flood_screening_proxy ?? 0)).toFixed(1),
+      avgWater: avg(wardData.map(w => w.indicators?.water_stress_proxy ?? 0)).toFixed(1),
+      avgGreen: avg(wardData.map(w => w.indicators?.green_deficit_proxy ?? 0)).toFixed(1),
+      avgTemp: temps.length ? avg(temps).toFixed(1) : 'N/A',
       high, mid, low: wardData.length - high - mid, total: wardData.length,
     };
   }, [wardData]);
@@ -227,12 +227,12 @@ export default function WardMapExplorer({ wardData = [], selectedWard, onSelectW
   /* Metric accessor */
   const getVal = useCallback((w, m) => {
     if (!w?.indicators) return 0;
-    return { heat:w.indicators.heat_exposure_proxy, flood:w.indicators.flood_screening_proxy, water:w.indicators.water_stress_proxy, green:w.indicators.green_deficit_proxy }[m] ?? w.indicators.composite_vulnerability_score;
+    return { heat: w.indicators.heat_exposure_proxy, flood: w.indicators.flood_screening_proxy, water: w.indicators.water_stress_proxy, green: w.indicators.green_deficit_proxy }[m] ?? w.indicators.composite_vulnerability_score;
   }, []);
 
   /* Fetch weather once */
   useEffect(() => {
-    fetch(`${API_BASE}/api/weather`).then(r=>r.json()).then(setWeather).catch(()=>{});
+    fetch(`${API_BASE}/api/weather`).then(r => r.json()).then(setWeather).catch(() => { });
   }, []);
 
   useEffect(() => { wardLookupRef.current = wardLookup; }, [wardLookup]);
@@ -283,11 +283,11 @@ export default function WardMapExplorer({ wardData = [], selectedWard, onSelectW
   /* ── 1. Init Leaflet (Mount once) ───────────────────────────── */
   useEffect(() => {
     if (!mapRef.current || mapInst.current) return;
-    const map = L.map(mapRef.current, { center:PUNE_CENTER, zoom:12, minZoom:11, maxZoom:18, zoomControl:false });
-    L.control.zoom({ position:'bottomright' }).addTo(map);
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { attribution:'&copy; OSM &copy; CARTO', maxZoom:19, subdomains:'abcd' }).addTo(map);
-    L.rectangle(PILOT_BOUNDS, { color:P.teal, weight:1.5, dashArray:'6 5', fillOpacity:0.02, interactive:false }).addTo(map);
-    canvas.current = L.canvas({ padding:0.5 });
+    const map = L.map(mapRef.current, { center: PUNE_CENTER, zoom: 12, minZoom: 11, maxZoom: 18, zoomControl: false });
+    L.control.zoom({ position: 'bottomright' }).addTo(map);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { attribution: '&copy; OSM &copy; CARTO', maxZoom: 19, subdomains: 'abcd' }).addTo(map);
+    L.rectangle(PILOT_BOUNDS, { color: P.teal, weight: 1.5, dashArray: '6 5', fillOpacity: 0.02, interactive: false }).addTo(map);
+    canvas.current = L.canvas({ padding: 0.5 });
     map.on('zoomend', () => setZoom(map.getZoom()));
 
     map.on('mouseout', () => {
@@ -333,20 +333,20 @@ export default function WardMapExplorer({ wardData = [], selectedWard, onSelectW
   /* ── 2. GeoJSON fetch/cache ──────────────────────────────────── */
   const fetchLayer = useCallback(async (key, ep) => {
     if (cache.current[key]) return cache.current[key];
-    setLoadingL(p=>({...p,[key]:true}));
+    setLoadingL(p => ({ ...p, [key]: true }));
     try {
       const r = await fetch(`${API_BASE}/api/map-layers/${ep}`);
       if (!r.ok) throw new Error();
       const d = await r.json();
       cache.current[key] = d;
-      setLoadingL(p=>({...p,[key]:false}));
+      setLoadingL(p => ({ ...p, [key]: false }));
       return d;
-    } catch { setLoadingL(p=>({...p,[key]:false})); return null; }
+    } catch { setLoadingL(p => ({ ...p, [key]: false })); return null; }
   }, []);
 
   /* Helper to remove old layer */
   const removeL = (key) => {
-    if (lgRef.current[key]) { mapInst.current?.removeLayer(lgRef.current[key]); lgRef.current[key]=null; }
+    if (lgRef.current[key]) { mapInst.current?.removeLayer(lgRef.current[key]); lgRef.current[key] = null; }
     if (key === 'wards') { geoJsonWardsRef.current = null; }
   };
 
@@ -359,9 +359,9 @@ export default function WardMapExplorer({ wardData = [], selectedWard, onSelectW
     if (geoJsonWardsRef.current) {
       geoJsonWardsRef.current.eachLayer((layer) => {
         const wnum = layer._wardNum;
-        const wi   = wardLookup.get(wnum);
-        const val  = wi ? getVal(wi, metric) : 0;
-        const sel  = selectedWard && Number(selectedWard.ward_num) === wnum;
+        const wi = wardLookup.get(wnum);
+        const val = wi ? getVal(wi, metric) : 0;
+        const sel = selectedWard && Number(selectedWard.ward_num) === wnum;
         layer.setStyle({
           fillColor: getChoroplethColor(val),
           fillOpacity: sel ? 0.82 : 0.50,
@@ -375,31 +375,31 @@ export default function WardMapExplorer({ wardData = [], selectedWard, onSelectW
 
     let alive = true;
     (async () => {
-      const data = await fetchLayer('wards','pune-electoral-wards');
-      if (!data||!alive||!mapInst.current) return;
+      const data = await fetchLayer('wards', 'pune-electoral-wards');
+      if (!data || !alive || !mapInst.current) return;
       removeL('wards');
 
       const wl = L.geoJSON(data, {
         style: (f) => {
-          const p = f.properties||{};
-          const wnum = Number(p.wardnum||p.ward_no||String(p.name||'').replace(/\D/g,''));
-          const wi   = wardLookup.get(wnum);
-          const val  = wi ? getVal(wi, metric) : 0;
-          const sel  = selectedWard && Number(selectedWard.ward_num)===wnum;
-          return { fillColor:getChoroplethColor(val), fillOpacity:sel?0.82:0.50, color:sel?P.silver:P.teal, weight:sel?3:1.2, opacity:sel?1:0.9 };
+          const p = f.properties || {};
+          const wnum = Number(p.wardnum || p.ward_no || String(p.name || '').replace(/\D/g, ''));
+          const wi = wardLookup.get(wnum);
+          const val = wi ? getVal(wi, metric) : 0;
+          const sel = selectedWard && Number(selectedWard.ward_num) === wnum;
+          return { fillColor: getChoroplethColor(val), fillOpacity: sel ? 0.82 : 0.50, color: sel ? P.silver : P.teal, weight: sel ? 3 : 1.2, opacity: sel ? 1 : 0.9 };
         },
         onEachFeature: (f, layer) => {
-          const p    = f.properties||{};
-          const wnum = Number(p.wardnum||p.ward_no||String(p.name||'').replace(/\D/g,''));
-          const wi   = wardLookup.get(wnum);
-          const title= wi?.ward_title||p.name||`Ward ${wnum}`;
-          const comp = wi?.indicators?.composite_vulnerability_score??0;
-          const vl   = vulnLabel(comp);
-          const score= wi ? getVal(wi,metric) : 0;
-          const swd  = wi?.evidence?.stormwater_drain_coverage_pct??0;
-          const heat = wi?.indicators?.heat_exposure_proxy??0;
-          const flood= wi?.indicators?.flood_screening_proxy??0;
-          const temp = wi?.evidence?.forecast_max_temp_c??null;
+          const p = f.properties || {};
+          const wnum = Number(p.wardnum || p.ward_no || String(p.name || '').replace(/\D/g, ''));
+          const wi = wardLookup.get(wnum);
+          const title = wi?.ward_title || p.name || `Ward ${wnum}`;
+          const comp = wi?.indicators?.composite_vulnerability_score ?? 0;
+          const vl = vulnLabel(comp);
+          const score = wi ? getVal(wi, metric) : 0;
+          const swd = wi?.evidence?.stormwater_drain_coverage_pct ?? 0;
+          const heat = wi?.indicators?.heat_exposure_proxy ?? 0;
+          const flood = wi?.indicators?.flood_screening_proxy ?? 0;
+          const temp = wi?.evidence?.forecast_max_temp_c ?? null;
 
           const wardItem = wi || {
             ward_num: wnum,
@@ -421,12 +421,12 @@ export default function WardMapExplorer({ wardData = [], selectedWard, onSelectW
             <div style="font-size:12px;font-weight:700;color:#FFFFFF;margin-bottom:6px;line-height:1.3;">${title}</div>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-bottom:6px;">
               <div style="background:#103A5740;border-radius:4px;padding:3px 6px;font-size:10px;color:#A9D3C5;display:flex;justify-content:space-between;"><span>Composite</span><strong style="color:#FFF;">${comp}</strong></div>
-              <div style="background:#103A5740;border-radius:4px;padding:3px 6px;font-size:10px;color:#A9D3C5;display:flex;justify-content:space-between;"><span>${METRIC_CONFIG[metric]?.shortLabel}</span><strong style="color:#FFF;">${typeof score==='number'?score.toFixed(1):score}</strong></div>
+              <div style="background:#103A5740;border-radius:4px;padding:3px 6px;font-size:10px;color:#A9D3C5;display:flex;justify-content:space-between;"><span>${METRIC_CONFIG[metric]?.shortLabel}</span><strong style="color:#FFF;">${typeof score === 'number' ? score.toFixed(1) : score}</strong></div>
             </div>
             <div style="font-size:10px;line-height:1.4;color:#CEE5D6;border-top:1px solid #103A5780;padding-top:5px;margin-bottom:5px;">
               <span style="color:#F59E0B;font-weight:600;">Key Reason: </span>${primeReason}
             </div>
-            ${temp!=null?`<div style="font-size:10px;color:#F87171;margin-bottom:4px;">📡 Forecast max: ${temp.toFixed(1)}°C</div>`:''}
+            ${temp != null ? `<div style="font-size:10px;color:#F87171;margin-bottom:4px;">📡 Forecast max: ${temp.toFixed(1)}°C</div>` : ''}
             <div style="font-size:9px;color:#64748B;font-style:italic;">Click ward for full action planning</div>
           </div>`;
 
@@ -491,7 +491,7 @@ export default function WardMapExplorer({ wardData = [], selectedWard, onSelectW
             },
             click: () => {
               onSelectWard?.(wardItem);
-              try { sessionStorage.setItem('climaid_selected_ward', String(wardItem.ward_num)); } catch {}
+              try { sessionStorage.setItem('climaid_selected_ward', String(wardItem.ward_num)); } catch { }
               setDetailOpen(true);
             },
           });
@@ -501,132 +501,132 @@ export default function WardMapExplorer({ wardData = [], selectedWard, onSelectW
       wl.addTo(mapInst.current);
       lgRef.current.wards = wl;
     })();
-    return () => { alive=false; };
+    return () => { alive = false; };
   }, [layers.wards, metric, wardLookup, selectedWard, getVal, fetchLayer]);
 
   /* ── 4-10. Other layers ──────────────────────────────────────── */
   /* Nallas */
   useEffect(() => {
-    const map=mapInst.current; if(!map) return;
-    if(!layers.nallas){removeL('nallas');return;}
-    let a=true;
-    (async()=>{
-      const d=await fetchLayer('nallas','nallas'); if(!d||!a||!mapInst.current)return;
+    const map = mapInst.current; if (!map) return;
+    if (!layers.nallas) { removeL('nallas'); return; }
+    let a = true;
+    (async () => {
+      const d = await fetchLayer('nallas', 'nallas'); if (!d || !a || !mapInst.current) return;
       removeL('nallas');
-      const l=L.geoJSON(d,{style:{color:'#0284C7',weight:2,opacity:0.85},onEachFeature:(f,l)=>l.bindTooltip(`<strong>${f.properties?.name||'Natural Nalla'}</strong><br/><span style="color:#93C5FD">Natural Drainage Channel</span>`,{sticky:false})});
-      l.addTo(mapInst.current); lgRef.current.nallas=l;
+      const l = L.geoJSON(d, { style: { color: '#0284C7', weight: 2, opacity: 0.85 }, onEachFeature: (f, l) => l.bindTooltip(`<strong>${f.properties?.name || 'Natural Nalla'}</strong><br/><span style="color:#93C5FD">Natural Drainage Channel</span>`, { sticky: false }) });
+      l.addTo(mapInst.current); lgRef.current.nallas = l;
     })();
-    return()=>{a=false;};
-  },[layers.nallas,fetchLayer]);
+    return () => { a = false; };
+  }, [layers.nallas, fetchLayer]);
 
   /* Chambers */
-  useEffect(()=>{
-    const map=mapInst.current; if(!map)return;
-    if(!layers.chambers){removeL('chambers');return;}
-    let a=true;
-    (async()=>{
-      const d=await fetchLayer('chambers','swd-chambers'); if(!d||!a||!mapInst.current)return;
+  useEffect(() => {
+    const map = mapInst.current; if (!map) return;
+    if (!layers.chambers) { removeL('chambers'); return; }
+    let a = true;
+    (async () => {
+      const d = await fetchLayer('chambers', 'swd-chambers'); if (!d || !a || !mapInst.current) return;
       removeL('chambers');
-      const l=L.geoJSON(d,{pointToLayer:(f,ll)=>L.circleMarker(ll,{radius:3.5,fillColor:'#8B5CF6',color:'#6D28D9',weight:1,fillOpacity:0.85,renderer:canvas.current}),onEachFeature:(f,l)=>l.bindTooltip(`<strong>${f.properties?.name||'SWD Inlet'}</strong><br/><span style="color:#C4B5FD">Stormwater Chamber</span>`,{sticky:false})});
-      l.addTo(mapInst.current); lgRef.current.chambers=l;
+      const l = L.geoJSON(d, { pointToLayer: (f, ll) => L.circleMarker(ll, { radius: 3.5, fillColor: '#8B5CF6', color: '#6D28D9', weight: 1, fillOpacity: 0.85, renderer: canvas.current }), onEachFeature: (f, l) => l.bindTooltip(`<strong>${f.properties?.name || 'SWD Inlet'}</strong><br/><span style="color:#C4B5FD">Stormwater Chamber</span>`, { sticky: false }) });
+      l.addTo(mapInst.current); lgRef.current.chambers = l;
     })();
-    return()=>{a=false;};
-  },[layers.chambers,fetchLayer]);
+    return () => { a = false; };
+  }, [layers.chambers, fetchLayer]);
 
   /* Waterbodies */
-  useEffect(()=>{
-    const map=mapInst.current; if(!map)return;
-    if(!layers.waterbodies){removeL('waterbodies');return;}
-    let a=true;
-    (async()=>{
-      const d=await fetchLayer('waterbodies','waterbodies-official'); if(!d||!a||!mapInst.current)return;
+  useEffect(() => {
+    const map = mapInst.current; if (!map) return;
+    if (!layers.waterbodies) { removeL('waterbodies'); return; }
+    let a = true;
+    (async () => {
+      const d = await fetchLayer('waterbodies', 'waterbodies-official'); if (!d || !a || !mapInst.current) return;
       removeL('waterbodies');
-      const l=L.geoJSON(d,{style:{fillColor:'#0284C7',fillOpacity:0.6,color:'#38BDF8',weight:1.5},onEachFeature:(f,l)=>l.bindTooltip(`<strong>${f.properties?.name||'River'}</strong><br/><span style="color:#93C5FD">PMC Water Feature</span>`,{sticky:false})});
-      l.addTo(mapInst.current); lgRef.current.waterbodies=l;
+      const l = L.geoJSON(d, { style: { fillColor: '#0284C7', fillOpacity: 0.6, color: '#38BDF8', weight: 1.5 }, onEachFeature: (f, l) => l.bindTooltip(`<strong>${f.properties?.name || 'River'}</strong><br/><span style="color:#93C5FD">PMC Water Feature</span>`, { sticky: false }) });
+      l.addTo(mapInst.current); lgRef.current.waterbodies = l;
     })();
-    return()=>{a=false;};
-  },[layers.waterbodies,fetchLayer]);
+    return () => { a = false; };
+  }, [layers.waterbodies, fetchLayer]);
 
   /* Parks */
-  useEffect(()=>{
-    const map=mapInst.current; if(!map)return;
-    if(!layers.parks){removeL('parks');return;}
-    let a=true;
-    (async()=>{
-      const d=await fetchLayer('parks','parks'); if(!d||!a||!mapInst.current)return;
+  useEffect(() => {
+    const map = mapInst.current; if (!map) return;
+    if (!layers.parks) { removeL('parks'); return; }
+    let a = true;
+    (async () => {
+      const d = await fetchLayer('parks', 'parks'); if (!d || !a || !mapInst.current) return;
       removeL('parks');
-      const l=L.geoJSON(d,{pointToLayer:(f,ll)=>L.marker(ll,{icon:PARK_ICON}),style:{fillColor:'#22C55E',fillOpacity:0.5,color:'#86EFAC',weight:1.5},onEachFeature:(f,l)=>l.bindTooltip(`<strong>${f.properties?.name||'Civic Park'}</strong><br/><span style="color:#BBF7D0">Public Green Space</span>`,{sticky:false})});
-      l.addTo(mapInst.current); lgRef.current.parks=l;
+      const l = L.geoJSON(d, { pointToLayer: (f, ll) => L.marker(ll, { icon: PARK_ICON }), style: { fillColor: '#22C55E', fillOpacity: 0.5, color: '#86EFAC', weight: 1.5 }, onEachFeature: (f, l) => l.bindTooltip(`<strong>${f.properties?.name || 'Civic Park'}</strong><br/><span style="color:#BBF7D0">Public Green Space</span>`, { sticky: false }) });
+      l.addTo(mapInst.current); lgRef.current.parks = l;
     })();
-    return()=>{a=false;};
-  },[layers.parks,fetchLayer]);
+    return () => { a = false; };
+  }, [layers.parks, fetchLayer]);
 
   /* Hospitals */
-  useEffect(()=>{
-    const map=mapInst.current; if(!map)return;
-    if(!layers.hospitals){removeL('hospitals');return;}
-    let a=true;
-    (async()=>{
-      const d=await fetchLayer('hospitals','hospitals'); if(!d||!a||!mapInst.current)return;
+  useEffect(() => {
+    const map = mapInst.current; if (!map) return;
+    if (!layers.hospitals) { removeL('hospitals'); return; }
+    let a = true;
+    (async () => {
+      const d = await fetchLayer('hospitals', 'hospitals'); if (!d || !a || !mapInst.current) return;
       removeL('hospitals');
-      const l=L.geoJSON(d,{pointToLayer:(f,ll)=>L.marker(ll,{icon:HEALTH_ICON}),onEachFeature:(f,l)=>l.bindTooltip(`<strong>${f.properties?.name||'Healthcare'}</strong><br/><span style="color:#FECACA">Medical Centre</span>`,{sticky:false})});
-      l.addTo(mapInst.current); lgRef.current.hospitals=l;
+      const l = L.geoJSON(d, { pointToLayer: (f, ll) => L.marker(ll, { icon: HEALTH_ICON }), onEachFeature: (f, l) => l.bindTooltip(`<strong>${f.properties?.name || 'Healthcare'}</strong><br/><span style="color:#FECACA">Medical Centre</span>`, { sticky: false }) });
+      l.addTo(mapInst.current); lgRef.current.hospitals = l;
     })();
-    return()=>{a=false;};
-  },[layers.hospitals,fetchLayer]);
+    return () => { a = false; };
+  }, [layers.hospitals, fetchLayer]);
 
   /* Trees */
-  useEffect(()=>{
-    const map=mapInst.current; if(!map)return;
-    if(!layers.trees){removeL('trees');return;}
-    let a=true;
-    (async()=>{
-      const d=await fetchLayer('trees','trees'); if(!d||!a||!mapInst.current)return;
+  useEffect(() => {
+    const map = mapInst.current; if (!map) return;
+    if (!layers.trees) { removeL('trees'); return; }
+    let a = true;
+    (async () => {
+      const d = await fetchLayer('trees', 'trees'); if (!d || !a || !mapInst.current) return;
       removeL('trees');
-      const useIcon=zoom>=15;
-      const l=L.geoJSON(d,{
-        pointToLayer:(f,ll)=>useIcon?L.marker(ll,{icon:TREE_ICON}):L.circleMarker(ll,{radius:2.5,fillColor:'#16A34A',color:'#22C55E',weight:0.5,fillOpacity:0.8,renderer:canvas.current}),
-        onEachFeature:(f,l)=>l.bindTooltip(`<strong>${f.properties?.species||'Urban Tree'}</strong><br/><span style="color:#BBF7D0">Mapped Canopy Asset</span>`,{sticky:false}),
+      const useIcon = zoom >= 15;
+      const l = L.geoJSON(d, {
+        pointToLayer: (f, ll) => useIcon ? L.marker(ll, { icon: TREE_ICON }) : L.circleMarker(ll, { radius: 2.5, fillColor: '#16A34A', color: '#22C55E', weight: 0.5, fillOpacity: 0.8, renderer: canvas.current }),
+        onEachFeature: (f, l) => l.bindTooltip(`<strong>${f.properties?.species || 'Urban Tree'}</strong><br/><span style="color:#BBF7D0">Mapped Canopy Asset</span>`, { sticky: false }),
       });
-      l.addTo(mapInst.current); lgRef.current.trees=l;
+      l.addTo(mapInst.current); lgRef.current.trees = l;
     })();
-    return()=>{a=false;};
-  },[layers.trees,zoom,fetchLayer]);
+    return () => { a = false; };
+  }, [layers.trees, zoom, fetchLayer]);
 
   /* Pipes (viewport-gated) */
-  useEffect(()=>{
-    const map=mapInst.current; if(!map)return;
-    if(!layers.pipes){removeL('pipes');return;}
-    if(zoom<13)return;
-    let a=true; let abort=new AbortController();
-    const load=async()=>{
-      if(!mapInst.current)return;
-      const b=mapInst.current.getBounds();
-      const bbox=`${b.getWest().toFixed(4)},${b.getSouth().toFixed(4)},${b.getEast().toFixed(4)},${b.getNorth().toFixed(4)}`;
-      try{
-        const r=await fetch(`${API_BASE}/api/map-layers/swd-pipes?bbox=${bbox}&limit=3500`,{signal:abort.signal});
-        if(!r.ok)throw new Error();
-        const d=await r.json();
-        if(!d||!a||!mapInst.current)return;
+  useEffect(() => {
+    const map = mapInst.current; if (!map) return;
+    if (!layers.pipes) { removeL('pipes'); return; }
+    if (zoom < 13) return;
+    let a = true; let abort = new AbortController();
+    const load = async () => {
+      if (!mapInst.current) return;
+      const b = mapInst.current.getBounds();
+      const bbox = `${b.getWest().toFixed(4)},${b.getSouth().toFixed(4)},${b.getEast().toFixed(4)},${b.getNorth().toFixed(4)}`;
+      try {
+        const r = await fetch(`${API_BASE}/api/map-layers/swd-pipes?bbox=${bbox}&limit=3500`, { signal: abort.signal });
+        if (!r.ok) throw new Error();
+        const d = await r.json();
+        if (!d || !a || !mapInst.current) return;
         removeL('pipes');
-        const l=L.geoJSON(d,{renderer:canvas.current,style:{color:'#A855F7',weight:1.5,opacity:0.7},onEachFeature:(f,l)=>l.bindTooltip(`<strong>SWD Pipe</strong><br/><span style="color:#E9D5FF">${f.properties?.diameter||'Municipal Drain'}</span>`,{sticky:false})});
-        l.addTo(mapInst.current); lgRef.current.pipes=l;
-      }catch{}
+        const l = L.geoJSON(d, { renderer: canvas.current, style: { color: '#A855F7', weight: 1.5, opacity: 0.7 }, onEachFeature: (f, l) => l.bindTooltip(`<strong>SWD Pipe</strong><br/><span style="color:#E9D5FF">${f.properties?.diameter || 'Municipal Drain'}</span>`, { sticky: false }) });
+        l.addTo(mapInst.current); lgRef.current.pipes = l;
+      } catch { }
     };
     load();
-    const onMove=()=>{ if(layers.pipes&&mapInst.current?.getZoom()>=13)load(); };
-    map.on('moveend',onMove);
-    return()=>{ a=false; abort.abort(); map.off('moveend',onMove); };
-  },[layers.pipes,zoom,fetchLayer]);
+    const onMove = () => { if (layers.pipes && mapInst.current?.getZoom() >= 13) load(); };
+    map.on('moveend', onMove);
+    return () => { a = false; abort.abort(); map.off('moveend', onMove); };
+  }, [layers.pipes, zoom, fetchLayer]);
 
-  const resetView=()=>mapInst.current?.fitBounds(PILOT_BOUNDS,{padding:[24,24]});
+  const resetView = () => mapInst.current?.fitBounds(PILOT_BOUNDS, { padding: [24, 24] });
   const cfg = METRIC_CONFIG[metric];
   const cur = weather?.current;
-  const daily = weather?.daily_forecast||[];
+  const daily = weather?.daily_forecast || [];
 
   /* ═══ RENDER ═════════════════════════════════════════════════ */
   return (
-    <div style={{ display:'flex', flex:1, alignSelf:'stretch', minHeight:0, minWidth:0, background:'#030B14', position:'relative', overflow:'hidden' }}>
+    <div style={{ display: 'flex', flex: 1, alignSelf: 'stretch', minHeight: 0, minWidth: 0, background: '#030B14', position: 'relative', overflow: 'hidden' }}>
 
       {/* ══ SPACIOUS 40% CLIMAID SIDEBAR ════════════════════════════ */}
       <aside style={{
@@ -868,10 +868,10 @@ export default function WardMapExplorer({ wardData = [], selectedWard, onSelectW
                   </div>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                     {[
-                      { key: 'heat',  label: 'Heat Exposure',      val: selectedWard.indicators?.heat_exposure_proxy,   color: '#F59E0B', Icon: Flame },
-                      { key: 'flood', label: 'Flood & Drainage',   val: selectedWard.indicators?.flood_screening_proxy,  color: '#0284C7', Icon: Waves },
-                      { key: 'water', label: 'Water Supply Stress', val: selectedWard.indicators?.water_stress_proxy,   color: '#38BDF8', Icon: Droplets },
-                      { key: 'green', label: 'Green Space Deficit', val: selectedWard.indicators?.green_deficit_proxy,  color: '#22C55E', Icon: TreePine },
+                      { key: 'heat', label: 'Heat Exposure', val: selectedWard.indicators?.heat_exposure_proxy, color: '#F59E0B', Icon: Flame },
+                      { key: 'flood', label: 'Flood & Drainage', val: selectedWard.indicators?.flood_screening_proxy, color: '#0284C7', Icon: Waves },
+                      { key: 'water', label: 'Water Supply Stress', val: selectedWard.indicators?.water_stress_proxy, color: '#38BDF8', Icon: Droplets },
+                      { key: 'green', label: 'Green Space Deficit', val: selectedWard.indicators?.green_deficit_proxy, color: '#22C55E', Icon: TreePine },
                     ].map((ind, i) => {
                       const sc = ind.val ?? 0;
                       return (
@@ -963,7 +963,7 @@ export default function WardMapExplorer({ wardData = [], selectedWard, onSelectW
                           key={w.ward_num}
                           onClick={() => {
                             onSelectWard?.(w);
-                            try { sessionStorage.setItem('climaid_selected_ward', String(w.ward_num)); } catch {}
+                            try { sessionStorage.setItem('climaid_selected_ward', String(w.ward_num)); } catch { }
                             setSidebarTab('ward');
                           }}
                           style={{
@@ -1169,7 +1169,7 @@ export default function WardMapExplorer({ wardData = [], selectedWard, onSelectW
           <button
             onClick={() => {
               if (selectedWard) {
-                try { sessionStorage.setItem('climaid_selected_ward', String(selectedWard.ward_num)); } catch {}
+                try { sessionStorage.setItem('climaid_selected_ward', String(selectedWard.ward_num)); } catch { }
                 navigate(`/plan?ward=${selectedWard.ward_num}`);
               } else {
                 navigate('/plan');
@@ -1202,14 +1202,14 @@ export default function WardMapExplorer({ wardData = [], selectedWard, onSelectW
       </aside>
 
       {/* ══ MAP CANVAS ═══════════════════════════════════════════ */}
-      <div style={{ flex:1, position:'relative', overflow:'hidden', minWidth:0, minHeight:0 }}>
-        <div ref={mapRef} style={{ width:'100%', height:'100%' }}/>
+      <div style={{ flex: 1, position: 'relative', overflow: 'hidden', minWidth: 0, minHeight: 0 }}>
+        <div ref={mapRef} style={{ width: '100%', height: '100%' }} />
 
         {/* Clear selection */}
         {selectedWard && (
-          <button onClick={()=>{onClearWard?.();setDetailOpen(false);}}
-            style={{ position:'absolute', top:12, right:12, zIndex:450, display:'flex', alignItems:'center', gap:5, padding:'6px 12px', borderRadius:20, background:'#061423', border:'1px solid rgba(0, 102, 158, 0.4)', color:'#E2E8F0', cursor:'pointer', fontFamily:'var(--font)', fontSize:'0.76rem', transition:'all 150ms ease' }}>
-            <X size={12}/> Clear selection
+          <button onClick={() => { onClearWard?.(); setDetailOpen(false); }}
+            style={{ position: 'absolute', top: 12, right: 12, zIndex: 450, display: 'flex', alignItems: 'center', gap: 5, padding: '6px 12px', borderRadius: 20, background: '#061423', border: '1px solid rgba(0, 102, 158, 0.4)', color: '#E2E8F0', cursor: 'pointer', fontFamily: 'var(--font)', fontSize: '0.76rem', transition: 'all 150ms ease' }}>
+            <X size={12} /> Clear selection
           </button>
         )}
 
@@ -1301,10 +1301,10 @@ export default function WardMapExplorer({ wardData = [], selectedWard, onSelectW
             <span style={{ fontSize: '0.62rem', color: '#94A3B8' }}>{cfg.shortLabel}</span>
           </div>
           {[
-            { color: '#EF4444', label: 'Higher Concern',   range: '≥ 75', desc: 'Critical risk drivers' },
+            { color: '#EF4444', label: 'Higher Concern', range: '≥ 75', desc: 'Critical risk drivers' },
             { color: '#F59E0B', label: 'Moderate Concern', range: '60–74', desc: 'Elevated exposure' },
-            { color: '#0284C7', label: 'Some Concern',     range: '45–59', desc: 'Moderate buffer' },
-            { color: '#22C55E', label: 'Lower Concern',    range: '< 45', desc: 'Nature-buffered' }
+            { color: '#0284C7', label: 'Some Concern', range: '45–59', desc: 'Moderate buffer' },
+            { color: '#22C55E', label: 'Lower Concern', range: '< 45', desc: 'Nature-buffered' }
           ].map(r => (
             <div key={r.label} style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 5 }}>
               <span style={{ width: 12, height: 12, borderRadius: 2, background: r.color, flexShrink: 0 }} />
@@ -1319,7 +1319,7 @@ export default function WardMapExplorer({ wardData = [], selectedWard, onSelectW
         {/* ── WARD DIRECTORY DRAWER (76 WARDS) ── */}
         {showWardList && (
           <div style={{
-            position:'absolute',
+            position: 'absolute',
             inset: 0,
             zIndex: 600,
             background: 'rgba(2, 6, 14, 0.85)',

@@ -3,7 +3,7 @@
  * All backend communication lives here. Components never call fetch() directly.
  */
 
-export const API_BASE = 'http://127.0.0.1:8000';
+export const API_BASE = '';
 
 async function request(path, options = {}) {
   const res = await fetch(`${API_BASE}${path}`, options);

@@ -1,69 +1,39 @@
 {
-  "generated_at_utc": "2026-10-18T17:57:15.286720+00:00",
+  "generated_at_utc": "2026-10-18T19:03:10.124679+00:00",
   "pilot_area": "Pune Pilot, Maharashtra, India",
   "target_ward": "Ward #19: Vadgaon Sheri - Ganesh Nagar",
   "budget_constraints": {
     "total_budget_inr": 5000000.0,
-    "allocated_spend_inr": 5000000.0,
-    "remaining_budget_inr": 0.0,
+    "allocated_spend_inr": 360000.0,
+    "remaining_budget_inr": 4640000.0,
     "equity_weight_factor": 1.0,
-    "unallocated_budget_explanation": "100.0% of the target municipal budget was allocated to selected actions."
+    "unallocated_budget_explanation": "Residual budget of INR 4,640,000 remained unallocated because the workforce capacity limit (6.0 person-months) was reached."
   },
   "performance_metrics": {
-    "total_interventions_selected": 5,
-    "total_units_allocated": 31,
-    "total_benefit_points": 2044.6,
-    "workforce_demand_person_months": 75.0,
-    "workforce_capacity_person_months": null,
-    "estimated_implementation_horizon_months": 3,
-    "portfolio_duration_description": "Maximum single-intervention lead time is 3 months (does not constitute a sequential Gantt critical-path schedule).",
+    "total_interventions_selected": 1,
+    "total_units_allocated": 3,
+    "total_benefit_points": 205.3,
+    "workforce_demand_person_months": 6.0,
+    "workforce_capacity_person_months": 6.0,
+    "estimated_implementation_horizon_months": 1,
+    "portfolio_duration_description": "Maximum single-intervention lead time is 1 months (does not constitute a sequential Gantt critical-path schedule).",
     "solver_status": "Optimal",
     "solver_name": "PuLP-CBC"
   },
   "portfolio": [
     {
-      "id": "INT-HEAT-03",
-      "title": "Shaded Bus Stops & Public Cooling Kiosks with Drinking Water",
-      "category": "Heat & Urban Cooling",
-      "allocated_units": 12,
-      "unit": "station kiosk",
-      "unit_cost_inr": 180000,
-      "total_cost_inr": 2160000,
-      "lead_time_months": 2,
-      "utility_score": 746.3,
-      "responsible_department": "PMPML & PMC Health Department",
-      "target_vulnerability": "heat_exposure_proxy",
-      "workforce_person_months": 30.0,
-      "site_suitability_status": "SUITABLE_CONFIRMED",
-      "prerequisite_verification_note": "Suitable based on current ward vulnerability screening criteria.",
-      "affected_indicators": [
-        "heat_exposure_proxy"
-      ],
-      "quantified_effects": {},
-      "directional_effects": [
-        "Commuter thermal refuge during heatwaves",
-        "Public hydration access"
-      ],
-      "scientific_rationale": "Cooling kiosks provide acute localized commuter relief; numerical effect on macro ward-level surface temperature is physically negligible and unavailable.",
-      "cost_provenance": "Prefabricated bus shelter upgrade heuristic.",
-      "benefit_provenance": "Qualitative commuter welfare score; no macro-temperature reduction claimed.",
-      "rationale": "Selected 12 station kiosk by MILP optimizer. Targets heat_exposure_proxy (Ward score: 58.4/100) with unit utility 62.2 pts under equity factor 1.0x.",
-      "data_quality_status": "PRELIMINARY_MUNICIPAL_PROXY",
-      "selection_justification": "Allocated under budget ceiling INR 5,000,000. Contributes 746.3 prioritization utility points."
-    },
-    {
       "id": "INT-HEAT-02",
       "title": "Cool Roof Reflective Coating in High-Density Receptors",
       "category": "Heat & Urban Cooling",
-      "allocated_units": 15,
+      "allocated_units": 3,
       "unit": "building cluster",
       "unit_cost_inr": 120000,
-      "total_cost_inr": 1800000,
+      "total_cost_inr": 360000,
       "lead_time_months": 1,
-      "utility_score": 1026.7,
+      "utility_score": 205.3,
       "responsible_department": "PMC Building & Development Department",
       "target_vulnerability": "heat_exposure_proxy",
-      "workforce_person_months": 30.0,
+      "workforce_person_months": 6.0,
       "site_suitability_status": "SUITABLE_CONFIRMED",
       "prerequisite_verification_note": "Suitable based on current ward vulnerability screening criteria.",
       "affected_indicators": [
@@ -81,138 +51,60 @@
       "scientific_rationale": "High-albedo solar-reflective coating reduces treated roof surface temperatures by 2-3\u00b0C, moderating ward-level heat proxy.",
       "cost_provenance": "Market rate estimate for elastomeric high-albedo coatings; assumes municipal or community permission.",
       "benefit_provenance": "Well-established surface physics; macro-ward heat effect depends on treated roof area fraction.",
-      "rationale": "Selected 15 building cluster by MILP optimizer. Targets heat_exposure_proxy (Ward score: 58.4/100) with unit utility 68.4 pts under equity factor 1.0x.",
+      "rationale": "Selected 3 building cluster by MILP optimizer. Targets heat_exposure_proxy (Ward score: 58.4/100) with unit utility 68.4 pts under equity factor 1.0x.",
       "data_quality_status": "PRELIMINARY_MUNICIPAL_PROXY",
-      "selection_justification": "Allocated under budget ceiling INR 5,000,000. Contributes 1026.7 prioritization utility points."
+      "selection_justification": "Allocated under budget ceiling INR 5,000,000. Contributes 205.3 prioritization utility points."
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "id": "INT-HEAT-01",
+      "title": "Urban Shade Corridors & Native Canopy Planting",
+      "category": "Heat & Urban Cooling",
+      "cost_per_unit_inr": 250000,
+      "reason": "SUBOPTIMAL_UTILITY: Lower overall utility density (66.444 pts/unit) compared to selected portfolio alternatives."
     },
     {
-      "id": "INT-WATER-01",
-      "title": "Decentralized Rainwater Harvesting in Municipal Complexes",
-      "category": "Water Security",
-      "allocated_units": 2,
-      "unit": "building installation",
-      "unit_cost_inr": 220000,
-      "total_cost_inr": 440000,
-      "lead_time_months": 2,
-      "utility_score": 128.1,
-      "responsible_department": "PMC Water Supply Department",
-      "target_vulnerability": "water_stress_proxy",
-      "workforce_person_months": 6.0,
-      "site_suitability_status": "SUITABLE_CONFIRMED",
-      "prerequisite_verification_note": "Suitable based on current ward vulnerability screening criteria.",
-      "affected_indicators": [
-        "water_stress_proxy"
-      ],
-      "quantified_effects": {
-        "water_stress_proxy": {
-          "delta_per_unit": -1.1,
-          "confidence": "MODELLED_ESTIMATE"
-        }
-      },
-      "directional_effects": [
-        "Decentralized non-potable substitution",
-        "Aquifer table recharge"
-      ],
-      "scientific_rationale": "Rooftop harvesting supplements non-potable institutional demand, dampening municipal water stress proxy.",
-      "cost_provenance": "Standard PMC rainwater harvesting rate for public buildings.",
-      "benefit_provenance": "Calculated assuming 700mm monsoon precipitation yielding ~140 kL recharge per unit.",
-      "rationale": "Selected 2 building installation by MILP optimizer. Targets water_stress_proxy (Ward score: 52.0/100) with unit utility 64.0 pts under equity factor 1.0x.",
-      "data_quality_status": "PRELIMINARY_MUNICIPAL_PROXY",
-      "selection_justification": "Allocated under budget ceiling INR 5,000,000. Contributes 128.1 prioritization utility points."
+      "id": "INT-HEAT-03",
+      "title": "Shaded Bus Stops & Public Cooling Kiosks with Drinking Water",
+      "category": "Heat & Urban Cooling",
+      "cost_per_unit_inr": 180000,
+      "reason": "WORKFORCE_LIMIT: Unit workforce requirement (2.5 p-mo) exceeds available workforce quota."
     },
     {
       "id": "INT-FLOOD-01",
       "title": "Critical Stormwater Drain Desilting & Inlet Trash Screens",
       "category": "Flood & Stormwater",
-      "allocated_units": 1,
-      "unit": "major drain ward section",
-      "unit_cost_inr": 350000,
-      "total_cost_inr": 350000,
-      "lead_time_months": 1,
-      "utility_score": 77.1,
-      "responsible_department": "PMC Drainage & Sewerage Department",
-      "target_vulnerability": "flood_screening_proxy",
-      "workforce_person_months": 5.0,
-      "site_suitability_status": "SUITABLE_CONFIRMED",
-      "prerequisite_verification_note": "Verified: Ward has mapped SWD network (9 chambers, 1.8% coverage).",
-      "affected_indicators": [
-        "drainage_maintenance_deficit"
-      ],
-      "quantified_effects": {},
-      "directional_effects": [
-        "Conduit clearing",
-        "Removal of plastic/debris bottlenecks",
-        "Vector-borne disease reduction"
-      ],
-      "scientific_rationale": "Desilting restores baseline designed pipe conveyance. However, it does not enlarge pipe capacity or provide a defensible numerical reduction in extreme storm flood probability.",
-      "cost_provenance": "PMC annual pre-monsoon desilting tender rate schedule.",
-      "benefit_provenance": "Directional maintenance benefit only; flood probability reduction unquantified.",
-      "rationale": "Selected 1 major drain ward section by MILP optimizer. Targets flood_screening_proxy (Ward score: 75.2/100) with unit utility 77.1 pts under equity factor 1.0x.",
-      "data_quality_status": "PRELIMINARY_MUNICIPAL_PROXY",
-      "selection_justification": "Allocated under budget ceiling INR 5,000,000. Contributes 77.1 prioritization utility points."
+      "cost_per_unit_inr": 350000,
+      "reason": "WORKFORCE_LIMIT: Unit workforce requirement (5.0 p-mo) exceeds available workforce quota."
     },
-    {
-      "id": "INT-HEAT-01",
-      "title": "Urban Shade Corridors & Native Canopy Planting",
-      "category": "Heat & Urban Cooling",
-      "allocated_units": 1,
-      "unit": "km corridor",
-      "unit_cost_inr": 250000,
-      "total_cost_inr": 250000,
-      "lead_time_months": 3,
-      "utility_score": 66.4,
-      "responsible_department": "PMC Garden Department / Tree Authority",
-      "target_vulnerability": "heat_exposure_proxy",
-      "workforce_person_months": 4.0,
-      "site_suitability_status": "SUITABLE_CONFIRMED",
-      "prerequisite_verification_note": "Suitable based on current ward vulnerability screening criteria.",
-      "affected_indicators": [
-        "green_deficit_proxy",
-        "heat_exposure_proxy"
-      ],
-      "quantified_effects": {
-        "green_deficit_proxy": {
-          "delta_per_unit": -1.8,
-          "confidence": "MODELLED_ESTIMATE"
-        },
-        "heat_exposure_proxy": {
-          "delta_per_unit": -0.8,
-          "confidence": "MODELLED_ESTIMATE"
-        }
-      },
-      "directional_effects": [
-        "Pedestrian shade comfort",
-        "Biodiversity corridor connectivity"
-      ],
-      "scientific_rationale": "Tree planting increases vegetative fraction along walkways, providing microclimatic shade and moderating green deficit.",
-      "cost_provenance": "PMC standard schedule of rates roadside plantation estimate; unverified for specific corridor utility conflicts.",
-      "benefit_provenance": "Screening heuristic (0-100); empirical cooling requires multispectral canopy verification.",
-      "rationale": "Selected 1 km corridor by MILP optimizer. Targets heat_exposure_proxy (Ward score: 58.4/100) with unit utility 66.4 pts under equity factor 1.0x.",
-      "data_quality_status": "PRELIMINARY_MUNICIPAL_PROXY",
-      "selection_justification": "Allocated under budget ceiling INR 5,000,000. Contributes 66.4 prioritization utility points."
-    }
-  ],
-  "rejected_candidates": [
     {
       "id": "INT-FLOOD-02",
       "title": "Bioretention Rain Gardens & Permeable Soakaways",
       "category": "Flood & Stormwater",
       "cost_per_unit_inr": 280000,
-      "reason": "SUBOPTIMAL_UTILITY: Lower overall utility density (69.078 pts/unit) compared to selected portfolio alternatives."
+      "reason": "WORKFORCE_LIMIT: Unit workforce requirement (3.0 p-mo) exceeds available workforce quota."
     },
     {
       "id": "INT-FLOOD-03",
       "title": "Neighborhood Retention Basins & Nalla Naturalization",
       "category": "Flood & Stormwater",
       "cost_per_unit_inr": 850000,
-      "reason": "BUDGET_INSUFFICIENT: Unit cost (INR 850,000) exceeds remaining unallocated budget (INR 440,000)."
+      "reason": "WORKFORCE_LIMIT: Unit workforce requirement (10.0 p-mo) exceeds available workforce quota."
+    },
+    {
+      "id": "INT-WATER-01",
+      "title": "Decentralized Rainwater Harvesting in Municipal Complexes",
+      "category": "Water Security",
+      "cost_per_unit_inr": 220000,
+      "reason": "WORKFORCE_LIMIT: Unit workforce requirement (3.0 p-mo) exceeds available workforce quota."
     },
     {
       "id": "INT-WATER-02",
       "title": "Acoustic Pipeline Leak Detection & Pressure Management",
       "category": "Water Security",
       "cost_per_unit_inr": 400000,
-      "reason": "BUDGET_INSUFFICIENT: Unit cost (INR 400,000) exceeds remaining unallocated budget (INR 0)."
+      "reason": "WORKFORCE_LIMIT: Unit workforce requirement (4.0 p-mo) exceeds available workforce quota."
     }
   ],
   "assumptions_and_limitations": [
