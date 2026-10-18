@@ -178,6 +178,23 @@ def get_ai_vulnerability_clusters():
     with open(ai_file, "r", encoding="utf-8") as f:
         return json.load(f)
 
+@app.get("/api/ai/ward-analysis/{ward_num}", tags=["AI Modeling"])
+def get_gemini_ward_analysis(
+    ward_num: int,
+    budget_inr: Optional[float] = Query(None, description="Optional custom budget in INR"),
+    force_refresh: bool = Query(False, description="Force re-generation via Gemini API")
+):
+    from .gemini_service import analyze_ward_with_gemini
+    try:
+        res = analyze_ward_with_gemini(
+            ward_num=ward_num,
+            custom_budget_inr=budget_inr,
+            force_refresh=force_refresh
+        )
+        return res
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
 @app.get("/api/map-layers", tags=["Spatial Layers"])
 def get_available_map_layers():
     return {
@@ -412,10 +429,14 @@ def create_action_plan(req: ActionPlanRequest):
 @app.post("/api/scenarios/compare", response_model=ScenarioComparisonResponse, tags=["Scenario Simulation"])
 def compare_scenarios(ward_num: Optional[int] = Query(None, description="Optional target ward number")):
     from ..scripts.build_action_plan import generate_scenario_comparison, generate_action_plan
-    scen_file = EXPORTS_DIR / "scenarios_latest.json"
-    if not scen_file.exists():
+    if ward_num is not None:
         plan = generate_action_plan(selected_ward_num=ward_num)
         return generate_scenario_comparison(plan=plan, ward_num=ward_num)
+
+    scen_file = EXPORTS_DIR / "scenarios_latest.json"
+    if not scen_file.exists():
+        plan = generate_action_plan()
+        return generate_scenario_comparison(plan=plan)
     
     with open(scen_file, "r", encoding="utf-8") as f:
         return json.load(f)
@@ -437,14 +458,13 @@ def list_reports():
     return {"reports": reports_list}
 
 @app.get("/api/reports/latest/download", tags=["Reports"])
-def download_latest_report():
-    pdf_path = REPORTS_DIR / "ClimateAdapt_Pune_Action_Report.pdf"
-    if not pdf_path.exists():
-        from ..scripts.generate_report import generate_pdf_report
-        generate_pdf_report()
+def download_latest_report(ward_num: Optional[int] = Query(None, description="Optional target ward number for AI report")):
+    from ..scripts.generate_report import generate_pdf_report
+    pdf_path = generate_pdf_report(ward_num=ward_num)
     
+    filename = f"ClimateAdapt_Pune_Action_Report_Ward{ward_num}.pdf" if ward_num else "ClimateAdapt_Pune_Action_Report.pdf"
     return FileResponse(
         pdf_path,
         media_type="application/pdf",
-        filename="ClimateAdapt_Pune_Action_Report.pdf"
+        filename=filename
     )
