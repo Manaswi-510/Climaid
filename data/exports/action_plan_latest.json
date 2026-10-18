@@ -1,84 +1,117 @@
 {
-  "generated_at_utc": "2026-10-18T05:03:19.859740+00:00",
+  "generated_at_utc": "2026-10-18T05:22:48.464772+00:00",
   "pilot_area": "Pune Pilot, Maharashtra, India",
-  "target_ward": "Ward #1: Lohegaon Airport",
+  "target_ward": "Ward #19: Vadgaon Sheri - Ganesh Nagar",
   "budget_constraints": {
-    "total_budget_inr": 50000.0,
-    "allocated_spend_inr": 0.0,
-    "remaining_budget_inr": 50000.0,
-    "equity_weight_factor": 1.0
+    "total_budget_inr": 3500000.0,
+    "allocated_spend_inr": 3490000.0,
+    "remaining_budget_inr": 10000.0,
+    "equity_weight_factor": 1.5
   },
   "performance_metrics": {
-    "total_interventions_selected": 0,
-    "total_units_allocated": 0,
-    "total_benefit_points": 0.0,
-    "workforce_demand_person_months": 0.0,
-    "estimated_implementation_horizon_months": 0,
-    "solver_status": "Optimal (Zero Allocation)",
+    "total_interventions_selected": 3,
+    "total_units_allocated": 24,
+    "total_benefit_points": 1702.2,
+    "workforce_demand_person_months": 54.0,
+    "workforce_capacity_person_months": null,
+    "estimated_implementation_horizon_months": 3,
+    "solver_status": "Optimal",
     "solver_name": "PuLP-CBC"
   },
-  "portfolio": [],
-  "rejected_candidates": [
-    {
-      "id": "INT-HEAT-01",
-      "title": "Urban Shade Corridors & Native Canopy Planting",
-      "category": "Heat & Urban Cooling",
-      "cost_per_unit_inr": 250000,
-      "reason": "BUDGET_INSUFFICIENT: Unit cost (INR 250,000) exceeds available budget (INR 50,000.0)."
-    },
+  "portfolio": [
     {
       "id": "INT-HEAT-02",
       "title": "Cool Roof Reflective Coating Pilots in High-Density Areas",
       "category": "Heat & Urban Cooling",
-      "cost_per_unit_inr": 120000,
-      "reason": "BUDGET_INSUFFICIENT: Unit cost (INR 120,000) exceeds available budget (INR 50,000.0)."
+      "allocated_units": 15,
+      "unit": "building cluster",
+      "unit_cost_inr": 120000,
+      "total_cost_inr": 1800000,
+      "lead_time_months": 1,
+      "utility_score": 1097.9,
+      "responsible_department": "PMC Building & Development Department",
+      "target_vulnerability": "heat_exposure_proxy",
+      "workforce_person_months": 30.0,
+      "rationale": "Selected 15 building cluster by MILP optimizer. Targets heat_exposure_proxy (Ward score: 58.4/100) with unit utility 73.2 pts under equity factor 1.5x.",
+      "data_quality_status": "PRELIMINARY_MUNICIPAL_PROXY",
+      "selection_justification": "Allocated under budget ceiling INR 3,500,000. Contributes 1097.9 prioritization points toward ward climate adaptation."
     },
     {
       "id": "INT-HEAT-03",
       "title": "Shaded Bus Stops & Public Cooling Kiosks with Drinking Water",
       "category": "Heat & Urban Cooling",
-      "cost_per_unit_inr": 180000,
-      "reason": "BUDGET_INSUFFICIENT: Unit cost (INR 180,000) exceeds available budget (INR 50,000.0)."
+      "allocated_units": 8,
+      "unit": "station kiosk",
+      "unit_cost_inr": 180000,
+      "total_cost_inr": 1440000,
+      "lead_time_months": 2,
+      "utility_score": 533.5,
+      "responsible_department": "PMPML & PMC Health Department",
+      "target_vulnerability": "heat_exposure_proxy",
+      "workforce_person_months": 20.0,
+      "rationale": "Selected 8 station kiosk by MILP optimizer. Targets heat_exposure_proxy (Ward score: 58.4/100) with unit utility 66.7 pts under equity factor 1.5x.",
+      "data_quality_status": "PRELIMINARY_MUNICIPAL_PROXY",
+      "selection_justification": "Allocated under budget ceiling INR 3,500,000. Contributes 533.5 prioritization points toward ward climate adaptation."
+    },
+    {
+      "id": "INT-HEAT-01",
+      "title": "Urban Shade Corridors & Native Canopy Planting",
+      "category": "Heat & Urban Cooling",
+      "allocated_units": 1,
+      "unit": "km corridor",
+      "unit_cost_inr": 250000,
+      "total_cost_inr": 250000,
+      "lead_time_months": 3,
+      "utility_score": 70.7,
+      "responsible_department": "PMC Garden Department / Tree Authority",
+      "target_vulnerability": "heat_exposure_proxy",
+      "workforce_person_months": 4.0,
+      "rationale": "Selected 1 km corridor by MILP optimizer. Targets heat_exposure_proxy (Ward score: 58.4/100) with unit utility 70.7 pts under equity factor 1.5x.",
+      "data_quality_status": "PRELIMINARY_MUNICIPAL_PROXY",
+      "selection_justification": "Allocated under budget ceiling INR 3,500,000. Contributes 70.7 prioritization points toward ward climate adaptation."
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "id": "INT-FLOOD-03",
+      "title": "Neighborhood Retention Basins & Nalla Naturalization",
+      "category": "Flood & Stormwater",
+      "cost_per_unit_inr": 850000,
+      "reason": "PREREQUISITE_NOT_MET: Ward has 0 mapped natural drainage nalla corridors (found: 0). Nalla naturalization cannot be sited."
     },
     {
       "id": "INT-FLOOD-01",
       "title": "Critical Stormwater Drain Desilting & Inlet Clearing",
       "category": "Flood & Stormwater",
       "cost_per_unit_inr": 350000,
-      "reason": "BUDGET_INSUFFICIENT: Unit cost (INR 350,000) exceeds available budget (INR 50,000.0)."
+      "reason": "BUDGET_INSUFFICIENT: Unit cost (INR 350,000) exceeds remaining unallocated budget (INR 10,000)."
     },
     {
       "id": "INT-FLOOD-02",
       "title": "Bioretention Rain Gardens & Permeable Soakaways",
       "category": "Flood & Stormwater",
       "cost_per_unit_inr": 280000,
-      "reason": "BUDGET_INSUFFICIENT: Unit cost (INR 280,000) exceeds available budget (INR 50,000.0)."
-    },
-    {
-      "id": "INT-FLOOD-03",
-      "title": "Neighborhood Retention Basins & Nalla Naturalization",
-      "category": "Flood & Stormwater",
-      "cost_per_unit_inr": 850000,
-      "reason": "BUDGET_INSUFFICIENT: Unit cost (INR 850,000) exceeds available budget (INR 50,000.0)."
+      "reason": "BUDGET_INSUFFICIENT: Unit cost (INR 280,000) exceeds remaining unallocated budget (INR 10,000)."
     },
     {
       "id": "INT-WATER-01",
       "title": "Decentralized Rainwater Harvesting in Municipal Schools & Complexes",
       "category": "Water Security",
       "cost_per_unit_inr": 220000,
-      "reason": "BUDGET_INSUFFICIENT: Unit cost (INR 220,000) exceeds available budget (INR 50,000.0)."
+      "reason": "BUDGET_INSUFFICIENT: Unit cost (INR 220,000) exceeds remaining unallocated budget (INR 10,000)."
     },
     {
       "id": "INT-WATER-02",
       "title": "Acoustic Pipeline Leak Detection & Pressure Management",
       "category": "Water Security",
       "cost_per_unit_inr": 400000,
-      "reason": "BUDGET_INSUFFICIENT: Unit cost (INR 400,000) exceeds available budget (INR 50,000.0)."
+      "reason": "BUDGET_INSUFFICIENT: Unit cost (INR 400,000) exceeds remaining unallocated budget (INR 10,000)."
     }
   ],
   "assumptions_and_limitations": [
-    "Budget is lower than the minimum unit cost of any candidate intervention.",
-    "Zero actions were selected; no unbacked or fractional commitments were made.",
-    "Costs and benefit points are engineering screening proxies, not contractual tender costs."
+    "Objective values represent estimated prioritization utility, NOT validated reductions in physical disaster damage.",
+    "Costs are municipal engineering heuristics and exclude land acquisition, inflation, or specialized subcontractor markups.",
+    "Workforce demand estimates assume standard municipal crew productivity without factoring weather or monsoon work stoppages.",
+    "Site suitability checks reflect OpenCity and PMC spatial datasets; localized ground-truth site surveys remain mandatory prior to procurement."
   ]
 }

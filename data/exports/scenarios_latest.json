@@ -1,37 +1,37 @@
 {
-  "generated_at_utc": "2026-10-18T05:03:19.869793+00:00",
-  "target_ward": "Ward #1: Lohegaon Airport",
+  "generated_at_utc": "2026-10-18T05:22:48.480971+00:00",
+  "target_ward": "Ward #19: Vadgaon Sheri - Ganesh Nagar",
   "baseline_scenario": {
-    "name": "Current Baseline (Lohegaon Airport)",
-    "heat_proxy": 53.4,
-    "flood_proxy": 48.8,
-    "water_stress_proxy": 44.0,
-    "composite_vulnerability": 52.5,
+    "name": "Current Baseline (Vadgaon Sheri - Ganesh Nagar)",
+    "heat_proxy": 58.4,
+    "flood_proxy": 75.2,
+    "water_stress_proxy": 52.0,
+    "composite_vulnerability": 68.8,
     "notes": "Observed OpenCity municipal spatial metrics and current forecast proxies."
   },
   "heatwave_scenario": {
     "name": "Extreme Heatwave Shock (+3.5\u00b0C Ambient Prolonged)",
-    "heat_proxy": 73.4,
-    "flood_proxy": 48.8,
-    "water_stress_proxy": 59.0,
-    "composite_vulnerability": 61.8,
+    "heat_proxy": 78.4,
+    "flood_proxy": 75.2,
+    "water_stress_proxy": 67.0,
+    "composite_vulnerability": 78.0,
     "notes": "Simulated persistent high LST exposure in unshaded, high-density residential sectors."
   },
   "flash_rainfall_scenario": {
     "name": "Extreme Cloudburst Monsoon Shock (+75mm 3-Hour Downpour)",
-    "heat_proxy": 43.4,
-    "flood_proxy": 73.8,
-    "water_stress_proxy": 34.0,
-    "composite_vulnerability": 59.8,
+    "heat_proxy": 48.4,
+    "flood_proxy": 100.0,
+    "water_stress_proxy": 42.0,
+    "composite_vulnerability": 76.0,
     "notes": "Simulated stormwater inundation at drainage constriction points and low-elevation junctions."
   },
   "post_adaptation_scenario": {
-    "name": "Post-Implementation Portfolio Outcome (INR 0)",
-    "heat_proxy": 53.4,
-    "flood_proxy": 48.8,
-    "water_stress_proxy": 44.0,
-    "composite_vulnerability": 52.5,
-    "net_vulnerability_reduction_pct": 0.0,
-    "notes": "Illustrative heuristic projection reflecting allocation of 0 adaptation actions. Disclosed limitation: This is an uncalibrated proxy shift, not a certified hydrodynamic or CFD simulation."
+    "name": "Post-Implementation Portfolio Outcome (INR 3,490,000)",
+    "heat_proxy": 33.4,
+    "flood_proxy": 75.2,
+    "water_stress_proxy": 52.0,
+    "composite_vulnerability": 60.1,
+    "net_vulnerability_reduction_pct": 12.6,
+    "notes": "Illustrative heuristic projection reflecting allocation of 3 adaptation actions. Disclosed limitation: This is an uncalibrated proxy shift, not a certified hydrodynamic or CFD simulation."
   }
 }
