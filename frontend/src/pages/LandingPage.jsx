@@ -248,7 +248,7 @@ export default function LandingPage() {
             <div style={{ maxWidth: '640px' }}>
               <div className="hero-eyebrow">Decision Science</div>
               <h2 className="t-h1 reveal" style={{ fontFamily: 'var(--font-serif)', letterSpacing: '0.02em' }}>
-                From geospatial data and context data, contextual data to clear action
+                From geospatial data and contextual data to clear action
               </h2>
               <p className="t-body reveal anim-delay-1" style={{ marginTop: 'var(--sp-4)', color: '#94A3B8' }}>
                 Municipal adaptation cannot rely on guesswork. Climaid pairs transparent data with a mathematical optimization engine to formulate practical roadmaps.
