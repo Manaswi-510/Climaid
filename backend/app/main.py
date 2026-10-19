@@ -178,17 +178,31 @@ def get_ai_vulnerability_clusters():
     with open(ai_file, "r", encoding="utf-8") as f:
         return json.load(f)
 
-@app.get("/api/ai/ward-analysis/{ward_num}", tags=["AI Modeling"])
-def get_gemini_ward_analysis(
+@app.post("/api/ai/ward-analysis/{ward_num}", tags=["AI Modeling"])
+async def get_gemini_ward_analysis(
     ward_num: int,
-    budget_inr: Optional[float] = Query(None, description="Optional custom budget in INR"),
+    body: dict = None,
     force_refresh: bool = Query(False, description="Force re-generation via Gemini API")
 ):
+    """
+    Accepts the full PuLP-optimized plan_data in the POST body so that
+    Gemini analyses exactly the portfolio the user sees on the Results page.
+    """
     from .gemini_service import analyze_ward_with_gemini
+    from fastapi import Request
     try:
+        body = body or {}
+        plan_data = body.get("plan_data")
+        budget_inr = body.get("budget_inr")
+        max_workforce = body.get("max_workforce")
+        max_horizon_months = body.get("max_horizon_months")
+
         res = analyze_ward_with_gemini(
             ward_num=ward_num,
             custom_budget_inr=budget_inr,
+            max_workforce=max_workforce,
+            max_horizon_months=max_horizon_months,
+            plan_data=plan_data,
             force_refresh=force_refresh
         )
         return res
@@ -457,10 +471,15 @@ def list_reports():
         })
     return {"reports": reports_list}
 
-@app.get("/api/reports/latest/download", tags=["Reports"])
-def download_latest_report(ward_num: Optional[int] = Query(None, description="Optional target ward number for AI report")):
+@app.post("/api/reports/latest/download", tags=["Reports"])
+async def download_latest_report(
+    body: dict = None,
+    ward_num: Optional[int] = Query(None, description="Optional target ward number for AI report")
+):
     from ..scripts.generate_report import generate_pdf_report
-    pdf_path = generate_pdf_report(ward_num=ward_num)
+    body = body or {}
+    plan_data = body.get("plan_data")
+    pdf_path = generate_pdf_report(ward_num=ward_num, plan_data=plan_data)
     
     filename = f"ClimateAdapt_Pune_Action_Report_Ward{ward_num}.pdf" if ward_num else "ClimateAdapt_Pune_Action_Report.pdf"
     return FileResponse(

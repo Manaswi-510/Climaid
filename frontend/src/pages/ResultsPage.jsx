@@ -80,11 +80,11 @@ export default function ResultsPage() {
   const [geminiAnalysis, setGeminiAnalysis] = useState(null);
   const [loadingGemini, setLoadingGemini] = useState(false);
 
-  const fetchGemini = async (wardNum, budget, force = false) => {
+  const fetchGemini = async (wardNum, planData, budget, workforce, horizon, force = false) => {
     if (!wardNum) return;
     setLoadingGemini(true);
     try {
-      const res = await api.wardAnalysis(wardNum, budget, force);
+      const res = await api.wardAnalysis(wardNum, planData, budget, workforce, horizon, force);
       setGeminiAnalysis(res);
     } catch (err) {
       console.error('Gemini analysis fetch failed:', err);
@@ -98,15 +98,19 @@ export default function ResultsPage() {
       const p = sessionStorage.getItem('climaid_plan');
       const s = sessionStorage.getItem('climaid_scenario');
       const q = sessionStorage.getItem('climaid_payload');
+      const parsedPayload = q ? JSON.parse(q) : {};
+      if (q) setPayload(parsedPayload);
+      if (s) setScenario(JSON.parse(s));
       if (p) {
         const parsedPlan = JSON.parse(p);
         setPlan(parsedPlan);
         const wMatch = parsedPlan.target_ward ? parsedPlan.target_ward.match(/Ward\s*#?(\d+)/) : null;
-        const wNum = wMatch ? parseInt(wMatch[1], 10) : (q ? JSON.parse(q).selected_ward_num : 19);
-        fetchGemini(wNum, parsedPlan.budget_constraints?.total_budget_inr);
+        const wNum = wMatch ? parseInt(wMatch[1], 10) : (parsedPayload.selected_ward_num ?? 19);
+        const b = parsedPlan.budget_constraints?.total_budget_inr ?? parsedPayload.budget_inr;
+        const w = parsedPayload.max_workforce_person_months ?? parsedPlan.performance_metrics?.workforce_capacity_person_months;
+        const h = parsedPayload.max_horizon_months ?? parsedPlan.performance_metrics?.estimated_implementation_horizon_months;
+        fetchGemini(wNum, parsedPlan, b, w, h);
       }
-      if (s) setScenario(JSON.parse(s));
-      if (q) setPayload(JSON.parse(q));
     } catch (e) {
       console.error('Could not parse stored plan:', e);
     }
@@ -152,8 +156,7 @@ export default function ResultsPage() {
     try {
       const wMatch = plan.target_ward ? plan.target_ward.match(/Ward\s*#?(\d+)/) : null;
       const targetWard = wMatch ? parseInt(wMatch[1], 10) : (payload?.selected_ward_num ?? 19);
-      const url = api.reportDownloadUrl(targetWard);
-      const res = await fetch(url);
+      const res = await api.reportDownload(targetWard, plan);
       if (!res.ok) throw new Error(`Server returned ${res.status}`);
       const blob = await res.blob();
       const a = document.createElement('a');
@@ -578,7 +581,10 @@ export default function ResultsPage() {
                 onClick={() => {
                   const wMatch = plan.target_ward ? plan.target_ward.match(/Ward\s*#?(\d+)/) : null;
                   const wNum = wMatch ? parseInt(wMatch[1], 10) : (payload?.selected_ward_num ?? 19);
-                  fetchGemini(wNum, plan.budget_constraints?.total_budget_inr, true);
+                  const b = plan.budget_constraints?.total_budget_inr ?? payload?.budget_inr;
+                  const w = payload?.max_workforce_person_months ?? plan.performance_metrics?.workforce_capacity_person_months;
+                  const h = payload?.max_horizon_months ?? plan.performance_metrics?.estimated_implementation_horizon_months;
+                  fetchGemini(wNum, plan, b, w, h, true);
                 }}
                 disabled={loadingGemini}
                 style={{

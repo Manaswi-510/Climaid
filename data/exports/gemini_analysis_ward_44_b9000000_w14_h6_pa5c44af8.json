@@ -1,0 +1,18 @@
+{
+  "generated_at_utc": "2026-10-19T04:16:39.388496+00:00",
+  "ward_num": 44,
+  "ward_title": "Gliding Centre",
+  "area_zone": "Hadapsar",
+  "gemini_model_used": "models/gemini-3.8-flash",
+  "content_markdown": "### 1. What's Life Like in This Ward?\nIn Gliding Centre, everyday life gets really tough during extreme weather. In summer, the streets and houses turn into heat traps because there are barely any shade trees or parks. During monsoon, even light rain quickly fills up the roads because 90% of streets have absolutely no drains to carry the water away.\n\n### 2. Problems and What We Can Do About Them\n\n| Problem | How Bad Is It? | Why Does This Happen Here? | What Can Be Done? |\n| :--- | :--- | :--- | :--- |\n| **Streets flooding with rainwater** | Very Bad | Only 10.0% of roads have drains. Rain has nowhere to go. | Clean out clogged drains and put iron trash guards so water keeps flowing. |\n| **Unbearable summer heat** | Bad | No shade trees, hot tin and concrete roofs trap the sun's heat all day. | Paint roofs white with heat-reflecting paint. Set up shaded bus stops with drinking water. |\n| **No trees or greenery** | Bad | Only 0 trees and very few parks recorded in this area. | Plant fast-growing local shade trees (Neem, Peepal) along footpaths and busy roads. |\n| **Dirty water mixing with rainwater** | Medium | Many homes in slum areas don't have proper sewer pipes. | Seal and clean open drains so dirty water doesn't mix with rainwater during monsoon. |\n\n### 3. How Will the Money, Workers and Time Be Used?\n\n| Work To Be Done | How Many? | Money (Rs.) | Workers Needed | Time Needed | Who Is Responsible? |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| **Cool Roof Reflective Coating in High-Density Receptors** | 7 building cluster | Rs. 840,000 | 14 workers | 1 mo | PMC Building & Development Department |\n\n**Summary:**\n- **Total money being used:** Rs. 840,000 out of Rs. 9,000,000\n- **Money left over:** Rs. 8,160,000\n- **Workers needed:** 14 person-months\n- **Everything done in:** 1 months\n\n### 4. What Should the Ward Officer Do? (Step by Step)\n\n1. **Week 1-2:** The ward engineer should visit the worst waterlogging spots and get the mud and garbage cleared from major drain channels.\n2. **Month 1:** Work with local community leaders to identify tin-roof buildings and get them painted with white heat-reflecting coating.\n3. **Month 2:** Coordinate with PMPML to set up shaded bus shelters with clean drinking water taps at the busiest stops.\n4. **Month 3:** The Garden Department plants hardy local shade trees (Neem, Peepal) along road edges with protective tree guards.\n\n### 5. How Will Residents Know Things Are Getting Better?\n\n- \u2705 **Streets clear up quickly:** After heavy rain, water should drain away within 30-45 minutes instead of staying for hours.\n- \u2705 **Homes feel cooler:** Rooms under white-painted roofs should feel noticeably more comfortable during hot afternoons.\n- \u2705 **Bus stops with shade and water:** Commuters and pedestrians can use shaded bus stops and new tree saplings are alive and growing.\n",
+  "indicators_snapshot": {
+    "heat_exposure_proxy": 58.4,
+    "flood_screening_proxy": 51.0,
+    "water_stress_proxy": 60.0,
+    "green_deficit_proxy": 95.0,
+    "composite_vulnerability_score": 61.5
+  },
+  "portfolio_summary": [
+    "- Cool Roof Reflective Coating in High-Density Receptors: 7 building cluster | Cost: Rs. 840,000 | Workers needed: 14 person-months | Time: 1 months | Dept in charge: PMC Building & Development Department"
+  ]
+}

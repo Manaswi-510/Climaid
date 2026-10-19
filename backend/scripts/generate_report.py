@@ -25,7 +25,7 @@ from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, PageBreak, HRFlowable
 from reportlab.lib.units import inch
 
-def generate_pdf_report(ward_num: Optional[int] = None):
+def generate_pdf_report(ward_num: Optional[int] = None, plan_data: Optional[dict] = None):
     repo_root = Path(__file__).resolve().parent.parent.parent
     reports_dir = repo_root / "reports"
     reports_dir.mkdir(parents=True, exist_ok=True)
@@ -44,10 +44,12 @@ def generate_pdf_report(ward_num: Optional[int] = None):
         with open(indicators_file, "r", encoding="utf-8") as f:
             ward_data = json.load(f)
 
-    plan_data = {}
-    if plan_file.exists():
-        with open(plan_file, "r", encoding="utf-8") as f:
-            plan_data = json.load(f)
+    # Use provided plan_data (from the active session) or fall back to disk
+    if plan_data is None:
+        plan_data = {}
+        if plan_file.exists():
+            with open(plan_file, "r", encoding="utf-8") as f:
+                plan_data = json.load(f)
 
     scenarios_data = {}
     if scenarios_file.exists():

@@ -1,20 +1,20 @@
 {
-  "generated_at_utc": "2026-10-18T19:03:10.124679+00:00",
+  "generated_at_utc": "2026-10-19T04:15:38.881577+00:00",
   "pilot_area": "Pune Pilot, Maharashtra, India",
-  "target_ward": "Ward #19: Vadgaon Sheri - Ganesh Nagar",
+  "target_ward": "Ward #44: Gliding Centre",
   "budget_constraints": {
-    "total_budget_inr": 5000000.0,
-    "allocated_spend_inr": 360000.0,
-    "remaining_budget_inr": 4640000.0,
-    "equity_weight_factor": 1.0,
-    "unallocated_budget_explanation": "Residual budget of INR 4,640,000 remained unallocated because the workforce capacity limit (6.0 person-months) was reached."
+    "total_budget_inr": 9000000.0,
+    "allocated_spend_inr": 840000.0,
+    "remaining_budget_inr": 8160000.0,
+    "equity_weight_factor": 1.9,
+    "unallocated_budget_explanation": "Residual budget of INR 8,160,000 remained unallocated because the workforce capacity limit (14.0 person-months) was reached."
   },
   "performance_metrics": {
     "total_interventions_selected": 1,
-    "total_units_allocated": 3,
-    "total_benefit_points": 205.3,
-    "workforce_demand_person_months": 6.0,
-    "workforce_capacity_person_months": 6.0,
+    "total_units_allocated": 7,
+    "total_benefit_points": 539.0,
+    "workforce_demand_person_months": 14.0,
+    "workforce_capacity_person_months": 14.0,
     "estimated_implementation_horizon_months": 1,
     "portfolio_duration_description": "Maximum single-intervention lead time is 1 months (does not constitute a sequential Gantt critical-path schedule).",
     "solver_status": "Optimal",
@@ -25,15 +25,15 @@
       "id": "INT-HEAT-02",
       "title": "Cool Roof Reflective Coating in High-Density Receptors",
       "category": "Heat & Urban Cooling",
-      "allocated_units": 3,
+      "allocated_units": 7,
       "unit": "building cluster",
       "unit_cost_inr": 120000,
-      "total_cost_inr": 360000,
+      "total_cost_inr": 840000,
       "lead_time_months": 1,
-      "utility_score": 205.3,
+      "utility_score": 539.0,
       "responsible_department": "PMC Building & Development Department",
       "target_vulnerability": "heat_exposure_proxy",
-      "workforce_person_months": 6.0,
+      "workforce_person_months": 14.0,
       "site_suitability_status": "SUITABLE_CONFIRMED",
       "prerequisite_verification_note": "Suitable based on current ward vulnerability screening criteria.",
       "affected_indicators": [
@@ -51,9 +51,9 @@
       "scientific_rationale": "High-albedo solar-reflective coating reduces treated roof surface temperatures by 2-3\u00b0C, moderating ward-level heat proxy.",
       "cost_provenance": "Market rate estimate for elastomeric high-albedo coatings; assumes municipal or community permission.",
       "benefit_provenance": "Well-established surface physics; macro-ward heat effect depends on treated roof area fraction.",
-      "rationale": "Selected 3 building cluster by MILP optimizer. Targets heat_exposure_proxy (Ward score: 58.4/100) with unit utility 68.4 pts under equity factor 1.0x.",
+      "rationale": "Selected 7 building cluster by MILP optimizer. Targets heat_exposure_proxy (Ward score: 58.4/100) with unit utility 77.0 pts under equity factor 1.9x.",
       "data_quality_status": "PRELIMINARY_MUNICIPAL_PROXY",
-      "selection_justification": "Allocated under budget ceiling INR 5,000,000. Contributes 205.3 prioritization utility points."
+      "selection_justification": "Allocated under budget ceiling INR 9,000,000. Contributes 539.0 prioritization utility points."
     }
   ],
   "rejected_candidates": [
@@ -62,7 +62,7 @@
       "title": "Urban Shade Corridors & Native Canopy Planting",
       "category": "Heat & Urban Cooling",
       "cost_per_unit_inr": 250000,
-      "reason": "SUBOPTIMAL_UTILITY: Lower overall utility density (66.444 pts/unit) compared to selected portfolio alternatives."
+      "reason": "SUBOPTIMAL_UTILITY: Lower overall utility density (74.094 pts/unit) compared to selected portfolio alternatives."
     },
     {
       "id": "INT-HEAT-03",

@@ -43,16 +43,32 @@ export const api = {
     });
   },
 
-  /** Google Gemini AI Ward Resilience Analysis */
-  wardAnalysis: (wardNum, budget, forceRefresh = false) => {
-    const qs = new URLSearchParams();
-    if (budget) qs.append('budget_inr', budget);
-    if (forceRefresh) qs.append('force_refresh', 'true');
-    const queryStr = qs.toString() ? `?${qs.toString()}` : '';
-    return request(`/api/ai/ward-analysis/${wardNum}${queryStr}`);
+  /** Google Gemini AI Ward Resilience Analysis — POST with full plan data */
+  wardAnalysis: (wardNum, planData, budget, workforce, horizon, forceRefresh = false) => {
+    const qs = forceRefresh ? '?force_refresh=true' : '';
+    return request(`/api/ai/ward-analysis/${wardNum}${qs}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        plan_data: planData,
+        budget_inr: budget,
+        max_workforce: workforce,
+        max_horizon_months: horizon,
+      }),
+    });
   },
 
-  /** Download report with optional ward number */
+  /** Download report — POST with plan data for accurate PDF */
+  reportDownload: (wardNum, planData) => {
+    const qs = wardNum ? `?ward_num=${wardNum}` : '';
+    return fetch(`${API_BASE}/api/reports/latest/download${qs}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ plan_data: planData }),
+    });
+  },
+
+  /** Legacy URL-only accessor (kept for backwards compat) */
   reportDownloadUrl: (wardNum) => {
     const qs = wardNum ? `?ward_num=${wardNum}` : '';
     return `${API_BASE}/api/reports/latest/download${qs}`;

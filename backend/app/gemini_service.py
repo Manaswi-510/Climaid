@@ -78,7 +78,20 @@ def analyze_ward_with_gemini(
     Performs comprehensive ward-specific climate risk analysis in plain, easy-to-understand language.
     Produces simple tables for problems & solutions, as well as budget/manpower division.
     """
-    cache_file = EXPORTS_DIR / f"gemini_analysis_ward_{ward_num}.json"
+    # 1. Determine constraints & Cache key
+    budget = custom_budget_inr if custom_budget_inr is not None else 5000000
+    w_key = int(max_workforce) if max_workforce is not None else 0
+    h_key = int(max_horizon_months) if max_horizon_months is not None else 0
+
+    # Include a hash of the portfolio so different PuLP outputs bust the cache
+    import hashlib
+    portfolio_hash = ""
+    if plan_data and plan_data.get("portfolio"):
+        portfolio_str = json.dumps(plan_data["portfolio"], sort_keys=True)
+        portfolio_hash = "_p" + hashlib.md5(portfolio_str.encode()).hexdigest()[:8]
+
+    cache_file = EXPORTS_DIR / f"gemini_analysis_ward_{ward_num}_b{int(budget)}_w{w_key}_h{h_key}{portfolio_hash}.json"
+
     if not force_refresh and cache_file.exists():
         try:
             with open(cache_file, "r", encoding="utf-8") as f:
@@ -87,7 +100,7 @@ def analyze_ward_with_gemini(
         except Exception:
             pass
 
-    # 1. Load Ward Indicators
+    # 2. Load Ward Indicators
     indicators_file = PROCESSED_DIR / "ward_indicators.json"
     if not indicators_file.exists():
         raise FileNotFoundError(f"Indicators file not found at {indicators_file}")
@@ -99,10 +112,9 @@ def analyze_ward_with_gemini(
     if not ward:
         raise ValueError(f"Ward number {ward_num} not found in indicator dataset.")
 
-    # 2. Load or Compute Action Plan
+    # 3. Load or Compute Action Plan
     if plan_data is None:
         from ..scripts.build_action_plan import generate_action_plan
-        budget = custom_budget_inr if custom_budget_inr is not None else 5000000
         plan_data = generate_action_plan(
             budget_inr=budget,
             max_workforce_person_months=max_workforce,
