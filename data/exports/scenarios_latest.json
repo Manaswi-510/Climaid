@@ -1,62 +1,62 @@
 {
-  "generated_at_utc": "2026-10-19T04:15:39.085675+00:00",
-  "target_ward": "Ward #44: Gliding Centre",
+  "generated_at_utc": "2026-10-19T06:42:38.802384+00:00",
+  "target_ward": "Ward #75: Katraj Dairy",
   "resource_summary": {
-    "total_budget_inr": 9000000.0,
-    "allocated_spend_inr": 840000.0,
-    "remaining_budget_inr": 8160000.0,
-    "workforce_demand_person_months": 14.0,
+    "total_budget_inr": 1000000.0,
+    "allocated_spend_inr": 480000.0,
+    "remaining_budget_inr": 520000.0,
+    "workforce_demand_person_months": 8.0,
     "actions_selected_count": 1,
-    "unallocated_budget_explanation": "Residual budget of INR 8,160,000 remained unallocated because the workforce capacity limit (14.0 person-months) was reached."
+    "unallocated_budget_explanation": "Residual budget of INR 520,000 remained unallocated because the workforce capacity limit (8.0 person-months) was reached."
   },
   "baseline_scenario": {
-    "name": "Current Baseline (Gliding Centre)",
+    "name": "Current Baseline (Katraj Dairy)",
     "heat_proxy": 58.4,
-    "flood_proxy": 51.0,
+    "flood_proxy": 34.2,
     "water_stress_proxy": 60.0,
     "green_deficit_proxy": 95.0,
-    "composite_vulnerability": 61.5,
+    "composite_vulnerability": 55.7,
     "notes": "Observed OpenCity municipal spatial metrics and current forecast proxies."
   },
   "heatwave_scenario": {
     "name": "Extreme Heatwave Shock (+3.5\u00b0C Ambient Prolonged)",
     "heat_proxy": 78.4,
-    "flood_proxy": 51.0,
+    "flood_proxy": 34.2,
     "water_stress_proxy": 75.0,
     "green_deficit_proxy": 95.0,
-    "composite_vulnerability": 70.8,
+    "composite_vulnerability": 65.0,
     "notes": "Simulated persistent high LST exposure in unshaded, high-density residential sectors."
   },
   "flash_rainfall_scenario": {
     "name": "Extreme Cloudburst Monsoon Shock (+75mm 3-Hour Downpour)",
     "heat_proxy": 48.4,
-    "flood_proxy": 76.0,
+    "flood_proxy": 59.2,
     "water_stress_proxy": 50.0,
     "green_deficit_proxy": 95.0,
-    "composite_vulnerability": 68.8,
+    "composite_vulnerability": 63.0,
     "notes": "Simulated stormwater inundation at drainage constriction points and low-elevation junctions."
   },
   "post_adaptation_scenario": {
-    "name": "Post-Implementation Portfolio Outcome (INR 840,000)",
-    "heat_proxy": 50.0,
-    "flood_proxy": 51.0,
+    "name": "Post-Implementation Portfolio Outcome (INR 480,000)",
+    "heat_proxy": 53.6,
+    "flood_proxy": 34.2,
     "water_stress_proxy": 60.0,
     "green_deficit_proxy": 95.0,
-    "composite_vulnerability": 58.6,
-    "net_vulnerability_reduction_pct": 4.7,
+    "composite_vulnerability": 54.0,
+    "net_vulnerability_reduction_pct": 3.1,
     "notes": "Modelled estimate reflecting 1 adaptation actions. Notice: Only indicators with defensible physical mechanisms are subtracted. Directional maintenance actions (such as drain desilting) contribute to resilience but do not claim uncalibrated flood probability drops."
   },
   "indicator_changes": {
     "heat_exposure_proxy": {
       "baseline": 58.4,
-      "proposed": 50.0,
-      "delta": -8.4,
+      "proposed": 53.6,
+      "delta": -4.8,
       "status": "MODELLED_ESTIMATE",
       "notes": "Driven by cool roof albedo reflectance and pedestrian shade canopy planting."
     },
     "flood_screening_proxy": {
-      "baseline": 51.0,
-      "proposed": 51.0,
+      "baseline": 34.2,
+      "proposed": 34.2,
       "delta": 0.0,
       "status": "UNQUANTIFIED_MAINTENANCE",
       "notes": "Driven by retention basins and soakaways. Drain desilting provides directional maintenance, but does not alter hydraulic 100-yr flood probability."
@@ -76,9 +76,9 @@
       "notes": "Driven by native roadside shade corridors and vegetated bioretention swales."
     },
     "composite_vulnerability_score": {
-      "baseline": 61.5,
-      "proposed": 58.6,
-      "delta": -2.9,
+      "baseline": 55.7,
+      "proposed": 54.0,
+      "delta": -1.7,
       "status": "MODELLED_COMPOSITE_RECOMPUTATION",
       "notes": "Recomputed strictly from updated constituent proxies using standard Pune weights (0.35 Heat + 0.35 Flood + 0.15 Water + 0.15 Green)."
     }
@@ -87,13 +87,13 @@
     {
       "id": "INT-HEAT-02",
       "title": "Cool Roof Reflective Coating in High-Density Receptors",
-      "allocated_units": 7,
+      "allocated_units": 4,
       "unit": "building cluster",
-      "spend_inr": 840000,
-      "workforce_person_months": 14.0,
+      "spend_inr": 480000,
+      "workforce_person_months": 8.0,
       "site_suitability_status": "SUITABLE_CONFIRMED",
       "quantified_effects": [
-        "heat_exposure_proxy: -8.4 (Modelled)"
+        "heat_exposure_proxy: -4.8 (Modelled)"
       ],
       "directional_effects": [
         "Indoor thermal comfort in uninsulated tin/asbestos housing"
