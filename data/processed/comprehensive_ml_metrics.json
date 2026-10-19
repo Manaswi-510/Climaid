@@ -1,0 +1,122 @@
+{
+  "n_wards": 76,
+  "features": [
+    "heat_exposure",
+    "flood_screening",
+    "water_stress",
+    "green_deficit",
+    "slum_drainage",
+    "receptors"
+  ],
+  "clustering_metrics": {
+    "k_clusters": 4,
+    "silhouette_score": 0.308,
+    "cluster_silhouette_scores": {
+      "Cluster_0": 0.4401,
+      "Cluster_1": 0.2314,
+      "Cluster_2": 0.2558,
+      "Cluster_3": 0.0
+    },
+    "davies_bouldin_index": 0.9274,
+    "calinski_harabasz_index": 32.808,
+    "inertia_wcss": 192.65,
+    "total_sum_of_squares_tss": 456.0,
+    "between_cluster_sum_of_squares_bss": 263.35,
+    "clustering_r2_variance_explained": 0.5775,
+    "cluster_ward_counts": {
+      "Cluster_0": 27,
+      "Cluster_1": 31,
+      "Cluster_2": 17,
+      "Cluster_3": 1
+    }
+  },
+  "pca_metrics": {
+    "n_components": 2,
+    "explained_variance_ratio": [
+      0.3917,
+      0.2288
+    ],
+    "total_explained_variance_2d": 0.6205,
+    "cumulative_explained_variance_all_features": [
+      0.3917,
+      0.6205,
+      0.7783,
+      0.9075,
+      0.9983,
+      1.0
+    ],
+    "singular_values": [
+      13.3651,
+      10.2147
+    ],
+    "reconstruction_mse": 0.3795,
+    "reconstruction_mae": 0.4187,
+    "reconstruction_r2_score": 0.6205
+  },
+  "classification_metrics_cluster_archetypes_5fold_cv": {
+    "description": "Cross-validated Random Forest prediction of K-Means Archetypes from indicators",
+    "confusion_matrix": [
+      [
+        25,
+        2,
+        0,
+        0
+      ],
+      [
+        3,
+        28,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        16,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ]
+    ],
+    "accuracy": 0.9079,
+    "precision_weighted": 0.8978,
+    "recall_weighted": 0.9079,
+    "f1_score_weighted": 0.9024,
+    "precision_macro": 0.692,
+    "recall_macro": 0.6926,
+    "f1_score_macro": 0.6919
+  },
+  "binary_risk_classification_metrics_5fold_cv": {
+    "description": "5-Fold Cross-Validation Logistic Regression for High Risk (Top 50% C_vuln) vs Low/Moderate Risk",
+    "confusion_matrix_2x2": {
+      "matrix": [
+        [
+          37,
+          1
+        ],
+        [
+          6,
+          32
+        ]
+      ],
+      "TN": 37,
+      "FP": 1,
+      "FN": 6,
+      "TP": 32
+    },
+    "accuracy": 0.9079,
+    "precision": 0.9697,
+    "recall": 0.8421,
+    "f1_score": 0.9014
+  },
+  "vulnerability_regression_metrics_5fold_cv": {
+    "description": "5-Fold Cross-Validation Ridge Regression predicting composite vulnerability index C_vuln",
+    "r2_score": 0.9905,
+    "rmse": 1.0738,
+    "mae": 0.5765,
+    "mse": 1.153
+  }
+}
